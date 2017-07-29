@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="32px" viewBox="0 0 37 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>ph_icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="16.5087001" y="0" width="3.88440003" height="31.0752003" rx="1.94220002"></rect>
+    </defs>
+    <g id="Round-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-702.000000, -1378.000000)">
+            <g id="Group-11" transform="translate(668.000000, 1378.000000)">
+                <g id="ph_icon" transform="translate(34.000000, 0.000000)">
+                    <g id="Rectangle-8">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <rect stroke="#FFFFFF" stroke-width="0.728325006" x="16.8728626" y="0.364162503" width="3.15607503" height="30.3468753" rx="1.57803751"></rect>
+                    </g>
+                    <rect id="Rectangle-8" stroke="#FFFFFF" stroke-width="0.728325006" x="9.10406258" y="3.27746253" width="3.15607503" height="25.4913752" rx="1.57803751"></rect>
+                    <rect id="Rectangle-8" stroke="#FFFFFF" stroke-width="0.728325006" x="0.364162503" y="8.13296257" width="3.15607503" height="15.7803751" rx="1.57803751"></rect>
+                    <rect id="Rectangle-8" stroke="#FFFFFF" stroke-width="0.728325006" x="25.6127627" y="3.27746253" width="3.15607503" height="25.4913752" rx="1.57803751"></rect>
+                    <rect id="Rectangle-8" stroke="#FFFFFF" stroke-width="0.728325006" x="33.3815628" y="8.13296257" width="3.15607503" height="15.7803751" rx="1.57803751"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
