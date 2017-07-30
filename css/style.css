@@ -87,6 +87,10 @@ a.logo {
 	left: 4vw;
 	top: 27px;
 }
+.mobile-video-nav button {
+	opacity: 0;
+	display: none;
+}
 /**************************** TYPOGRAPHY ****************************/
 html {
 	font-family: "Forza SSm A", "Forza SSm B", Forza, sans-serif;
@@ -237,7 +241,6 @@ video {
 	height: 36px;
 	background: url("../images/no_mess_icon.svg") no-repeat;
 }
-	
 /********************* HOME *********************/
 #intro {
 	position: relative;
@@ -297,10 +300,10 @@ video {
 	content:"";
 	display: inline-block;
 	background: url("../images/arrow.svg") no-repeat;
-	width: 20px;
-	height: 18px;
+	width: 1rem;
+	height: .8rem;
 	background-size: contain;
-	margin-right: .8rem;	
+	margin-right: .6rem;	
 }
 #putty {
 	position: relative;
@@ -409,6 +412,7 @@ video {
 #histology .images .first {
 	background-image: url("../images/h010x.jpg");
 }
+
 /******************************* TEAM *******************************/
 /**************************** CONTACT *******************************/
 /*************************** MEDIA QUERIES **************************/
@@ -442,7 +446,7 @@ video {
 	}
 	progress {
 		bottom: 22%;
-		width: 90vw;
+		width: 87vw;
 		left: 44%;
 	}
 	video {
@@ -495,9 +499,73 @@ video {
 	}
 }
 @media screen and (max-width: 600px) {
+	/*************** Mobile Video Nav ***************/
+	 .mobile-video-nav button {
+		display: block;
+		opacity: 1;
+		text-align: center;
+		border: 2px solid transparent;
+		border-image: -moz-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
+		border-image: -webkit-linear-gradient(left, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
+		border-image: linear-gradient(to right, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
+		border-image-slice: 1;
+		padding: .5rem;
+		position: absolute;
+		z-index: 301;
+		bottom: 6vw;
+		left: 42%;
+		margin-left: -20vw;
+		width: 40vw;
+		text-transform: uppercase;
+		webkit-appearance: push-button;
+		  -moz-appearance: button; 
+		  cursor: pointer;
+		background: transparent;			
+	}
+	.mobile-video-nav button:hover {
+		background: -moz-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
+		background: -webkit-linear-gradient(left, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
+		background: linear-gradient(to right, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
+		transition: all 0.2s linear;
+	}
+	.mobile-video-nav button:focus {
+		outline: none;
+	}
+	.vid-nav {
+		display: none;
+		background-color: #F6F8FB;
+		position: absolute;
+	    position: fixed;
+	    z-index: 301;
+	    top: 10%;
+		left: 50%;
+	    padding: 8% 8% 8%;
+	    height: 50%;
+	    width: 90vw;
+	    transition: none;
+	}
+	.vid-nav li {
+		display: block;
+		max-width: 100%;
+	}
+	
+	.vid-nav li a {
+		display: block;
+		padding: .55rem;
+	}
+	
+	.vid-nav li a::before {
+		display: inline-block;
+		top: 10px;
+		margin-right: 1rem;
+	}
+	
+	.vid-nav li br { display: none;}
+
 	a.logo {
 		background: url("../images/mark-full.svg") no-repeat;
 		background-size: contain;
+		background-position: center center;
 		height: 30px;
 		width: 44px;
 		top: 14px;	

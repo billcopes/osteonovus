@@ -33,20 +33,23 @@
 		<li><a href="#" class="">Injectable</a></li>
 	</ul>
 	<div class="video-gradient"></div>
-	<div id="putty">
+	<article id="putty">
 		<progress id='p' max='100' value='0'></progress>
-		<video id="putty-vid" src="vid/putty.mp4#t=1" autoplay preload="auto"> <!--loop poster="/images/putty.jpg"-->
+		<video id="putty-vid" src="vid/putty.mp4#t=1" autoplay preload="auto" loop> <!-- poster="/images/putty.jpg"-->
 		</video>
-		<ul class="vid-nav">
-			<li><a href="#" id="vid1-1">Moldable <br/>and cohesive</a></li>
-			<li><a href="#" id="vid1-2">Will not <br/>Wash Out</a></li>
-			<li><a href="#" id="vid1-3">Conforms to <br/>Graft Site</a></li>
-			<li><a href="#" id="vid1-4">Resists <br/>Compression</a></li>
-			<li><a href="#" id="vid1-5">Sticks to <br/>Wet Bone</a></li>
-			<li><a href="#" id="vid1-6">No-mess <br/>Removal</a></li>
-		</ul>
-	</div>
-	<div id="injectable">
+		<div class="mobile-video-nav">
+			<button class="vid-nav-button">Features</button>
+			<ul class="vid-nav putty">
+				<li><a href="#" id="vid1-1">Moldable <br/>and cohesive</a></li>
+				<li><a href="#" id="vid1-2">Will not <br/>Wash Out</a></li>
+				<li><a href="#" id="vid1-3">Conforms to <br/>Graft Site</a></li>
+				<li><a href="#" id="vid1-4">Resists <br/>Compression</a></li>
+				<li><a href="#" id="vid1-5">Sticks to <br/>Wet Bone</a></li>
+				<li><a href="#" id="vid1-6">No-mess <br/>Removal</a></li>
+			</ul>
+		</div>
+	</article>
+	<article id="injectable">
 		<progress></progress>
 		<ul class="vid-nav">
 			<li><a href="#">Moldable and cohesive</a></li>
@@ -56,7 +59,7 @@
 			<li><a href="#">Sticks to Wet Bone</a></li>
 			<li><a href="#">No-mess Removal</a></li>
 		</ul>
-	</div>
+	</article>
 </section>
 <section id="attributes">
 	<ul>
@@ -70,7 +73,7 @@
 		<li><a href="#" class="active">Histology</a></li>
 		<li><a href="#" class="">&mu;CT</a></li>
 	</ul>
-	<div id="histology">
+	<article id="histology">
 		<div class="zoom-text-container">
 			<div id="ten" class="zoom-text">
 				<h2>10x<span>Histology</span></h2>
@@ -101,12 +104,26 @@
 				</div-->
 			</div>
 		</div>
-	</div>
-	<div id="ct">
+	</article>
+	<article id="ct">
 		
-	</div>
+	</article>
 </section>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="js/scripts.js"></script>
+	<script>
+	$( ".vid-nav a" ).click(function( event ) {
+	  event.preventDefault();
+	});
+	$( ".vid-nav-button" ).click(function() {
+	  $( ".vid-nav" ).toggle( "slow", function() {
+	  });
+	});
+	$( ".vid-nav a" ).click(function() {
+	  $( ".vid-nav" ).toggle( "slow", function() {
+	
+	  });
+	});
+	</script>
 </body>
 </html>
