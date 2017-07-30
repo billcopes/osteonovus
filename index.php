@@ -23,7 +23,7 @@
 <section id="intro" class="logomark">
 	<div class="text-container">
 		<h1>Do you really need <strong>BMP?</strong></h1>
-		<p>Introducing <strong>NovoGro<sup>&reg;</sup></strong>, a breakthrough bone regeneration biomaterial that grows robust bone, with excellent handling properties, in just six weeks. Only from Osteonovus</p>
+		<p>Introducing <strong>NovoGro<sup>&reg;</sup></strong>, a breakthrough bone regeneration biomaterial that grows robust bone, with excellent handling properties, in just six weeks. Only from Osteonovus.</p>
 	</div>
 </section>
 <section id="novogro">
@@ -38,12 +38,12 @@
 		<video id="putty-vid" src="vid/putty.mp4#t=1" autoplay preload="auto" loop poster="/images/putty.jpg">
 		</video>
 		<ul class="vid-nav">
-			<li><a href="#" id="vid1-1">Moldable and cohesive</a></li>
-			<li><a href="#" id="vid1-2">Will not Wash Out</a></li>
-			<li><a href="#" id="vid1-3">Conforms to Graft Site</a></li>
-			<li><a href="#" id="vid1-4">Resists Compression</a></li>
-			<li><a href="#" id="vid1-5">Sticks to Wet Bone</a></li>
-			<li><a href="#" id="vid1-6">No-mess Removal</a></li>
+			<li><a href="#" id="vid1-1">Moldable <br/>and cohesive</a></li>
+			<li><a href="#" id="vid1-2">Will not <br/>Wash Out</a></li>
+			<li><a href="#" id="vid1-3">Conforms to <br/>Graft Site</a></li>
+			<li><a href="#" id="vid1-4">Resists <br/>Compression</a></li>
+			<li><a href="#" id="vid1-5">Sticks to <br/>Wet Bone</a></li>
+			<li><a href="#" id="vid1-6">No-mess <br/>Removal</a></li>
 		</ul>
 	</div>
 	<div id="injectable">

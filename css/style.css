@@ -48,27 +48,24 @@ table {
 	border-spacing: 0;
 }
 /* END RESET */
-
 html,body {
 	background-color: #F6F8FB;
 }
-
-
+html, *, :hover {transition: all 0.2s linear;}
 /*********************** HEADER // NAVIGATION ***********************/
-
 header {
 	background-image: linear-gradient(to right, #1f1d36, #4d4d4d);
 	height: 78px;
-	position: relative;
+	width: 100%;
+	position: fixed;
+	z-index: 101;
 }
-
 header nav {
 	position: absolute;
 	right: 0;
     right: 5vw;
     top: 31px;
 }
-
 header nav a {
 	color: #fff;
 	font-size: 1rem;
@@ -78,7 +75,6 @@ header nav a {
 a.active, a:hover {
 	color: #79EAB9;
 }
-	
 a.logo {
 	display: inline-block;
 	background: url("../images/logo-wordmark.svg") no-repeat;
@@ -88,38 +84,17 @@ a.logo {
 	width: 212px;
 	height: 22px;
 	position: absolute;
-	left: 2vw;
+	left: 4vw;
 	top: 27px;
 }
-
-
-
-
 /**************************** TYPOGRAPHY ****************************/
-
-/*
-font-family: "Forza SSm A", "Forza SSm B";
-font-style: normal;
-font-weight: 300;
-
-font-family: "Forza SSm A", "Forza SSm B";
-font-style: normal;
-font-weight: 400;
-
-*/
-
 html {
 	font-family: "Forza SSm A", "Forza SSm B", Forza, sans-serif;
-	font-family: "Forza SSm A", "Forza SSm B";
 	font-style: normal;
 }
-
 strong {
 	font-weight: 500;
 }
-
-:hover {transition: all 0.2s linear;}
-
 a {
 	font-family: "Forza SSm A", "Forza SSm B", Forza, sans-serif;
 	font-style: normal;
@@ -129,8 +104,6 @@ a {
 	cursor: pointer;
 	transition: all 0.2s linear;
 }
-
-
 h1 {
 	font-family: Georgia;
 	font-size: 4.4vw;
@@ -139,14 +112,12 @@ h1 {
 	font-weight: normal;
 	color: #000000;
 }
-
 h1 strong {
 	font-weight: bold;
 	font-size: 8.8vw;
 	line-height: 8vw;
 	display: block;
 }
-
 p {
 	font-family: "Forza SSm A", "Forza SSm B", Forza, sans-serif;
 	font-size: 1.4vw;
@@ -158,11 +129,9 @@ p {
 	color: #000000;
 }
 /********************** OBJECTS/POSITIONING **************************/
-
 ul li {
 	display: inline-block;
 }
-
 ul.toggle li {
 	display: block;
 }
@@ -173,84 +142,72 @@ ul.toggle li {
 	background-position-x: -2%;
 	background-position-y: -6rem;
 }
-
 progress {
 	display: block;
 	margin: 0 auto;
     position: absolute;
 	bottom: 18%;
-	max-width: 76vw;
-	width: 100%;
+	width: 76vw;
 	left: 50%;
 	margin-left: -38vw;
 	background: #D8E4EE;
 	height: 3px;
+	z-index: 96;
 }
-
 progress::-webkit-progress-bar {
 	background: #D8E4EE;
 }
-
 progress::-webkit-progress-value {
 	background: #7f7cbb; /* Old browsers */
 	background: -moz-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 	background: -webkit-linear-gradient(left, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
 	background: linear-gradient(to right, #7f7cbb 0%,#7fceea 50%,#89cda8 100%); 
 }
-
 progress::-moz-progress-bar {
 	background: #7f7cbb; /* Old browsers */
 	background: -moz-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%); 
 	background: -webkit-linear-gradient(left, #7f7cbb 0%,#7fceea 50%,#89cda8 100%); 
 	background: linear-gradient(to right, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
 }
-
 video {
 	width: 100%;
 	height: auto;
+	position: relative;
 }
-
 .video-gradient {
 	height: 12vw;
 	width: 100%;
-	z-index: 96;
+	z-index: 95;
 	position: absolute;
+	top: -1px;
 	background: -moz-linear-gradient(top, rgba(246,248,251,1) 0%, rgba(246,248,251,0) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, rgba(246,248,251,1) 0%,rgba(246,248,251,0) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, rgba(246,248,251,1) 0%,rgba(246,248,251,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
-
 .vid-nav {
-	/*text-align: center;
-	z-index: 100;
-	padding-left: 2vw;
-	width: 100%;
-	position: relative;
-	margin: 0 auto;*/
 	bottom: 4vw;
 	position: absolute;
 	left: 50%;
-	margin-left: -35vw;
+	margin-left: -45%;
 	display: flex;
 	justify-content: space-around;
-	width: 70vw;
+	width: 90%;
 }
-
 .vid-nav li {
     position: relative;
     text-align: left;
-	max-width: 116px;
+	white-space: nowrap;
+	max-width: 92px;
 }
-
 .vid-nav li:last-child { margin: 0;}
-
 .vid-nav li a {
 	text-align: left;
+	display: block;
 	color: #000;
-	font-size: 16px;
-	line-height: 21px;
+	font-size: 12px;
+	line-height: 19px;
+	letter-spacing: .025rem;
 }
-
 .vid-nav li a::before {
 	content:"";
 	display: inline-block;
@@ -259,41 +216,24 @@ video {
 	position: absolute;
 	left: -46px;
 	background-size: contain;
-	background-repeat: no-repeat;
 }
-
 .vid-nav li a#vid1-1::before {
 	width: 37px;
-	height: 24px;
-	background: url("../images/moldable_icon.svg");
+	background: url("../images/moldable_icon.svg") no-repeat;
 }
-
 .vid-nav li a#vid1-2::before {
-	width: 33px;
-	height: 26px;
 	background: url("../images/wash_icon.svg") no-repeat;
 }
-
 .vid-nav li a#vid1-3::before {
-	width: 33px;
-	height: 27px;
 	background: url("../images/conform_icon.svg") no-repeat;
 }
-
 .vid-nav li a#vid1-4::before {
-	width: 33px;
-	height: 30px;
 	background: url("../images/compress_icon.svg") no-repeat;
 }
-
 .vid-nav li a#vid1-5::before {
-	width: 33px;
-	height: 30px;
 	background: url("../images/wet_icon.svg") no-repeat;
 }
-
 .vid-nav li a#vid1-6::before {
-	width: 33px;
 	height: 36px;
 	background: url("../images/no_mess_icon.svg") no-repeat;
 }
@@ -301,17 +241,13 @@ video {
 /********************* HOME *********************/
 #intro {
 	position: relative;
-	padding: 6vw 0 12vw 12vw ;
+	padding: 12vw 0 8vw 12vw ;
 }
-
 #intro h1 {
 	white-space: nowrap;
-
 }
-	
 #intro h1 strong {
 }
-	
 #intro p {
 	position: relative;
 	left: 34vw;
@@ -325,44 +261,38 @@ video {
 	width: 100%;
 	overflow: hidden;
 }
-
-
 .novogro {
 	position: absolute;
-	top:10vw; 
+	top:6vw; 
 	left:8vw;
 	font-size: 0px;
 	line-height: 0px;
 	display: inline-block;
 	background: url("../images/novogro.svg") no-repeat;
 	background-size: contain;
-	width:30vw;
-	height:14vw;
+	width:40%;
+	height:24%;
 	z-index:99;
 }
-
 .toggle {
 	position: absolute;
 	z-index: 2;
-	left: 16.8vw;
-	top: 24vw;
-	font-size: 2rem;
-	line-height: 4rem;
+	left: 19.8vw;
+	top: 22vw;
+	font-size: 2vw;
+	line-height: 4vw;
 }
-
 .toggle a {
 	text-transform: none;
 	text-decoration: underline;
 	color: #2e2d38;
 	opacity: 0.5;
 }
-
 .toggle a.active, .toggle a:hover {
 	opacity: 1;
 	color: #000;
 	text-decoration: none;
 }
-
 .toggle a.active::before {
 	content:"";
 	display: inline-block;
@@ -375,7 +305,6 @@ video {
 #putty {
 	position: relative;
 }
-
 #injectable {
 	display: none;
 }
@@ -387,7 +316,6 @@ video {
 	text-align: center;
 	margin-top: -3px;
 }
-
 #attributes ul {
 	width: 60%;
 	margin: 0 auto;
@@ -397,7 +325,6 @@ video {
 	text-transform: uppercase;
 	letter-spacing: 0.4px;
 }
-
 #attributes ul li:before {
 	content:"";
 	display: block;
@@ -407,7 +334,6 @@ video {
 	background-repeat: no-repeat;
 	background-size: contain;
 }
-
 #zero-exotherm:before {
 	background: url("../images/exotherm_icon.svg");
 }
@@ -417,15 +343,12 @@ video {
 #weeks:before {
 	background: url("../images/growth_icon.svg");
 }		
-
 #zoom .toggle {
 	top: 16vw;
 }
-
 .zoom-nav {
 	position: absolute;
 }
-
 .zoom-nav li {
 	display: block;
 	width: 4vw;
@@ -438,7 +361,6 @@ video {
 	background: linear-gradient(to right, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
 	padding: .25vw;
 }
-
 .zoom-nav li a {
 	display: block;
 	width: 3vw;
@@ -450,7 +372,6 @@ video {
     padding-top: 26px;
     font-size: 1.2rem;
 }
-
 .zoom-image-container {
 	position: absolute;
 	position: relative;
@@ -464,7 +385,6 @@ video {
 	background: -webkit-linear-gradient(left, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
 	background: linear-gradient(to right, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
 }
-
 .zoom-image-container .images {
 	background: #fff;
 	width: 36vw;
@@ -474,7 +394,6 @@ video {
 	position: relative;
 	top: 6vw;
 }
-
 .zoom-image-container .images .image {
 	width: 32vw;
 	height: 32vw;
@@ -487,57 +406,105 @@ video {
 	background-position: center center;
 	background-size: 112%;
 }
-
 #histology .images .first {
 	background-image: url("../images/h010x.jpg");
 }
-
 /******************************* TEAM *******************************/
 /**************************** CONTACT *******************************/
 /*************************** MEDIA QUERIES **************************/
 @media screen and (max-width: 1024px) {
     #intro {
-    	padding: 8vw 0 8vw 12vw;
+    	padding: 14vw 0 8vw 8vw;
     }
 	#intro h1 {
-		font-size: 6.4vw;
-		line-height: 6.87vw;
+		font-size: 7.4vw;
+		line-height: 7.87vw;
 	}
 	#intro h1 strong {
-		font-size: 10.8vw;
-		line-height: 10vw;
+		font-size: 11.8vw;
+		line-height: 11vw;
 	}
 	#intro p {
     	left: 0vw;
 		top: 4vh;
-		max-width: 70vw;
-		font-size:2.4vw;
+		max-width: 60vw;
+		font-size:2vw;
+    }
+	.novogro {
+		width: 40%;
+		height: 25%;
+	}
+	progress {
+		bottom: 25%;
+		width: 90vw;
+		left: 44%;
+	}
+	video {
+		width: 120%;
+		margin-left: -20%;
+	}
+	.vid-nav {
+		bottom: 2.5vw;
+	}
+	.vid-nav li a {
+		font-size: 12px;
+		line-height: 19px;
+		letter-spacing: .025rem;
+	}
+	.vid-nav li a::before {
+		display: block;
+		width: 30px;
+		height: 30px;
+		position: relative;
+		left: 0;
+		top: -6px;
+		background-size: contain;
+	}
+}
+@media screen and (max-width: 768px) {
+    #intro {
+    	padding: 20vw 0 8vw 12vw;
     }
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 600px) {
 	a.logo {
 		background: url("../images/mark-full.svg") no-repeat;
 		background-size: contain;
-		left: 4vw;
-		top: 18px;
-		height: 40px;
-		width: 54px;
+		height: 30px;
+		width: 44px;
+		top: 14px;	
 	}
+	header { height: 58px;}
+	header nav { top: 21px;}
 	header nav a {
 		font-size: .8rem;
 		margin-left: 1.5rem;
 	}
-}
-
-@media screen and (max-width: 399px) {
-	a.logo {
-		top: 18px;
-		height: 30px;
-		width: 44px;
-		top: 24px;	
+    #intro {
+    	padding: 34vw 0 8vw 12vw;
+    }
+	#intro p {
+		max-width: 80vw;
 	}
+}
+@media screen and (max-width: 460px) {
 	header nav a {
 		font-size: .8rem;
 		margin-left: .8rem;
+	}
+	#intro h1 {
+	    font-size: 10vw;
+	    line-height: 10vw;
+	}
+	#intro h1 strong {
+	    font-size: 17vw;
+	    line-height: 17vw;
+	}	
+	#intro p {
+		font-size: 4vw;
+	}
+	.novogro {
+		width: 75%;
+		height: 50%;
 	}
 }
