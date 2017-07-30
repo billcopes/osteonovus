@@ -270,14 +270,14 @@ video {
 	display: inline-block;
 	background: url("../images/novogro.svg") no-repeat;
 	background-size: contain;
-	width:40%;
+	width:38%;
 	height:24%;
 	z-index:99;
 }
 .toggle {
 	position: absolute;
 	z-index: 2;
-	left: 19.8vw;
+	left: 19vw;
 	top: 22vw;
 	font-size: 2vw;
 	line-height: 4vw;
@@ -415,6 +415,7 @@ video {
 @media screen and (max-width: 1024px) {
     #intro {
     	padding: 14vw 0 8vw 8vw;
+		padding: 16vw 0 8vw 80px;
     }
 	#intro h1 {
 		font-size: 7.4vw;
@@ -427,15 +428,20 @@ video {
 	#intro p {
     	left: 0vw;
 		top: 4vh;
-		max-width: 60vw;
+		max-width: 62vw;
 		font-size:2vw;
+		padding: 4vw 0 0 .9vw;
     }
 	.novogro {
-		width: 40%;
+		width: 42%;
 		height: 25%;
+		left: 60px;
+	}
+	.toggle {
+		left: 180px;
 	}
 	progress {
-		bottom: 25%;
+		bottom: 22%;
 		width: 90vw;
 		left: 44%;
 	}
@@ -463,8 +469,30 @@ video {
 }
 @media screen and (max-width: 768px) {
     #intro {
-    	padding: 20vw 0 8vw 12vw;
+    	padding: 22vw 0 10vw 18vw;
+		padding: 160px 0 10vw 110px;
     }
+	.novogro {
+		left: 28px;
+		width: 50%;
+	}
+	progress {
+		bottom: 26%;
+	}
+	.toggle {
+		top: 26vw;
+		left: 18.2vw;
+		font-size: 1rem;
+		line-height: 1.75rem;
+	}
+	.vid-nav {
+		bottom: 3.5vw;
+	}
+	#intro p {
+		font-size: 2.5vw;
+		padding: 2vw 0 0 .9vw;
+		padding: 0;
+	}
 }
 @media screen and (max-width: 600px) {
 	a.logo {
@@ -474,6 +502,7 @@ video {
 		width: 44px;
 		top: 14px;	
 	}
+	.logomark { background-position-y: -3rem;}
 	header { height: 58px;}
 	header nav { top: 21px;}
 	header nav a {
@@ -481,11 +510,8 @@ video {
 		margin-left: 1.5rem;
 	}
     #intro {
-    	padding: 34vw 0 8vw 12vw;
+    	padding: 120px 0 8vw 12vw;
     }
-	#intro p {
-		max-width: 80vw;
-	}
 }
 @media screen and (max-width: 460px) {
 	header nav a {
@@ -501,10 +527,16 @@ video {
 	    line-height: 17vw;
 	}	
 	#intro p {
-		font-size: 4vw;
+		font-size: 3.6vw;
+		max-width: 82vw;
+		padding: 0 0 12vw;
 	}
 	.novogro {
-		width: 75%;
-		height: 50%;
+		left: 44px;
+		top: 0;
+	}
+	video {
+		width: 180%;
+		margin-left: -60%;
 	}
 }

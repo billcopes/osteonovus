@@ -35,7 +35,7 @@
 	<div class="video-gradient"></div>
 	<div id="putty">
 		<progress id='p' max='100' value='0'></progress>
-		<video id="putty-vid" src="vid/putty.mp4#t=1" autoplay preload="auto" loop poster="/images/putty.jpg">
+		<video id="putty-vid" src="vid/putty.mp4#t=1" autoplay preload="auto"> <!--loop poster="/images/putty.jpg"-->
 		</video>
 		<ul class="vid-nav">
 			<li><a href="#" id="vid1-1">Moldable <br/>and cohesive</a></li>
