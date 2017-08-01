@@ -1,59 +1,95 @@
-var video = document.getElementById('putty-vid');
+var pvideo = document.getElementById('putty-vid');
 var pBar = document.getElementById('p');
-
-
-video.addEventListener('timeupdate', function() {
-  var percent = Math.floor((100 / video.duration) * video.currentTime);
+pvideo.addEventListener('timeupdate', function() {
+  var percent = Math.floor((100 / pvideo.duration) * pvideo.currentTime);
   pBar.value = percent;
-  /*pBar.getElementsByTagName('span')[0].innerHTML = percent;*/
 }, false);
-
-
-jumplink1 = document.getElementById('vid1-1');
-jumplink2 = document.getElementById('vid1-2');
-jumplink3 = document.getElementById('vid1-3');
-jumplink4 = document.getElementById('vid1-4');
-jumplink5 = document.getElementById('vid1-5');
-jumplink6 = document.getElementById('vid1-6');
-
-
-jumplink1.addEventListener("click", function (event) {
+puttynav1 = document.getElementById('vid1-1');
+puttynav2 = document.getElementById('vid1-2');
+puttynav3 = document.getElementById('vid1-3');
+puttynav4 = document.getElementById('vid1-4');
+puttynav5 = document.getElementById('vid1-5');
+puttynav6 = document.getElementById('vid1-6');
+puttynav1.addEventListener("click", function (event) {
     event.preventDefault();
-    video.currentTime = 2;
-    video.play();
+    pvideo.currentTime = 2;
+    pvideo.play();
 	return false;
 }, false);
 
-jumplink2.addEventListener("click", function (event) {
+puttynav2.addEventListener("click", function (event) {
     event.preventDefault();
-    video.currentTime = 32;
-    video.play();
+    pvideo.currentTime = 32;
+    pvideo.play();
 	return false;
 }, false);
 
-jumplink3.addEventListener("click", function (event) {
+puttynav3.addEventListener("click", function (event) {
     event.preventDefault();
-    video.currentTime = 43;
-    video.play();
+    pvideo.currentTime = 43;
+    pvideo.play();
 	return false;
 }, false);
 
-jumplink4.addEventListener("click", function (event) {
+puttynav4.addEventListener("click", function (event) {
     event.preventDefault();
-    video.currentTime = 54;
-    video.play();
+    pvideo.currentTime = 54;
+    pvideo.play();
 	return false;
 }, false);
 
-jumplink5.addEventListener("click", function (event) {
+puttynav5.addEventListener("click", function (event) {
     event.preventDefault();
-    video.currentTime = 72;
-    video.play();
+    pvideo.currentTime = 72;
+    pvideo.play();
 	return false;
 }, false);
-jumplink6.addEventListener("click", function (event) {
+puttynav6.addEventListener("click", function (event) {
     event.preventDefault();
-    video.currentTime = 83;
-    video.play();
+    pvideo.currentTime = 83;
+    pvideo.play();
 	return false;
 }, false);
+
+/******************************************************************************/
+
+var ivideo = document.getElementById('injectable-vid');
+var iBar = document.getElementById('i');
+ivideo.addEventListener('timeupdate', function() {
+  var percent = Math.floor((100 / ivideo.duration) * ivideo.currentTime);
+  iBar.value = percent;
+}, false);
+injectnav1 = document.getElementById('vid2-1');
+injectnav2 = document.getElementById('vid2-2');
+injectnav3 = document.getElementById('vid2-3');
+injectnav4 = document.getElementById('vid2-4');
+
+injectnav1.addEventListener("click", function (event) {
+    event.preventDefault();
+    ivideo.currentTime = 4;
+    ivideo.play();
+	return false;
+}, false);
+
+injectnav2.addEventListener("click", function (event) {
+    event.preventDefault();
+    ivideo.currentTime = 30;
+    ivideo.play();
+	return false;
+}, false);
+
+injectnav3.addEventListener("click", function (event) {
+    event.preventDefault();
+    ivideo.currentTime = 58;
+    ivideo.play();
+	return false;
+}, false);
+
+injectnav4.addEventListener("click", function (event) {
+    event.preventDefault();
+    ivideo.currentTime = 70;
+    ivideo.play();
+	return false;
+}, false);
+
+

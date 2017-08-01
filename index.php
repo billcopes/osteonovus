@@ -29,16 +29,16 @@
 <section id="novogro">
 	<h2 class="novogro">Novgro <span>Moldable Bone Substitute</span></h2>
 	<ul class="toggle">
-		<li><a href="#" class="active">Putty</a></li>
-		<li><a href="#" class="">Injectable</a></li>
+		<li><a href="#" class="" data-toggle="#putty">Putty</a></li>
+		<li><a href="#" class="" data-toggle="#injectable">Injectable</a></li>
 	</ul>
 	<div class="video-gradient"></div>
 	<article id="putty">
 		<progress id='p' max='100' value='0'></progress>
-		<video id="putty-vid" src="vid/putty.mp4#t=1" autoplay preload="auto" loop> <!-- poster="/images/putty.jpg"-->
+		<video id="putty-vid" autoplay preload="auto" loop>
+			 <source src="vid/putty.mp4" type="video/mp4">  <!-- poster="/images/putty.jpg"-->
+			 <!--source src="vid/putty-mobile.mp4#t=1" type="video/mp4" media="all and (max-width: 768px)"--> 
 		</video>
-		<div class="mobile-video-nav">
-			<button class="vid-nav-button">Features</button>
 			<ul class="vid-nav putty">
 				<li><a href="#" id="vid1-1">Moldable <br/>and cohesive</a></li>
 				<li><a href="#" id="vid1-2">Will not <br/>Wash Out</a></li>
@@ -47,21 +47,23 @@
 				<li><a href="#" id="vid1-5">Sticks to <br/>Wet Bone</a></li>
 				<li><a href="#" id="vid1-6">No-mess <br/>Removal</a></li>
 			</ul>
-		</div>
 	</article>
 	<article id="injectable">
-		<progress></progress>
-		<ul class="vid-nav">
-			<li><a href="#">Moldable and cohesive</a></li>
-			<li><a href="#">Will not Wash Out</a></li>
-			<li><a href="#">Conforms to Graft Site</a></li>
-			<li><a href="#">Resists Compression</a></li>
-			<li><a href="#">Sticks to Wet Bone</a></li>
-			<li><a href="#">No-mess Removal</a></li>
-		</ul>
+		<progress id='i' max='100' value='0'></progress>
+		<video id="injectable-vid" autoplay preload="auto" loop>
+			 <source src="vid/injectable.mp4" type="video/mp4">  <!-- poster="/images/putty.jpg"-->
+			 <!--source src="vid/injectable-mobile.mp4#t=1" type="video/mp4" media="all and (max-width: 768px)"--> 
+		</video>
+			<ul class="vid-nav injectable">
+				<li><a href="#" id="vid2-1">Injectable <br/>for 10 minutes</a></li>
+				<li><a href="#" id="vid2-2">Will not <br/>Wash Out</a></li>
+				<li><a href="#" id="vid2-3">Conforms<br/>to Bone</a></li>
+				<li><a href="#" id="vid2-4">Sets hard in <br/>20 minutes</a></li>
+			</ul>
 	</article>
 </section>
 <section id="attributes">
+	<h3>Let's put a statement here  that says what these bullets are</h3>
 	<ul>
 		<li id="zero-exotherm">zero exotherm</li>
 		<li id="ph-neutral">PH NEUTRAL</li>
@@ -109,21 +111,32 @@
 		
 	</article>
 </section>
+<footer>
+	<div>
+		<h4>Want to know more?</h4>
+		<p>Quisque fringilla diam a magna imperdiet, sed aliquet arcu molestie.<p>
+		<a href="mailto:hello@osteonovus.com">hello@osteonovus.com</a>
+		<p>* only available by prescription</p>	
+	</div>
+	<div></div>
+</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="js/scripts.js"></script>
 	<script>
-	$( ".vid-nav a" ).click(function( event ) {
-	  event.preventDefault();
-	});
-	$( ".vid-nav-button" ).click(function() {
-	  $( ".vid-nav" ).toggle( "slow", function() {
-	  });
-	});
-	$( ".vid-nav a" ).click(function() {
-	  $( ".vid-nav" ).toggle( "slow", function() {
-	
-	  });
-	});
+		$( ".vid-nav a" ).click(function( event ) {
+			event.preventDefault();
+		});	
+		
+		$("#novogro a[data-toggle]").on("click", function(e) {
+		  e.preventDefault();  // prevent navigating
+		  var selector = $(this).data("toggle");  // get corresponding selector from data-toggle
+		  $("#novogro article").hide();
+		  $(selector).show();
+		});
+		
+		/*$("a[data-toggle]").click(function(){
+		    $("a[data-toggle]").toggleClass("active");
+		});*/
 	</script>
 </body>
 </html>
