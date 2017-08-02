@@ -92,9 +92,9 @@
 		</div>
 		<div class="zoom-image-container">
 			<ul class="zoom-nav">
-				<li><a href="#" class="first selected">10x</a></li>
-				<li><a href="#" class="second">25x</a></li>
-				<li><a href="#" class="third">40x</a></li>
+				<li class="first selected"><a href="#">10x</a></li>
+				<li class="second"><a href="#">25x</a></li>
+				<li class="third"><a href="#">40x</a></li>
 			</ul>
 			<div class="images">
 				<div class="image first"></div>
