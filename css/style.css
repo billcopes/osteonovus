@@ -294,7 +294,9 @@ video {
 	left: 19vw;
 	top: 22vw;
 	font-size: 2vw;
+	font-size: 2rem;
 	line-height: 4vw;
+	line-height: 4rem;
 }
 .toggle a {
 	text-transform: none;
@@ -363,7 +365,7 @@ video {
 }
 
 #zoom {
-	padding: 4rem 0 8rem;
+	padding: 6rem 0;
 }
 		
 #zoom .toggle {
@@ -433,10 +435,27 @@ video {
 
 .zoom-text-container {
 	position: absolute;
-	border: solid 1px red;
 	left: 19vw;
 	top: 24vw;
-	max-width: 500px;
+	max-width: 300px;
+	
+}
+.zoom-text-container h2 {
+	font-size: 5rem;
+	font-weight: 200;
+}
+.zoom-text-container h2 span {
+	font-size: 1.5rem;
+	display: block;
+}
+
+.zoom-text-container p {
+	font-size: 22px;
+	margin: 2rem 0;
+}
+
+#twenty-five, #fourty {
+	display: none;
 }
 
 #histology .images .first {
