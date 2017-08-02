@@ -16,8 +16,8 @@
 	<a href="index.php" class="logo">>OsteoNovus</a>
 	<nav>
 		<a href="#" class="active">Novogro<sup>&reg;</sup></a>
-		<a href="#">Team</a>
-		<a href="#">Contact</a>
+		<a href="team.php">Team</a>
+		<a href="contact.php">Contact</a>
 	</nav>
 </header>
 <section id="intro" class="logomark">
@@ -112,13 +112,30 @@
 	</article>
 </section>
 <footer>
-	<div>
-		<h4>Want to know more?</h4>
-		<p>Quisque fringilla diam a magna imperdiet, sed aliquet arcu molestie.<p>
-		<a href="mailto:hello@osteonovus.com">hello@osteonovus.com</a>
-		<p>* only available by prescription</p>	
+	<div class="section-one">
+		<div class="left">
+			<h2>Want to know more?</h2>
+			<p>Quisque fringilla diam a magna imperdiet, sed aliquet arcu molestie.<p>
+			<a href="mailto:hello@osteonovus.com" class="mailto">hello@osteonovus.com</a>
+		</div>
+		<div class="right">
+			<p class="footnote">* only available by prescription</p>	
+		</div>
 	</div>
-	<div></div>
+	<div class="section-two">
+		<div class="left">
+			<a href="index.php" class="logo">>OsteoNovus</a>
+			<p class="legal">The statements made on this website have not been evaluated by the FDA. All statements are supported by internally derived data or from peer-reviewed research.</p>
+			<nav>
+				<a href="index.php">Novogro<sup>&reg;</sup></a>
+				<a href="team.php">Team</a>
+				<a href="contact.php">Contact</a>
+			</nav>
+		</div>
+		<div class="right ut">
+			<p>The science behind our products is the result of over 3 years of clinical research at the University of Toledo.</p>
+		</div>
+	</div>
 </footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="js/scripts.js"></script>

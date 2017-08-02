@@ -66,7 +66,7 @@ header nav {
     right: 5vw;
     top: 31px;
 }
-header nav a {
+header nav a, footer nav a {
 	color: #fff;
 	font-size: 1rem;
 	letter-spacing: .07rem;
@@ -250,17 +250,7 @@ video {
 	height: 36px;
 	background: url("../images/no_mess_icon.svg") no-repeat;
 }
-/********************* FOOTER *********************/
 
-footer {
-	color: #fff;
-	background: #2E2D39 url("../images/pattern.svg");
-	background-size: 25%;
-}
-
-footer p {
-	color: #fff;
-}
 
 /********************* HOME *********************/
 #intro {
@@ -441,13 +431,98 @@ footer p {
 	background-image: url("../images/h010x.jpg");
 }
 
-/******************************* TEAM *******************************/
-/**************************** CONTACT *******************************/
-/*************************** MEDIA QUERIES **************************/
+/******************************* TEAM ******************************/
+/**************************** CONTACT ******************************/
+/**************************** FOOTER *******************************/
+
+footer {
+	padding: 8rem 8rem 4rem;
+	background: #2E2D39 url("../images/pattern.svg");
+	background-size: 25%;
+	color: #fff;
+}
+
+footer nav a:first-child {
+	margin: 0;
+}
+
+footer p {
+	color: #fff;
+	font-size: 22px;
+}
+
+footer h2 {
+	font-family: "Georgia", serif;
+	font-size: 3.6rem;
+	margin-bottom: 3rem;
+	white-space: nowrap;
+}
+.footnote {
+	text-align: right;
+	margin: 0 3.25rem 0 0;
+}
+
+footer a.logo {
+	position: static;
+}
+
+footer .left p {
+	max-width: 500px;
+}
+
+footer .section-two {
+	padding-top: 12rem;
+}
+
+p.legal {
+	font-size: 13px;
+	margin: 1.6rem 0 2rem;
+}
+
+.ut p {
+	font-size: 14px;
+    float: right;
+    max-width: 400px;
+}
+
+.ut p:before {
+	content:"";
+	float: left;
+	background: url("../images/ut.png") no-repeat;
+	background-size: contain;
+	width: 51px;
+	height: 55px;
+	margin: .6rem 2rem 0 0;
+}
+
+.left, .right {
+	display: inline-block;
+	width: 49.3%;
+}
+.mailto {
+	color: #79EAB9;
+	text-transform: none;
+	font-family: "Georgia";
+	font-size: 32px;
+	display: block;
+	margin: 2rem 0 0;
+}
+
+
+
+/********************* FOOTER *********************/
+
+
+
+
+/*************************** MEDIA QUERIES *************************/
 @media screen and (max-width: 1480px) {
 	.vid-nav li a {
 		font-size: 1rem;
 		line-height: 1.4rem;
+	}
+	footer {
+		padding: 8rem 6rem 4rem;
 	}
 }
 @media screen and (max-width: 1200px) {
@@ -461,6 +536,9 @@ footer p {
 	.toggle {
 		font-size: 24px;
 		line-height: 40px;
+	}
+	footer {
+		padding: 6rem 4rem 4rem;
 	}
 }
 @media screen and (max-width: 1024px) {
@@ -519,6 +597,28 @@ footer p {
 	}
 	
 }
+@media screen and (max-width: 980px) {
+	footer .section-two {
+		padding-top: 6rem;
+	}
+	.section-one .left,
+	.section-one .right,
+	.section-two .left,
+	.section-two .right {
+		width: 100%;
+	} 
+	.footnote {
+		text-align: left;
+		margin: 4rem 0 0;
+	}
+	.ut p {
+		float: none;
+		margin-top: 6rem;
+	}
+	.footnote {
+		margin: 1rem 0 0;
+	}	
+}
 @media screen and (max-width: 768px) {
     #intro {
     	padding: 22vw 0 10vw 18vw;
@@ -560,7 +660,12 @@ footer p {
 	}
 	#attributes ul li:last-child {
 		margin-bottom: 0;
-	}		
+	}
+	footer h2 {
+		font-size: 3rem;
+		white-space: normal;
+	}
+		
 }
 @media screen and (max-width: 600px) {
 	/*************** Mobile Video Nav ***************/
@@ -599,7 +704,7 @@ footer p {
 	
 	.vid-nav li br { display: none;}
 
-	a.logo {
+	header a.logo {
 		background: url("../images/mark-full.svg") no-repeat;
 		background-size: contain;
 		background-position: center center;
@@ -633,6 +738,11 @@ footer p {
 	#attributes ul li:last-child {
 		margin-bottom: 0;
 	}
+	footer {padding: 4rem 3rem 2rem;}
+	footer h2 {
+		margin-bottom: 1rem;
+	}
+	.mailto {margin: 1rem 0 0;}
 }
 
 
@@ -662,9 +772,16 @@ footer p {
 		width: 180%;
 		margin-left: -60%;
 	}
+	footer h2 { font-size: 2rem;}
+	footer p { font-size: 18px;}
+	.mailto {font-size: 22px;}
+	.ut p:before {
+		margin-bottom: 4rem;
+	}
 }
 @media screen and (max-width: 420px) {
 	progress { top: 48%;}
+	
 }
 @media screen and (max-width: 400px) {
 	.novogro {
