@@ -29,7 +29,7 @@
 <section id="novogro">
 	<h2 class="novogro">Novgro <span>Moldable Bone Substitute</span></h2>
 	<ul class="toggle">
-		<li><a href="#" class="" data-toggle="#putty">Putty</a></li>
+		<li><a href="#" class="active" data-toggle="#putty">Putty</a></li>
 		<li><a href="#" class="" data-toggle="#injectable">Injectable</a></li>
 	</ul>
 	<div class="video-gradient"></div>
@@ -72,8 +72,8 @@
 </section>
 <section id="zoom">
 	<ul class="toggle">
-		<li><a href="#" class="active">Histology</a></li>
-		<li><a href="#" class="">&mu;CT</a></li>
+		<li><a href="#" class="active" data-toggle="#histology">Histology</a></li>
+		<li><a href="#" class=""data-toggle="#ct">&mu;CT</a></li>
 	</ul>
 	<article id="histology">
 		<div class="zoom-text-container">
@@ -92,23 +92,44 @@
 		</div>
 		<div class="zoom-image-container">
 			<ul class="zoom-nav">
-				<li class="first selected"><a href="#">10x</a></li>
-				<li class="second"><a href="#">25x</a></li>
-				<li class="third"><a href="#">40x</a></li>
+				<li><a href="#" class="first selected">10x</a></li>
+				<li><a href="#" class="second">25x</a></li>
+				<li><a href="#" class="third">40x</a></li>
 			</ul>
 			<div class="images">
 				<div class="image first"></div>
-				<!--div class="image second">
-					<img src="images/" alt=""/>
-				</div>
-				<div class="image third">
-					<img src="images/" alt=""/>
-				</div-->
+				<div class="image second"></div>
+				<div class="image third"></div-->
 			</div>
 		</div>
 	</article>
 	<article id="ct">
-		
+		<div class="zoom-text-container">
+			<div id="" class="zoom-text">
+				<h2>555x<span>Lorem</span></h2>
+				<p>Ipsum dolor sit amet consecteeteur</p>
+			</div>
+			<div id="" class="zoom-text">
+				<h2>666x<span>Lorem</span></h2>
+				<p>Ipsum dolor sit amet consecteeteur</p>
+			</div>
+			<div id="" class="zoom-text">
+				<h2>777x<span>Lorem</span></h2>
+				<p>Ipsum dolor sit amet consecteeteur</p>
+			</div>
+		</div>
+		<div class="zoom-image-container">
+			<ul class="zoom-nav">
+				<li><a href="#" class="first selected"></a></li>
+				<li><a href="#" class="second"></a></li>
+				<li><a href="#" class="third"></a></li>
+			</ul>
+			<div class="images">
+				<div class="image first"></div>
+				<div class="image second"></div>
+				<div class="image third"></div-->
+			</div>
+		</div>
 	</article>
 </section>
 <footer>
@@ -142,15 +163,24 @@
 	<script>
 		$( ".vid-nav a" ).click(function( event ) {
 			event.preventDefault();
-		});	
-		
+		});			
 		$("#novogro a[data-toggle]").on("click", function(e) {
 		  e.preventDefault();  // prevent navigating
 		  var selector = $(this).data("toggle");  // get corresponding selector from data-toggle
 		  $("#novogro article").hide();
 		  $(selector).show();
+		  /*if ($(this).hasClass("active")) {
+		  		$(this).removeClass("active");
+			} else {
+				$(this).addClass("active");
+		  }*/
 		});
-		
+		$("#zoom a[data-toggle]").on("click", function(e) {
+		  e.preventDefault();  // prevent navigating
+		  var selector = $(this).data("toggle");  // get corresponding selector from data-toggle
+		  $("#zoom article").hide();
+		  $(selector).show();
+		});		
 		/*$("a[data-toggle]").click(function(){
 		    $("a[data-toggle]").toggleClass("active");
 		});*/

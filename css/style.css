@@ -270,7 +270,7 @@ video {
 	font-size: 1.4vw;
 }
 
-#novogro, #zoom, #histology{
+#novogro, #zoom{
 	position: relative;
 	width: 100%;
 	overflow: hidden;
@@ -362,10 +362,12 @@ video {
 	background: url("../images/growth_icon.svg");
 }
 
-#zoom { padding: 0 0 8rem 4rem;}
+#zoom {
+	padding: 4rem 0 8rem;
+}
 		
 #zoom .toggle {
-	top: 16vw;
+	top: 12vw;
 }
 .zoom-nav {
 	position: absolute;
@@ -397,8 +399,8 @@ video {
 	position: absolute;
 	position: relative;
 	float: right;
-	width: 48vw;
-	height: 48vw;
+	width: 44vw;
+	height: 44vw;
 	margin-right: -3vw;
 	border-radius: 100%;
 	background: #7f7cbb; /* Old browsers */
@@ -413,7 +415,7 @@ video {
 	border-radius: 100%;
 	margin: 0 auto;
 	position: relative;
-	top: 6vw;
+	top: 4vw;
 }
 .zoom-image-container .images .image {
 	width: 32vw;
@@ -421,15 +423,47 @@ video {
 	margin: 0 auto;
 	border: solid 3px #88CDAF;
     border-radius: 100%;
-    position: relative;
+    position: absolute;
     top: 2vw;
+	left: 2vw;
 	overflow: hidden;
 	background-position: center center;
 	background-size: 112%;
 }
+
+.zoom-text-container {
+	position: absolute;
+	border: solid 1px red;
+	left: 19vw;
+	top: 24vw;
+	max-width: 500px;
+}
+
 #histology .images .first {
 	background-image: url("../images/h010x.jpg");
 }
+#histology .images .second {
+	background-image: url("../images/h025x.jpg");
+	background-color: red;
+	opacity: 0;
+}
+#histology .images .third {
+	background-image: url("../images/h025x.jpg");
+	background-color: blue;
+	opacity: 0;
+}
+
+#ct {
+	display: none;
+}
+
+#ct .zoom-image-container {
+	background: #7f7cbb; /* Old browsers */
+	background: -moz-linear-gradient(left, #7f7cbb -10%, #7fceea 60%, #89cda8 120%);
+	background: -webkit-linear-gradient(left, #7f7cbb -10%,#7fceea 60%,#89cda8 120%);
+	background: linear-gradient(to right, #7f7cbb -10%,#7fceea 60%,#89cda8 120%);
+}
+
 
 /******************************* TEAM ******************************/
 /**************************** CONTACT ******************************/
@@ -507,11 +541,6 @@ p.legal {
 	display: block;
 	margin: 2rem 0 0;
 }
-
-
-
-/********************* FOOTER *********************/
-
 
 
 
