@@ -739,7 +739,7 @@ p.legal {
 }
 @media screen and (max-width: 600px) {
 	/*************** Mobile Video Nav ***************/
-
+	
 	progress {
 		bottom: initial;
 		top: 58%;
@@ -792,6 +792,7 @@ p.legal {
     #intro {
     	padding: 120px 0 8vw 12vw;
     }
+	#attributes { padding: 4rem 2rem;}
 	#attributes h3 {
 		margin: 0 auto;
 		padding: 0;
@@ -842,11 +843,15 @@ p.legal {
 		width: 180%;
 		margin-left: -60%;
 	}
+	footer {padding: 4rem 2rem 2rem;}
 	footer h2 { font-size: 2rem;}
 	footer p { font-size: 18px;}
+	footer nav a{ font-size: 12px;	}
 	.mailto {font-size: 22px;}
 	.ut p:before {
-		margin-bottom: 4rem;
+		display: block;
+		float: none;
+		margin-bottom: 1rem;
 	}
 }
 @media screen and (max-width: 420px) {
