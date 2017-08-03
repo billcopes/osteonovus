@@ -303,11 +303,13 @@ video {
 	text-decoration: underline;
 	color: #2e2d38;
 	opacity: 0.5;
+	transition: all 0.5s ease;
 }
 .toggle a.active, .toggle a:hover {
 	opacity: 1;
 	color: #000;
 	text-decoration: none;
+	transition: all 0.5s ease;
 }
 .toggle a.active::before {
 	content:"";
@@ -315,11 +317,11 @@ video {
 	background: url("../images/arrow.svg") no-repeat;
 	width: 1rem;
 	height: .8rem;
-	
 	width: 2vw;
 	height: 1.4vw;
 	background-size: contain;
 	margin-right: .6vw;	
+	transition: all 0.5s ease;
 }
 #putty {
 	position: relative;
@@ -476,9 +478,12 @@ video {
 	margin: 2rem 0;
 }
 
-#twenty-five, #fourty {
-	display: none;
+.zoom-text {
+	position: absolute;
+	top: 0;
+	width: 300px;
 }
+
 
 #histology .images .first {
 	background-image: url("../images/h010x.jpg");
@@ -486,12 +491,19 @@ video {
 #histology .images .second {
 	background-image: url("../images/h025x.jpg");
 	background-color: red;
-	opacity: 0;
 }
 #histology .images .third {
 	background-image: url("../images/h025x.jpg");
 	background-color: blue;
+}
+
+.hidden {
 	opacity: 0;
+	transform: scale(0);
+}
+.visible {
+	opacity: 1;
+	transform: scale(1);
 }
 
 #ct {

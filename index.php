@@ -77,15 +77,15 @@
 	</ul>
 	<article id="histology">
 		<div class="zoom-text-container">
-			<div id="ten" class="zoom-text">
+			<div id="ten" class="zoom-text first visible">
 				<h2>10x<span>Histology</span></h2>
 				<p>NovoGro Putty in a Rabbit Distal Femoral Condyle at 6 weeks post-op.</p>
 			</div>
-			<div id="twenty-five" class="zoom-text">
+			<div id="twenty-five" class="zoom-text second hidden">
 				<h2>25x<span>Histology</span></h2>
 				<p>NovoGro Putty in a Rabbit Distal Femoral Condyle at 6 weeks post-op.</p>
 			</div>
-			<div id="fourty" class="zoom-text">
+			<div id="fourty" class="zoom-text third hidden">
 				<h2>40x<span>Histology</span></h2>
 				<p>NovoGro Putty in a Rabbit Distal Femoral Condyle at 6 weeks post-op.</p>
 			</div>
@@ -97,37 +97,37 @@
 				<li class="third"><a href="#">40x</a></li>
 			</ul>
 			<div class="images">
-				<div class="image first"></div>
-				<div class="image second"></div>
-				<div class="image third"></div-->
+				<div class="image first visible"></div>
+				<div class="image second hidden"></div>
+				<div class="image third hidden"></div-->
 			</div>
 		</div>
 	</article>
 	<article id="ct">
 		<div class="zoom-text-container">
-			<div id="" class="zoom-text">
+			<div id="" class="zoom-text first visible">
 				<h2>555x<span>Lorem</span></h2>
 				<p>Ipsum dolor sit amet consecteeteur</p>
 			</div>
-			<div id="" class="zoom-text">
+			<div id="" class="zoom-text second hidden">
 				<h2>666x<span>Lorem</span></h2>
 				<p>Ipsum dolor sit amet consecteeteur</p>
 			</div>
-			<div id="" class="zoom-text">
+			<div id="" class="zoom-text third hidden">
 				<h2>777x<span>Lorem</span></h2>
 				<p>Ipsum dolor sit amet consecteeteur</p>
 			</div>
 		</div>
 		<div class="zoom-image-container">
 			<ul class="zoom-nav">
-				<li><a href="#" class="first selected"></a></li>
-				<li><a href="#" class="second"></a></li>
-				<li><a href="#" class="third"></a></li>
+				<li class="first selected"><a href="#">A</a></li>
+				<li class="second"><a href="#">B</a></li>
+				<li class="third"><a href="#">C</a></li>
 			</ul>
 			<div class="images">
-				<div class="image first"></div>
-				<div class="image second"></div>
-				<div class="image third"></div-->
+				<div class="image first visible"></div>
+				<div class="image second hidden"></div>
+				<div class="image third hidden"></div-->
 			</div>
 		</div>
 	</article>
@@ -160,30 +160,5 @@
 </footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="js/scripts.js"></script>
-	<script>
-		$( ".vid-nav a" ).click(function( event ) {
-			event.preventDefault();
-		});			
-		$("#novogro a[data-toggle]").on("click", function(e) {
-		  e.preventDefault();  // prevent navigating
-		  var selector = $(this).data("toggle");  // get corresponding selector from data-toggle
-		  $("#novogro article").hide();
-		  $(selector).show();
-		  /*if ($(this).hasClass("active")) {
-		  		$(this).removeClass("active");
-			} else {
-				$(this).addClass("active");
-		  }*/
-		});
-		$("#zoom a[data-toggle]").on("click", function(e) {
-		  e.preventDefault();  // prevent navigating
-		  var selector = $(this).data("toggle");  // get corresponding selector from data-toggle
-		  $("#zoom article").hide();
-		  $(selector).show();
-		});		
-		/*$("a[data-toggle]").click(function(){
-		    $("a[data-toggle]").toggleClass("active");
-		});*/
-	</script>
 </body>
 </html>
