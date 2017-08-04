@@ -1,9 +1,21 @@
+/*(PROGRESS BARS)*/
+
 var pvideo = document.getElementById('putty-vid');
 var pBar = document.getElementById('p');
 pvideo.addEventListener('timeupdate', function() {
   var percent = Math.floor((100 / pvideo.duration) * pvideo.currentTime);
   pBar.value = percent;
 }, false);
+
+var ivideo = document.getElementById('injectable-vid');
+var iBar = document.getElementById('i');
+ivideo.addEventListener('timeupdate', function() {
+  var percent = Math.floor((100 / ivideo.duration) * ivideo.currentTime);
+  iBar.value = percent;
+}, false);
+
+
+
 puttynav1 = document.getElementById('vid1-1');
 puttynav2 = document.getElementById('vid1-2');
 puttynav3 = document.getElementById('vid1-3');
@@ -53,12 +65,7 @@ puttynav6.addEventListener("click", function (event) {
 
 /******************************************************************************/
 
-var ivideo = document.getElementById('injectable-vid');
-var iBar = document.getElementById('i');
-ivideo.addEventListener('timeupdate', function() {
-  var percent = Math.floor((100 / ivideo.duration) * ivideo.currentTime);
-  iBar.value = percent;
-}, false);
+
 injectnav1 = document.getElementById('vid2-1');
 injectnav2 = document.getElementById('vid2-2');
 injectnav3 = document.getElementById('vid2-3');

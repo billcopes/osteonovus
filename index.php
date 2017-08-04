@@ -36,9 +36,9 @@
 	<article id="putty">
 		<progress id='p' max='100' value='0'></progress>
 		<video id="putty-vid" autoplay preload="auto" loop>
-			 <source src="vid/putty.mp4" type="video/mp4">  <!-- poster="/images/putty.jpg"-->
-			 <!--source src="vid/putty-mobile.mp4#t=1" type="video/mp4" media="all and (max-width: 768px)"--> 
+			 <source src="vid/putty.mp4" type="video/mp4">
 		</video>
+		<!--https://www.youtube.com/embed/30Q8WiPraDE?wmode=opaque&rel=0&enablejsapi=1&autoplay=1&controls=0&showinfo=0&loop=1&iv_load_policy=3&playlist=ibWcMpSM6TY-->
 			<ul class="vid-nav putty">
 				<li><a href="#" id="vid1-1">Moldable <br/>and cohesive</a></li>
 				<li><a href="#" id="vid1-2">Will not <br/>Wash Out</a></li>
@@ -54,6 +54,7 @@
 			 <source src="vid/injectable.mp4" type="video/mp4">  <!-- poster="/images/putty.jpg"-->
 			 <!--source src="vid/injectable-mobile.mp4#t=1" type="video/mp4" media="all and (max-width: 768px)"--> 
 		</video>
+		<!--https://www.youtube.com/embed/1Lt4x7ZpXak?wmode=opaque&rel=0&enablejsapi=1&autoplay=1&controls=0&showinfo=0&loop=1&iv_load_policy=3&playlist=ibWcMpSM6TY-->
 			<ul class="vid-nav injectable">
 				<li><a href="#" id="vid2-1">Injectable <br/>for 10 minutes</a></li>
 				<li><a href="#" id="vid2-2">Will not <br/>Wash Out</a></li>
@@ -83,11 +84,11 @@
 			</div>
 			<div id="twenty-five" class="zoom-text second hidden">
 				<h2>25x<span>Histology</span></h2>
-				<p>NovoGro Putty in a Rabbit Distal Femoral Condyle at 6 weeks post-op.</p>
+				<p>Need a statement about the new marrow or some such.</p>
 			</div>
 			<div id="fourty" class="zoom-text third hidden">
 				<h2>40x<span>Histology</span></h2>
-				<p>NovoGro Putty in a Rabbit Distal Femoral Condyle at 6 weeks post-op.</p>
+				<p>Robust new bone formation in the center of the defect.</p>
 			</div>
 		</div>
 		<div class="zoom-image-container">
