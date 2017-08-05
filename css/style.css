@@ -59,6 +59,9 @@ header {
 	width: 100%;
 	position: fixed;
 	z-index: 101;
+	top: 0;
+	-webkit-transition: top .5s;
+	transition: top .5s;
 }
 header nav {
 	position: absolute;
@@ -260,16 +263,17 @@ video {
 #intro h1 {
 	white-space: nowrap;
 }
-#intro h1 strong {
-}
 #intro p {
+	font-size: 1.4rem;
+}
+
+.home #intro p, .contact #intro h2 {
 	position: relative;
 	left: 34vw;
 	top: -6vh;
 	max-width: 42vw;
-	font-size: 1.4vw;
+	font-weight: 100;
 }
-
 #novogro, #zoom{
 	position: relative;
 	width: 100%;
@@ -488,15 +492,30 @@ video {
 
 #histology .images .first {
 	background-image: url("../images/h010x.jpg");
+	background-color: #7f7cbb;
 }
 #histology .images .second {
-	background-image: url("../images/h025x.jpg");
-	background-color: red;
+	/*background-image: url("../images/");*/
+	background-color: #7fceea;
 }
 #histology .images .third {
-	background-image: url("../images/h025x.jpg");
-	background-color: blue;
+	/*background-image: url("../images/");*/
+	background-color: #89cda8;
 }
+
+#ct .images .first {
+	/*background-image: url("../images/");*/
+	background-color: #7f7cbb;
+}
+#ct .images .second {
+	/*background-image: url("../images/");*/
+	background-color: #7fceea;
+}
+#ct .images .third {
+	/*background-image: url("../images/");*/
+	background-color: #89cda8;
+}
+
 
 .hidden {
 	opacity: 0;
@@ -521,6 +540,20 @@ video {
 
 /******************************* TEAM ******************************/
 /**************************** CONTACT ******************************/
+.contact #intro h2 {
+	font-size: 1.6rem;
+	line-height: 2.6rem;
+}
+.contact #intro h2 strong {
+	font-size: 2rem;
+	font-weight: 400;
+}
+.contact #intro h2 a {
+	display: block;
+	margin-top: 1rem;
+	font-size: 80%;
+}
+
 /**************************** FOOTER *******************************/
 
 footer {
@@ -678,6 +711,20 @@ p.legal {
 	.zoom-nav li {
 		border: solid 6px #fff;
 	}
+	.contact #intro h2 {
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+	}
+	.contact #intro h2 strong {
+		font-size: 1.8rem;
+	}
+	.contact #intro h2 a {
+		display: block;
+		margin-top: .8rem;
+	}
+	.home #intro p, .contact #intro h2 {
+		top: -3vh;
+	}
 }
 @media screen and (max-width: 1024px) {
     #intro {
@@ -692,12 +739,13 @@ p.legal {
 		font-size: 11.8vw;
 		line-height: 11vw;
 	}
-	#intro p {
+	#intro p, { font-size:1.2rem; }
+	.home #intro p,
+	.contact #intro h2 {
     	left: 0vw;
 		top: 2.4rem;
 		max-width: 62vw;
-		font-size:1.2rem;
-		padding: 4vw 0 0 .9vw;
+		padding: 2vw 0 0 .9vw;
     }
 	.novogro {
 		width: 42%;
@@ -742,7 +790,9 @@ p.legal {
 		top: -6px;
 		background-size: contain;
 	}
-	
+	.contact .text-container {
+		margin-bottom: 3rem;
+	}
 }
 @media screen and (max-width: 980px) {
 	footer .section-two {
@@ -798,9 +848,13 @@ p.legal {
 	.vid-nav {
 		bottom: 3.5vw;
 	}
-	#intro p {
-		font-size: 2.5vw;
-		padding: 2vw 0 0 .9vw;
+	#intro p,
+	.contact #intro h2 {
+		/*font-size: 2.5vw;*/
+		font-size: 19px;
+	}
+	.home #intro p,
+	.contact #intro h2 {
 		padding: 0;
 	}
 	#attributes h3 {
@@ -837,7 +891,10 @@ p.legal {
 	}
 	.zoom-text {
 		width: 200px;
-	}	
+	}
+	.contact #intro h2 {
+		line-height: 2rem;
+	}
 }
 @media screen and (max-width: 600px) {
 	/*************** Mobile Video Nav ***************/
@@ -954,6 +1011,9 @@ p.legal {
 	.zoom-nav li.third {
 		top: 67vw;
 	}
+	.contact #intro h2 {
+		font-size: 1.2rem;
+	}
 }
 @media screen and (max-width: 460px) {
 	header nav a {
@@ -968,8 +1028,10 @@ p.legal {
 	    font-size: 17vw;
 	    line-height: 17vw;
 	}	
-	#intro p {
-		font-size: 3.6vw;
+	
+	#intro p {font-size: 3.6vw;}
+	.home #intro p,
+	.contact #intro h2 {
 		max-width: 82vw;
 		padding: 0 0 12vw;
 	}
@@ -996,6 +1058,10 @@ p.legal {
 	}
 	.zoom-nav li.selected, .zoom-nav li.selected:hover {
 		transform: scale(1.25);
+	}
+	.contact #intro h2 {
+		font-size: 1rem;
+		line-height: 1.6rem;
 	}
 }
 @media screen and (max-width: 420px) {

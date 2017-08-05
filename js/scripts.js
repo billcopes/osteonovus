@@ -13,9 +13,6 @@ ivideo.addEventListener('timeupdate', function() {
   var percent = Math.floor((100 / ivideo.duration) * ivideo.currentTime);
   iBar.value = percent;
 }, false);
-
-
-
 puttynav1 = document.getElementById('vid1-1');
 puttynav2 = document.getElementById('vid1-2');
 puttynav3 = document.getElementById('vid1-3');
@@ -176,3 +173,4 @@ $(document).ready(function() {
 		$(".zoom-text.third").removeClass("hidden");
 	});		
 });
+

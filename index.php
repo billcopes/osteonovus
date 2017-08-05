@@ -1,25 +1,9 @@
+<?php $page = "home"; ?>
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>OsteoNovus. Breakthrough bone regeneration.</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6967512/641324/css/fonts.css" />
-	<link rel="stylesheet" href="css/style.css?v=1.0">
-	<!--[if lt IE 9]>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-	<![endif]-->
-</head>
-<body class="home">
-<header>
-	<a href="index.php" class="logo">>OsteoNovus</a>
-	<nav>
-		<a href="#" class="active">Novogro<sup>&reg;</sup></a>
-		<a href="team.php">Team</a>
-		<a href="contact.php">Contact</a>
-	</nav>
-</header>
+<?php include 'document-head.php'; // Renders HEAD elements of page?>
+<body class="<?php echo $page ?>">
+<?php include 'header.php'; // Renders navigation ?>
 <section id="intro" class="logomark">
 	<div class="text-container">
 		<h1>Do you really need <strong>BMP?</strong></h1>
@@ -133,33 +117,8 @@
 		</div>
 	</article>
 </section>
-<footer>
-	<div class="section-one">
-		<div class="left">
-			<h2>Want to know more?</h2>
-			<p>Quisque fringilla diam a magna imperdiet, sed aliquet arcu molestie.<p>
-			<a href="mailto:hello@osteonovus.com" class="mailto">hello@osteonovus.com</a>
-		</div>
-		<div class="right">
-			<p class="footnote">* only available by prescription</p>	
-		</div>
-	</div>
-	<div class="section-two">
-		<div class="left">
-			<a href="index.php" class="logo">>OsteoNovus</a>
-			<p class="legal">The statements made on this website have not been evaluated by the FDA. All statements are supported by internally derived data or from peer-reviewed research.</p>
-			<nav>
-				<a href="index.php">Novogro<sup>&reg;</sup></a>
-				<a href="team.php">Team</a>
-				<a href="contact.php">Contact</a>
-			</nav>
-		</div>
-		<div class="right ut">
-			<p>The science behind our products is the result of over 3 years of clinical research at the University of Toledo.</p>
-		</div>
-	</div>
-</footer>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="js/scripts.js"></script>
+<?php include 'footer.php'; // Renders page footer ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
