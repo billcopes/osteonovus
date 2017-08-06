@@ -183,15 +183,16 @@ progress::-moz-progress-bar {
 }
 video {
 	width: 100%;
-	height: auto;
+	height: 100vh;
+	margin-bottom: -1vh;
 	position: relative;
+	background: #fff;
 }
 .video-gradient {
 	height: 12vw;
 	width: 100%;
 	z-index: 95;
 	position: absolute;
-	top: -1px;
 	background: -moz-linear-gradient(top, rgba(246,248,251,1) 0%, rgba(246,248,251,0) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, rgba(246,248,251,1) 0%,rgba(246,248,251,0) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, rgba(246,248,251,1) 0%,rgba(246,248,251,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -225,11 +226,16 @@ video {
 	line-height: 1.6rem;
 	letter-spacing: .025rem;
 }
+
+.vid-nav li a:hover {
+	color: #7f7cbb;
+	color: #89cda8;
+}
 .vid-nav li a::before {
 	content:"";
 	display: inline-block;
-	width: 30px;
-	height: 30px;
+	width: 32px;
+	height: 32px;
 	position: absolute;
 	left: -46px;
 	background-size: contain;
@@ -240,6 +246,24 @@ video {
 }
 .vid-nav li a#vid1-2::before, .vid-nav li a#vid2-2::before {
 	background: url("../images/wash_icon.svg") no-repeat;
+}
+.vid-nav li a.playing#vid1-1::before {
+	background: url("../images/moldable_icon_active.svg") no-repeat;
+}
+.vid-nav li a.playing#vid1-2::before, .vid-nav li a.playing#vid2-2::before {
+	background: url("../images/wash_icon_active.svg") no-repeat;
+}
+.vid-nav li a.playing#vid1-3::before, .vid-nav li a.playing#vid2-3::before {
+	background: url("../images/conform_icon_active.svg") no-repeat;
+}
+.vid-nav li a.playing#vid1-4::before {
+	background: url("../images/compress_icon_active.svg") no-repeat;
+}
+.vid-nav li a.playing#vid1-5::before {
+	background: url("../images/wet_icon_active.svg") no-repeat;
+}
+.vid-nav li a.playing#vid1-6::before {
+	background: url("../images/no_mess_icon_active.svg") no-repeat;
 }
 .vid-nav li a#vid1-3::before, .vid-nav li a#vid2-3::before {
 	background: url("../images/conform_icon.svg") no-repeat;
@@ -253,6 +277,33 @@ video {
 .vid-nav li a#vid1-6::before {
 	height: 36px;
 	background: url("../images/no_mess_icon.svg") no-repeat;
+}
+.vid-nav li a#vid2-1::before {
+	background: url("../images/injectable_icon.svg") no-repeat;
+}
+.vid-nav li a.playing#vid2-1::before {
+	background: url("../images/injectable_icon_active.svg") no-repeat;
+}
+.vid-nav li a#vid2-4::before {
+	background: url("../images/clock_icon.svg") no-repeat;
+}
+.vid-nav li a.playing#vid2-4::before {
+	background: url("../images/clock_icon_active.svg") no-repeat;
+}
+.vid-nav li a.playing {
+	animation: pulse 1s ease-in-out infinite alternate; 
+	font-weight: 400;
+}
+@keyframes pulse {
+  0% {
+    color: #7f7cbb;
+  }
+  50% {
+    color: #7fceea;
+  }
+  100% {
+    color: #89cda8;
+  }
 }
 
 
@@ -864,10 +915,10 @@ p.legal {
 		width: 87vw;
 		left: 44%;
 	}
-	video {
+	/*video {
 		width: 140%;
 		margin-left: -30%;
-	}
+	}*/
 	.vid-nav {
 		bottom: 2.5vw;
 	}
@@ -1170,10 +1221,10 @@ p.legal {
 		left: 44px;
 		top: 0;
 	}
-	video {
+	/*video {
 		width: 180%;
 		margin-left: -60%;
-	}
+	}*/
 	footer {padding: 4rem 2rem 2rem;}
 	footer h2 { font-size: 2rem;}
 	footer p { font-size: 18px;}
