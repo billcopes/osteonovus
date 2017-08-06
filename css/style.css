@@ -540,11 +540,12 @@ video {
 /******************************* TEAM ******************************/
 #team {
 	position: relative;
-	top: -28vw;
+	margin-top: -28vw;
 }
 .team #intro {
-	padding: 16vw 0 8vw 7vw;
+	padding: 14vw 0 8vw 7vw;
 }
+
 .team #intro p {
     width: 32%;
     margin: 3rem 0 0;
@@ -556,24 +557,29 @@ picture {
 	display: block;
 	background: #7f7cbb;
 	width: 100%;
+	height: 18vw;
+	overflow: hidden;
+	position: relative;
 }
+.team-members picture img {
+	/*height: 18vw;*/
+	position: absolute;
+	width: 125%;
+	left: -10%;
+}
+
 .team-members {
 	padding-left: 14vw;
 }
 .team-members li {
 	display: inline-block;
-	width: 32%;
+	width: 32.8%;
 	vertical-align: top;
-	margin: 0 0 6rem;
+	margin: 0 .1rem 6rem 0;
 }
 .team-members li:first-child {
 	margin-left: 32%;
 }
-
-.team-members li img {
-	height: 18vw;
-}
-
 .team-members li h3 {
 	margin: 1.5rem 0 1rem;	
 	font-size: 1.6rem;
@@ -688,6 +694,22 @@ p.legal {
 
 
 /*************************** MEDIA QUERIES *************************/
+
+@media screen and (min-width: 1800px){
+	.team-members li h3 {
+		margin: 2rem 0 1rem;	
+		font-size: 2.4rem;
+	}
+	.team-members li h4 {
+		margin: 1.4rem 0;
+		font-size: 1.2rem;
+	}
+	.team-members li p {
+		font-size: 1.4rem;
+	}
+}
+
+
 @media screen and (max-width: 1480px) {
 	.vid-nav li a {
 		font-size: 1rem;
@@ -698,6 +720,12 @@ p.legal {
 	}
 	.zoom-text-container, #zoom .toggle {
 		left: 10vw;
+	}
+	.team #intro h1 {
+		padding-top: 2vw;
+	}
+	#team {
+		margin-top: -32vw;
 	}
 }
 @media screen and (max-width: 1300px) {
@@ -738,6 +766,13 @@ p.legal {
 		width: 270px;
 		top: 4vw;
 	}
+	.team #intro h1 {
+		padding-top: 2vw;
+	}
+	#team {
+		margin-top: -38vw;
+	}
+}
 }
 @media screen and (max-width: 1200px) {
 	.vid-nav li a {

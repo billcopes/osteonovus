@@ -14,9 +14,9 @@
 	<ul class="team-members">
 		<li>
 			<picture>
-			  <source media="(max-width: 599px)" srcset="anand_small.jpg">
-			  <source media="(min-width: 600px)" srcset="anand_large.jpg">
-			  <img src="name_large.jpg" alt="Anand Agarwal, MD">
+			  <source media="(max-width: 799px)" srcset="images/team/anand_small.jpg">
+			  <source media="(min-width: 800px)" srcset="images/team/anand_large.jpg">
+			  <img src="images/team/anand_large.jpg" alt="Anand Agarwal, MD">
 			</picture>
 			<div class="text-container">
 				<h3>Anand Agarwal, MD</h3>
@@ -26,9 +26,9 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 599px)" srcset="name_small.jpg">
-			  <source media="(min-width: 600px)" srcset="name_large.jpg">
-			  <img src="name_large.jpg" alt="Sarit Bhaduri, PhD">
+			  <source media="(max-width: 799px)" srcset="images/team/anand_small.jpg">
+			  <source media="(min-width: 800px)" srcset="images/team/anand_large.jpg">
+			  <img src="images/team/anand_large.jpg" alt="Sarit Bhaduri, PhD">
 			</picture>
 			<div class="text-container">
 				<h3>Sarit Bhaduri, PhD</h3>
@@ -38,9 +38,9 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 599px)" srcset="name_small.jpg">
-			  <source media="(min-width: 600px)" srcset="name_large.jpg">
-			  <img src="name_large.jpg" alt="Vijay Goel, PhD">
+			  <source media="(max-width: 799px)" srcset="images/team/anand_small.jpg">
+			  <source media="(min-width: 800px)" srcset="images/team/anand_large.jpg">
+			  <img src="images/team/anand_large.jpg" alt="Vijay Goel, PhD">
 			</picture>
 			<div class="text-container">
 				<h3>Vijay Goel, PhD</h3>
@@ -50,9 +50,9 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 599px)" srcset="name_small.jpg">
-			  <source media="(min-width: 600px)" srcset="name_large.jpg">
-			  <img src="name_large.jpg" alt="Brian Schlossberg">
+			  <source media="(max-width: 799px)" srcset="images/team/anand_small.jpg">
+			  <source media="(min-width: 800px)" srcset="images/team/anand_large.jpg">
+			  <img src="images/team/anand_large.jpg" alt="Brian Schlossberg">
 			</picture>
 			<div class="text-container">
 				<h3>Brian Schlossberg</h3>
@@ -62,9 +62,9 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 599px)" srcset="name_small.jpg">
-			  <source media="(min-width: 600px)" srcset="name_large.jpg">
-			  <img src="name_large.jpg" alt="Christian Schulz, MD">
+			  <source media="(max-width: 799px)" srcset="images/team/anand_small.jpg">
+			  <source media="(min-width: 800px)" srcset="images/team/anand_large.jpg">
+			  <img src="images/team/anand_large.jpg" alt="Christian Schulz, MD">
 			</picture>
 			<div class="text-container">
 				<h3>Christian Schulz, MD</h3>
@@ -74,9 +74,9 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 599px)" srcset="name_small.jpg">
-			  <source media="(min-width: 600px)" srcset="name_large.jpg">
-			  <img src="name_large.jpg" alt="Christian Schulz, MD">
+			  <source media="(max-width: 799px)" srcset="images/team/anand_small.jpg">
+			  <source media="(min-width: 800px)" srcset="images/team/anand_large.jpg">
+			  <img src="images/team/anand_large.jpg" alt="Christian Schulz, MD">
 			</picture>
 			<div class="text-container">
 				<h3>Aaron</h3>
@@ -86,21 +86,9 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 599px)" srcset="name_small.jpg">
-			  <source media="(min-width: 600px)" srcset="name_large.jpg">
-			  <img src="name_large.jpg" alt="Aaron">
-			</picture>
-			<div class="text-container">
-				<h3>Aaron</h3>
-				<h4>Lorem</h4>
-				<p>Praesent ultrices interdum justo, ut malesuada sem. Morbi dignissim, arcu sit amet sagittis venenatis, dolor risus blandit metus, eget feugiat nisi sem ut risus. Donec placerat eget mi ut pharetra.</p>
-			</div>
-		</li>
-		<li>
-			<picture>
-			  <source media="(max-width: 599px)" srcset="name_small.jpg">
-			  <source media="(min-width: 600px)" srcset="name_large.jpg">
-			  <img src="name_large.jpg" alt="Arthur">
+			  <source media="(max-width: 799px)" srcset="images/team/anand_small.jpg">
+			  <source media="(min-width: 800px)" srcset="images/team/anand_large.jpg">
+			  <img src="images/team/anand_large.jpg" alt="Arthur">
 			</picture>
 			<div class="text-container">
 				<h3>Arthur</h3>
@@ -110,9 +98,9 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 599px)" srcset="name_small.jpg">
-			  <source media="(min-width: 600px)" srcset="name_large.jpg">
-			  <img src="name_large.jpg" alt="Blaine">
+			  <source media="(max-width: 799px)" srcset="images/team/anand_small.jpg">
+			  <source media="(min-width: 800px)" srcset="images/team/anand_large.jpg">
+			  <img src="images/team/anand_large.jpg" alt="Blaine">
 			</picture>
 			<div class="text-container">
 				<h3>Blaine</h3>
@@ -122,9 +110,9 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 599px)" srcset="name_small.jpg">
-			  <source media="(min-width: 600px)" srcset="name_large.jpg">
-			  <img src="name_large.jpg" alt="Neha">
+			  <source media="(max-width: 799px)" srcset="images/team/anand_small.jpg">
+			  <source media="(min-width: 800px)" srcset="images/team/anand_large.jpg">
+			  <img src="images/team/anand_large.jpg" alt="Neha">
 			</picture>
 			<div class="text-container">
 				<h3>Neha</h3>
@@ -134,9 +122,9 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 599px)" srcset="name_small.jpg">
-			  <source media="(min-width: 600px)" srcset="name_large.jpg">
-			  <img src="name_large.jpg" alt="Olivia">
+			  <source media="(max-width: 799px)" srcset="images/team/anand_small.jpg">
+			  <source media="(min-width: 800px)" srcset="images/team/anand_large.jpg">
+			  <img src="images/team/anand_large.jpg" alt="Olivia">
 			</picture>
 			<div class="text-container">
 				<h3>Olivia</h3>
@@ -146,9 +134,9 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 599px)" srcset="name_small.jpg">
-			  <source media="(min-width: 600px)" srcset="name_large.jpg">
-			  <img src="name_large.jpg" alt="Steve">
+			  <source media="(max-width: 799px)" srcset="images/team/anand_small.jpg">
+			  <source media="(min-width: 800px)" srcset="images/team/anand_large.jpg">
+			  <img src="images/team/anand_large.jpg" alt="Steve">
 			</picture>
 			<div class="text-container">
 				<h3>Steve</h3>
