@@ -612,8 +612,10 @@ picture {
 }
 
 .contact iframe {
-	width: 100%;
-	height: 75vw;
+	display: block;
+	width: 87%;
+	height: 50vw;
+	margin: 0 0 0 13%;
 }
 
 /**************************** FOOTER *******************************/
@@ -772,7 +774,9 @@ p.legal {
 	#team {
 		margin-top: -38vw;
 	}
-}
+	.contact iframe {
+		height: 75vw;
+	}
 }
 @media screen and (max-width: 1200px) {
 	.vid-nav li a {
@@ -884,6 +888,24 @@ p.legal {
 	.contact .text-container {
 		margin-bottom: 3rem;
 	}
+	.contact iframe {
+		height: 75vw;
+		margin: 0;
+		width: 100%;
+	}
+	#team {
+		margin-top: 0;
+	}
+	.team #intro p {
+		width: 75%;
+		margin-top: 1rem;
+	}
+	.team-members {
+		padding: 0 2vw 0 7vw;
+	}
+	.team-members li:first-child {
+		margin-left: 0;
+	}
 }
 @media screen and (max-width: 980px) {
 	footer .section-two {
@@ -918,6 +940,17 @@ p.legal {
 		font-size: 1rem;
 	}
 }
+@media screen and (max-width: 940px) {
+	.team #intro p {
+		width: 90%;
+	}
+	.team-members li {
+		width: 48.8%;
+	}
+	picture {
+		height: 28vw;
+	}
+}
 @media screen and (max-width: 768px) {
     #intro {
     	padding: 22vw 0 10vw 18vw;
@@ -941,7 +974,6 @@ p.legal {
 	}
 	#intro p,
 	.contact #intro h2 {
-		/*font-size: 2.5vw;*/
 		font-size: 19px;
 	}
 	.home #intro p,
@@ -986,9 +1018,11 @@ p.legal {
 	.contact #intro h2 {
 		line-height: 2rem;
 	}
+	.team-members li {
+		margin-bottom: 3.5rem;
+	}
 }
 @media screen and (max-width: 600px) {
-	/*************** Mobile Video Nav ***************/
 	progress {
 		bottom: initial;
 		top: 58%;
@@ -1104,6 +1138,12 @@ p.legal {
 	}
 	.contact #intro h2 {
 		font-size: 1.2rem;
+	}
+	.team-members li {
+		width: 96.8%;
+	}
+	picture {
+		height: 56vw;
 	}
 }
 @media screen and (max-width: 460px) {
