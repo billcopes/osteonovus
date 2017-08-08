@@ -181,6 +181,8 @@ $(document).ready(function() {
 	  $(".zoom-nav li.third").removeClass("selected");
 	  $(".image.first").removeClass("hidden");
 	  $(".image.first").addClass("visible");
+	  $(".key").removeClass("hidden");
+	  $(".key").addClass("visible");
 	  $(".image.second").addClass("hidden");
 	  $(".image.third").addClass("hidden");
 	  
@@ -201,6 +203,8 @@ $(document).ready(function() {
 		//Toggle the related elements
 		$(".zoom-text.first").addClass("visible")
 		$(".zoom-text.first").removeClass("hidden");
+  	  	$(".key").removeClass("hidden");
+  	  	$(".key").addClass("visible");
 		$(".zoom-text.second").addClass("hidden")
 		$(".zoom-text.second").removeClass("visible");
 		$(".zoom-text.third").addClass("hidden");
@@ -215,6 +219,8 @@ $(document).ready(function() {
 		//Toggle the related elements
 		$(".zoom-text.first").addClass("hidden")
 		$(".zoom-text.first").removeClass("visible");
+  	  	$(".key").addClass("hidden");
+  	  	$(".key").removeClass("visible");
 		$(".zoom-text.second").addClass("visible")
 		$(".zoom-text.second").removeClass("hidden");
 		$(".zoom-text.third").addClass("hidden");
@@ -234,6 +240,8 @@ $(document).ready(function() {
 		$(".zoom-text.second").removeClass("visible");
 		$(".zoom-text.third").addClass("visible");
 		$(".zoom-text.third").removeClass("hidden");
+  	  	$(".key").addClass("hidden");
+  	  	$(".key").removeClass("visible");
 	});		
 });
 

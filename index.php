@@ -19,10 +19,9 @@
 	<div class="video-gradient"></div>
 	<article id="putty">
 		<progress id='p' max='100' value='0'></progress>
-		<video id="putty-vid" autoplay preload="auto" loop>
+		<video id="putty-vid" autoplay preload="auto" loop muted>
 			 <source src="vid/putty.mp4" type="video/mp4">
 		</video>
-		<!--https://www.youtube.com/embed/30Q8WiPraDE?wmode=opaque&rel=0&enablejsapi=1&autoplay=1&controls=0&showinfo=0&loop=1&iv_load_policy=3&playlist=ibWcMpSM6TY-->
 			<ul class="vid-nav putty">
 				<li><a href="#" id="vid1-1">Moldable <br/>and cohesive</a></li>
 				<li><a href="#" id="vid1-2">Will not <br/>Wash Out</a></li>
@@ -34,11 +33,10 @@
 	</article>
 	<article id="injectable">
 		<progress id='i' max='100' value='0'></progress>
-		<video id="injectable-vid" autoplay preload="auto" loop>
+		<video id="injectable-vid" autoplay preload="auto" loop muted>
 			 <source src="vid/injectable.mp4" type="video/mp4">  <!-- poster="/images/putty.jpg"-->
 			 <!--source src="vid/injectable-mobile.mp4#t=1" type="video/mp4" media="all and (max-width: 768px)"--> 
 		</video>
-		<!--https://www.youtube.com/embed/1Lt4x7ZpXak?wmode=opaque&rel=0&enablejsapi=1&autoplay=1&controls=0&showinfo=0&loop=1&iv_load_policy=3&playlist=ibWcMpSM6TY-->
 			<ul class="vid-nav injectable">
 				<li><a href="#" id="vid2-1">Injectable <br/>for 10 minutes</a></li>
 				<li><a href="#" id="vid2-2">Will not <br/>Wash Out</a></li>
@@ -82,6 +80,11 @@
 				<li class="third"><a href="#">40x</a></li>
 			</ul>
 			<div class="images">
+				<ul class="key">
+					<li class="residual"><span>Residual implant</span></li>
+					<li class="new-bone"><span>New Bone</span></li>
+					<li class="new-marrow"><span>New Marrow</span></li>
+				</ul>
 				<div class="image first visible"></div>
 				<div class="image second hidden"></div>
 				<div class="image third hidden"></div-->

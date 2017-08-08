@@ -1,4 +1,4 @@
-<header id="header">
+<header id="header headroom">
 	<a href="index.php" class="logo">>OsteoNovus</a>
 	<nav>
 		<a href="index.php" class="<?php echo ($page == "home" ? "active" : "")?>">Novogro<sup>&reg;</sup></a>

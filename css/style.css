@@ -30,7 +30,8 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {	line-height: 1;
+body {
+	line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -58,11 +59,12 @@ header {
 	height: 78px;
 	width: 100%;
 	position: fixed;
-	z-index: 101;
+	z-index: 999;
 	top: 0;
 	-webkit-transition: top .5s;
 	transition: top .5s;
 }
+
 header nav {
 	position: absolute;
 	right: 0;
@@ -89,6 +91,16 @@ a.logo {
 	position: absolute;
 	left: 4vw;
 	top: 27px;
+}
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
 }
 /**************************** TYPOGRAPHY ****************************/
 html {
@@ -291,7 +303,6 @@ video {
 }
 .vid-nav li a.playing {
 	animation: pulse 1s ease-in-out infinite alternate; 
-	font-weight: 400;
 }
 @keyframes pulse {
   0% {
@@ -454,6 +465,8 @@ video {
 
 .zoom-nav li.selected, .zoom-nav li.selected:hover {
 	transform: scale(1.5);
+	position: relative;
+	z-index: 888;
 }
 
 .zoom-nav li:hover {
@@ -551,6 +564,38 @@ video {
 	/*background-image: url("../images/");*/
 	background-color: #89cda8;
 }
+.key {
+    background: #EFEFEF;
+    position: absolute;
+    z-index: 777;
+    display: block;
+    width: 22vw;
+    height: 22vw;
+	padding: 4vw 0 0 4vw;
+    right: 0vw;
+    bottom: -10vw;
+	border-radius: 100%;
+	text-transform: uppercase;
+	font-size: .9rem;
+}
+.key span {display: inline-block;}
+.key li {
+	display: block;
+	position: relative;
+	margin: 1rem 0;
+}
+
+.key li:before {
+	content:"";
+	display: inline-block;
+	background: #ccc	;
+	width: 2.5vw;
+	height: 2.5vw;
+	border-radius: 100%;
+	position: relative;
+	top: .75vw;
+	margin: 0 .75rem 0 0;
+}
 
 #ct .images .first {
 	/*background-image: url("../images/");*/
@@ -564,8 +609,6 @@ video {
 	/*background-image: url("../images/");*/
 	background-color: #89cda8;
 }
-
-
 .hidden {
 	opacity: 0;
 	transform: scale(0);
@@ -764,7 +807,7 @@ p.legal {
 
 @media screen and (max-width: 1480px) {
 	.vid-nav li a {
-		font-size: 1rem;
+		font-size: .9rem;
 		line-height: 1.4rem;
 	}
 	footer {
@@ -870,6 +913,16 @@ p.legal {
 	.home #intro p, .contact #intro h2 {
 		top: -3vh;
 	}
+	.key {
+		width: 240px;
+		height: 240px;
+		padding: 3vw 0 0 3vw;
+	}
+	.key li:before {
+		width: 2vw;
+		height: 2vw;
+		top: .5vw;
+	}
 }
 @media screen and (max-width: 1024px) {
     #intro {
@@ -914,10 +967,10 @@ p.legal {
 		width: 87vw;
 		left: 44%;
 	}
-	video {
+	/*video {
 		width: 140%;
 		margin-left: -30%;
-	}
+	}*/
 	.vid-nav {
 		bottom: 2.5vw;
 	}
@@ -989,6 +1042,13 @@ p.legal {
 	.zoom-text-container h2 span {
 		font-size: 1rem;
 	}
+	progress {
+		bottom: 26%;
+	}
+	.toggle a.active::before {
+		width: 2.5vw;
+		height: 1.8vw;
+	}
 }
 @media screen and (max-width: 940px) {
 	.team #intro p {
@@ -999,6 +1059,11 @@ p.legal {
 	}
 	picture {
 		height: 28vw;
+	}
+	.key {
+		width: 200px;
+		height: 200px;
+		padding: 40px;
 	}
 }
 @media screen and (max-width: 768px) {
@@ -1011,7 +1076,11 @@ p.legal {
 		width: 50%;
 	}
 	progress {
-		bottom: 20vw;
+		bottom: 18vw;
+	}
+	video {
+		width: 120%;
+		left: -20%;
 	}
 	.toggle {
 		top: 26vw;
@@ -1071,12 +1140,41 @@ p.legal {
 	.team-members li {
 		margin-bottom: 3.5rem;
 	}
+	.key {
+	    width: 160px;
+	    height: 160px;
+	    padding: 30px;
+	}
 }
 @media screen and (max-width: 600px) {
+	*::-webkit-media-controls-panel {
+	  display: none!important;
+	  -webkit-appearance: none;
+	}
+
+	/* Old shadow dom for play button */
+
+	*::--webkit-media-controls-play-button {
+	  display: none!important;
+	  -webkit-appearance: none;
+	}
+
+	/* New shadow dom for play button */
+
+	/* This one works */
+
+	*::-webkit-media-controls-start-playback-button {
+	  display: none!important;
+	  -webkit-appearance: none;
+	}
 	progress {
 		bottom: initial;
 		top: 58%;
 		display: none;
+	}
+	video {
+		width: 100%;
+		left: 0%;
 	}
 	.vid-nav, #injectable .vid-nav {
 		position: relative;
@@ -1195,8 +1293,15 @@ p.legal {
 	picture {
 		height: 56vw;
 	}
+	.vid-nav li a.playing {
+		animation: none;
+	}
+	.toggle a.active::before {
+		width: 4vw;
+		height: 2.5vw;
+	}
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
 	header nav a {
 		font-size: .8rem;
 		margin-left: .8rem;
@@ -1222,7 +1327,7 @@ p.legal {
 	}
 	video {
 		width: 180%;
-		margin-left: -60%;
+		margin-left: -80%;
 	}
 	footer {padding: 4rem 2rem 2rem;}
 	footer h2 { font-size: 2rem;}
@@ -1237,12 +1342,16 @@ p.legal {
 	.zoom-text-container {
 		top: 124vw;
 	}
-	.zoom-nav li.selected, .zoom-nav li.selected:hover {
-		transform: scale(1.25);
-	}
 	.contact #intro h2 {
 		font-size: 1rem;
 		line-height: 1.6rem;
+	}
+	.toggle a.active::before {
+	    width: 6vw;
+	    height: 3vw;
+	}
+	.team #intro {
+		padding-top: 22vw;
 	}
 }
 @media screen and (max-width: 420px) {
@@ -1250,6 +1359,10 @@ p.legal {
 	
 }
 @media screen and (max-width: 400px) {
+	.toggle a.active::before {
+	    width: 9vw;
+	    height: 5vw;
+	}
 	.novogro {
 		width: 74%;
 		top: 6vw;
@@ -1262,4 +1375,5 @@ p.legal {
 		width: 300px;
 		top: 6vw;
 	}
+	
 }
