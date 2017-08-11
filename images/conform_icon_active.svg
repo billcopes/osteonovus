@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
-    <title>conform_icon</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Round-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Home" transform="translate(-538.000000, -1238.000000)" stroke="#000000">
-            <g id="conform_icon" transform="translate(539.000000, 1239.000000)">
-                <polygon id="Fill-1" fill="#79EAB9" points="0 8 0 16.9994808 9.00051924 16.9994808 9.00051924 26 18 26 18 8"></polygon>
-                <path d="M17.0078732,6.0307498 L20,6.0149999 L20.0157087,9.01498099 C20.023937,10.6657206 21.3771264,12.0082121 23.0227961,11.9999622 C24.6684659,11.9917122 26.0081906,10.6342208 25.9999623,8.98423118 L25.968545,2.98426899 C25.9603166,1.33502939 24.6071273,-0.00821214794 22.9607095,3.78000741e-05 L16.9764559,0.0307876063 C15.3315341,0.0397875496 13.9918094,1.396529 14.0000377,3.0465186 C14.0090141,4.6965082 15.3622034,6.03974974 17.0078732,6.0307498" id="Fill-2" fill="#8199DE"></path>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"><title>conform_icon</title><desc>Created with Sketch.</desc><g fill="none"><g stroke="#000"><g><path fill="#79EAB9" d="M1 9v9h9v9h9V9z"/><path fill="#8199DE" d="M18 7.03L21 7l.02 3c0 1.67 1.36 3 3 3 1.65 0 3-1.37 2.98-3.02l-.03-6c0-1.64-1.36-3-3-2.98l-6 .03C16.34 1.03 15 2.4 15 4.05c0 1.65 1.36 3 3 2.98"/></g></g></g></svg>

@@ -101,7 +101,6 @@ puttynav6.addEventListener("click", function (event) {
 	return false;
 }, false);
 
-/******************************************************************************/
 var ivideo = document.getElementById('injectable-vid');
 var iBar = document.getElementById('i');
 ivideo.addEventListener('timeupdate', function() {
@@ -160,6 +159,9 @@ injectnav4.addEventListener("click", function (event) {
     ivideo.play();
 	return false;
 }, false);
+
+/* Toggle Between */
+
 $(document).ready(function() {
 	$("#novogro a[data-toggle]").on("click", function(e) {
 	  e.preventDefault();  // prevent navigating
@@ -185,11 +187,11 @@ $(document).ready(function() {
 	  $(".key").addClass("visible");
 	  $(".image.second").addClass("hidden");
 	  $(".image.third").addClass("hidden");
-	  
 	});
 	$( ".vid-nav, .zoom-nav a" ).click(function( event ) {
 		event.preventDefault();
 	});
+	// Add the selected class to the nav
 	$( ".zoom-nav li" ).click(function () {
 		$(".zoom-nav li").removeClass("selected");
 		$(this).addClass("selected"); 
@@ -244,4 +246,23 @@ $(document).ready(function() {
   	  	$(".key").removeClass("visible");
 	});		
 });
-
+$(document).ready(function() {
+	var mainVideo = $('#putty-vid');
+	var medQualVersionSrc = 'vid/putty-mobile.mp4';
+	var highQualVersionSrc = 'vid/putty.mp4';
+	if ($(window).width() < 800) {
+		mainVideo.append("<source type='video/mp4' src='" + medQualVersionSrc + "' />");
+	} else {
+		mainVideo.append("<source type='video/mp4' src='" + highQualVersionSrc + "' />");
+	}
+});
+$(document).ready(function() {
+	var mainVideo2 = $('#injectable-vid');
+	var medQualVersionSrc = 'vid/injectable-mobile.mp4';
+	var highQualVersionSrc = 'vid/injectable.mp4';
+	if ($(window).width() < 800) {
+		mainVideo2.append("<source type='video/mp4' src='" + medQualVersionSrc + "' />");
+	} else {
+		mainVideo2.append("<source type='video/mp4' src='" + highQualVersionSrc + "' />");
+	}
+});

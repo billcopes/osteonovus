@@ -1,3 +1,4 @@
+<?php include 'gzip.php'; // Compress Stuff ?>
 <?php $page = "home"; ?>
 <!doctype html>
 <html lang="en">
@@ -19,9 +20,7 @@
 	<div class="video-gradient"></div>
 	<article id="putty">
 		<progress id='p' max='100' value='0'></progress>
-		<video id="putty-vid" autoplay preload="auto" loop muted>
-			 <source src="vid/putty.mp4" type="video/mp4">
-		</video>
+		<video id="putty-vid" preload="auto" poster="images/putty.jpg" autoplay loop muted></video>
 			<ul class="vid-nav putty">
 				<li><a href="#" id="vid1-1">Moldable <br/>and cohesive</a></li>
 				<li><a href="#" id="vid1-2">Will not <br/>Wash Out</a></li>
@@ -33,10 +32,7 @@
 	</article>
 	<article id="injectable">
 		<progress id='i' max='100' value='0'></progress>
-		<video id="injectable-vid" autoplay preload="auto" loop muted>
-			 <source src="vid/injectable.mp4" type="video/mp4">  <!-- poster="/images/putty.jpg"-->
-			 <!--source src="vid/injectable-mobile.mp4#t=1" type="video/mp4" media="all and (max-width: 768px)"--> 
-		</video>
+		<video id="injectable-vid" preload="auto" poster="images/injectable.jpg" autoplay loop muted></video>
 			<ul class="vid-nav injectable">
 				<li><a href="#" id="vid2-1">Injectable <br/>for 10 minutes</a></li>
 				<li><a href="#" id="vid2-2">Will not <br/>Wash Out</a></li>
@@ -94,16 +90,16 @@
 	<article id="ct">
 		<div class="zoom-text-container">
 			<div id="" class="zoom-text first visible">
-				<h2>555x<span>Lorem</span></h2>
-				<p>Ipsum dolor sit amet consecteeteur</p>
+				<h2>Axial<span>44&mu;M</span></h2>
+				<p>NovoGro Putty in a Rabbit Distal Femoral Condyle at 6 weeks post-op.</p>
 			</div>
 			<div id="" class="zoom-text second hidden">
-				<h2>666x<span>Lorem</span></h2>
+				<h2>Sagittal<span>44&mu;M</span></h2>
 				<p>Ipsum dolor sit amet consecteeteur</p>
 			</div>
 			<div id="" class="zoom-text third hidden">
-				<h2>777x<span>Lorem</span></h2>
-				<p>Ipsum dolor sit amet consecteeteur</p>
+				<h2>Coronal<span>44&mu;M</span></h2>
+				<p>Robust new bone formation in the center of the defect.</p>
 			</div>
 		</div>
 		<div class="zoom-image-container">

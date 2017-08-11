@@ -1,3 +1,4 @@
+<div class="cover"></div>
 <header id="header headroom">
 	<a href="index.php" class="logo">>OsteoNovus</a>
 	<nav>

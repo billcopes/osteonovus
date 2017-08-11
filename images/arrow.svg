@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="15px" viewBox="0 0 20 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
-    <title>arrow</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Round-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Home" transform="translate(-204.000000, -881.000000)" fill-rule="nonzero" fill="#000000">
-            <path d="M216.417118,881.067521 C216.325612,880.977493 216.187631,880.977493 216.096125,881.067521 L215.134012,881.999399 L220.952876,887.634281 L204.824998,887.634281 C204.367179,887.63456 204,887.989082 204,888.43503 C204,888.878182 204.367179,889.232704 204.824998,889.232704 L221.090568,889.232704 L215.134012,895.003187 L216.096125,895.933108 C216.187631,896.022297 216.325612,896.022297 216.417118,895.933108 L223.931587,888.655907 C224.022804,888.567277 224.022804,888.43503 223.931587,888.344442 L216.417118,881.067521 Z" id="arrow"></path>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15"><title>arrow</title><desc>Created with Sketch.</desc><g fill="none"><g fill="#000" fill-rule="nonzero"><path d="M12.42.07c-.1-.1-.23-.1-.32 0l-.97.93 5.82 5.63H.82c-.45 0-.82.36-.82.8 0 .45.37.8.82.8H17.1L11.12 14l.97.93c.1.1.23.1.32 0l7.5-7.27c.1-.1.1-.22 0-.32L12.43.07z"/></g></g></svg>
