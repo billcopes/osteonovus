@@ -60,7 +60,17 @@
 		</li>
 		<li>
 			<picture>
-			  <img src="images/team/anand_small.jpg" alt="Steven Nemes, CPA">
+			  <img src="images/team/arthur_small.jpg" alt="Arthur Karas, MBA">
+			</picture>
+			<div class="text-container">
+				<h3>Arthur Karas, MBA</h3>
+				<h4>Regional Sales Manager</h4>
+				<p>Arthur is an accomplished sales, operations and management professional who brings over 10 years of experience building successful sales and marketing programs in competitive medical device markets. Former distributor for ETEX, Amedica, Innovision and others.</p>
+			</div>
+		</li>
+		<li>
+			<picture>
+			  <img src="images/team/steve_small.jpg" alt="Steven Nemes, CPA">
 			</picture>
 			<div class="text-container">
 				<h3>Steven Nemes, CPA</h3>
@@ -80,7 +90,7 @@
 		</li>
 		<li>
 			<picture>
-			  <img src="images/team/anand_small.jpg" alt="Olivia Norman, MS">
+			  <img src="images/team/olivia_small.jpg" alt="Olivia Norman, MS">
 			</picture>
 			<div class="text-container">
 				<h3>Olivia Norman, MS</h3>
@@ -90,22 +100,12 @@
 		</li>
 		<li>
 			<picture>
-			  <img src="images/team/aaron_small.jpg" alt="Aaron Gao, Phd">
+			  <img src="images/team/aaron_small.jpg" alt="Aaron Gao, Phd" class="aaron">
 			</picture>
 			<div class="text-container">
 				<h3>Aaron Gao, Phd</h3>
 				<h4>Lead Scientist</h4>
 				<p>Aaron is a material scientist who enjoys problem solving and finding the important facts hidden behind the trivial details. He earned his Ph.D.in chemistry from University of Toledo, and brings experience in inorganic synthesis and material characterization. He's motivated by exploring ways to make novel materials and searching for connections between their material structure and properties.</p>
-			</div>
-		</li>
-		<li>
-			<picture>
-			  <img src="images/team/arthur_small.jpg" alt="Arthur Karas, MBA">
-			</picture>
-			<div class="text-container">
-				<h3>Arthur Karas, MBA</h3>
-				<h4>Regional Sales Manager</h4>
-				<p>Arthur is an accomplished sales, operations and management professional who brings over 10 years of experience building successful sales and marketing programs in competitive medical device markets. Former distributor for ETEX, Amedica, Innovision and others.</p>
 			</div>
 		</li>
 		<li>

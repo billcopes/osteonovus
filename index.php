@@ -20,8 +20,8 @@
 <section id="novogro">
 	<h2 class="novogro">Novgro <span>Moldable Bone Substitute</span></h2>
 	<ul class="toggle">
-		<li><a href="#" class="active" data-toggle="#putty">Putty</a></li>
-		<li><a href="#" class="" data-toggle="#injectable">Injectable</a></li>
+		<li><a href="#" id="putty-toggle" class="active" data-toggle="#putty">Putty</a></li>
+		<li><a href="#" id="injectable-toggle" class="" data-toggle="#injectable">Injectable</a></li>
 	</ul>
 	<div class="video-gradient"></div>
 	<article id="putty">
@@ -38,7 +38,7 @@
 	</article>
 	<article id="injectable">
 		<progress id='i' max='100' value='0'></progress>
-		<video id="injectable-vid" preload="auto" poster="images/injectable.jpg" autoplay loop muted></video>
+		<video id="injectable-vid" preload="auto" poster="images/injectable.jpg" loop muted></video>
 			<ul class="vid-nav injectable">
 				<li><a href="#" id="vid2-1">Injectable <br/>for 10 minutes</a></li>
 				<li><a href="#" id="vid2-2">Will not <br/>Wash Out</a></li>
@@ -57,8 +57,8 @@
 </section>
 <section id="zoom">
 	<ul class="toggle">
-		<li><a href="#" class="active" data-toggle="#histology">Histology</a></li>
-		<li><a href="#" class=""data-toggle="#ct">&mu;CT</a></li>
+		<li><a href="#" class="active" id="hist-toggle" data-toggle="#histology">Histology</a></li>
+		<li><a href="#" class="" id="ct-toggle" data-toggle="#ct">&mu;CT</a></li>
 	</ul>
 	<article id="histology">
 		<div class="zoom-text-container">

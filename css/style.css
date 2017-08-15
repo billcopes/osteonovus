@@ -200,7 +200,9 @@ video {
 	margin-bottom: -1vh;
 	position: relative;
 	background: #fff;
+	animation: fade-in;
 }
+
 .video-gradient {
 	height: 12vw;
 	width: 100%;
@@ -760,10 +762,14 @@ picture {
 	position: relative;
 }
 .team-members picture img {
-	/*height: 18vw;*/
 	position: absolute;
 	width: 105%;
 	left: -5%;
+}
+
+.team-members picture img.aaron {
+	width: 114%;
+	top: -16%;
 }
 
 .team-members {

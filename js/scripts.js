@@ -101,6 +101,14 @@ puttynav6.addEventListener("click", function (event) {
 	return false;
 }, false);
 
+puttyplay = document.getElementById('putty-toggle');
+puttyplay.addEventListener("click", function (event) {
+    event.preventDefault();
+    pvideo.currentTime = 0;
+    pvideo.play();
+	return false;
+}, false);
+
 var ivideo = document.getElementById('injectable-vid');
 var iBar = document.getElementById('i');
 ivideo.addEventListener('timeupdate', function() {
@@ -160,6 +168,15 @@ injectnav4.addEventListener("click", function (event) {
 	return false;
 }, false);
 
+injectplay = document.getElementById('injectable-toggle');
+injectplay.addEventListener("click", function (event) {
+    event.preventDefault();
+    ivideo.currentTime = 0;
+    ivideo.play();
+	return false;
+}, false);
+
+
 /* Toggle Between */
 
 $(document).ready(function() {
@@ -170,7 +187,7 @@ $(document).ready(function() {
 	  var selector = $(this).data("toggle");  // get corresponding selector from data-toggle
 	  $("#novogro article").hide();
 	  $(selector).show();
-	});
+	});	
 	$("#zoom a[data-toggle]").on("click", function(e) {
 	  e.preventDefault();  // prevent navigating
 	  $("#zoom a[data-toggle]").removeClass("active");
@@ -182,11 +199,27 @@ $(document).ready(function() {
 	  $(".zoom-nav li.second").removeClass("selected");
 	  $(".zoom-nav li.third").removeClass("selected");
 	  $(".zoom-nav li.fourth").removeClass("selected");
-	  $(".image.first").removeClass("hidden");
-	  $(".image.first").addClass("visible");
 	  $(".image.second").addClass("hidden");
 	  $(".image.third").addClass("hidden");
 	  $(".image.fourth").addClass("hidden");
+	  $(".image.first").removeClass("hidden");
+	  $(".image.first").addClass("visible");
+	});
+	$("#ct-toggle, #hist-toggle").on("click", function(e) {
+	  e.preventDefault();  // prevent navigating
+		$(".image.first").removeClass("hidden");
+		$(".image.second").removeClass("hidden");
+		$(".image.third").removeClass("hidden");
+		$(".image.fourth").removeClass("hidden");
+		$(".image.first").addClass("visible");
+		$(".zoom-text.first").removeClass("hidden");
+		$(".zoom-text.second").removeClass("visible");
+		$(".zoom-text.second").addClass("hidden");
+		$(".zoom-text.third").removeClass("visible");
+		$(".zoom-text.third").addClass("hidden");
+		$(".zoom-text.fourth").removeClass("visible");
+		$(".zoom-text.fourth").addClass("hidden");
+		$(".zoom-text.first").addClass("visible");
 	});
 	$( ".vid-nav, .zoom-nav a, .zoom-text-container li.six a, .zoom-text-container li.twelve a" ).click(function( event ) {
 		event.preventDefault();
@@ -331,3 +364,5 @@ $(document).ready(function() {
 		mainVideo2.append("<source type='video/mp4' src='" + highQualVersionSrc + "' />");
 	}
 });
+
+//$("#putty-vid").css('opacity', 0).animate( { opacity: 1 }, 7000 )
