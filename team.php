@@ -2,7 +2,12 @@
 <?php $page = "team"; ?>
 <!doctype html>
 <html lang="en">
-<?php include 'document-head.php'; // Renders HEAD elements of page?>
+<head>
+	<?php include 'document-head.php'; // Renders HEAD elements of page?>
+	<style type="text/css">
+	*, ::before, ::after{box-sizing:inherit;}html, *, :hover{transition:all 0.2s linear;}html{box-sizing:border-box;font-family:"Forza SSm A", "Forza SSm B", Forza, sans-serif;font-style:normal;}html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin:0px;padding:0px;border:0px;font-style:inherit;font-variant:inherit;font-weight:inherit;font-stretch:inherit;font-size:inherit;line-height:inherit;font-family:inherit;vertical-align:baseline;}html, body{background-color:rgb(246, 248, 251);}body{line-height:1;}.logomark{background-image:url("../images/logomark.svg");background-repeat:no-repeat;background-size:contain;background-position:-2rem -6rem;}.team.logomark, .contact.logomark{background-image:url("../images/logomark.svg");background-repeat:no-repeat;background-size:120%;background-attachment:fixed;background-position:0px -6rem;}.contact.logomark{background-position-y:-12rem;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}header{background-image:linear-gradient(to right, rgb(31, 29, 54), rgb(77, 77, 77));height:78px;width:100%;position:fixed;z-index:999;top:0px;transition:top 0.5s;}.headroom{will-change:transform;transition:transform 200ms linear;}a{font-family:"Forza SSm A", "Forza SSm B", Forza, sans-serif;font-style:normal;text-transform:uppercase;text-decoration:none;font-weight:300;cursor:pointer;transition:all 0.2s linear;color:rgb(127, 124, 187);}a.logo{display:inline-block;background:url("../images/logo-wordmark.svg") 0% 0% / cover no-repeat;font-size:0px;line-height:0px;width:212px;height:22px;position:absolute;left:4vw;top:27px;}header nav{position:absolute;right:5vw;top:31px;}header nav a, footer nav a{color:rgb(255, 255, 255);font-size:1rem;letter-spacing:0.07rem;margin-left:2rem;}a.active, a:hover, #attributes h3{color:rgb(121, 234, 185);}#intro{position:relative;padding:12vw 0px 8vw 12vw;}h1{font-family:Georgia;font-size:4.4vw;line-height:4.87vw;letter-spacing:-0.07rem;font-weight:normal;color:rgb(0, 0, 0);}#intro h1{white-space:nowrap;}strong{font-weight:500;}h1 strong{font-weight:bold;font-size:8.8vw;line-height:8vw;display:block;}.home #intro p, .contact #intro h2{position:relative;left:34vw;top:-6vh;max-width:42vw;font-weight:100;}.contact #intro h2{font-size:1.6rem;line-height:2.6rem;}.contact #intro h2 strong{font-size:2rem;font-weight:400;}.contact #intro h2 a{display:block;margin-top:1rem;font-size:80%;}.contact iframe{display:block;width:87%;height:50vw;margin:0px 0px 0px 13%;}
+	</style>
+</head>
 <body class="<?php echo $page ?> logomark">
 <?php include 'header.php'; // Renders navigation ?>
 <section id="intro">
@@ -15,9 +20,7 @@
 	<ul class="team-members">
 		<li>
 			<picture>
-			  <source media="(max-width: 799px)" srcset="images/team/anand_small.jpg">
-			  <source media="(min-width: 800px)" srcset="images/team/anand_large.jpg">
-			  <img src="images/team/anand_large.jpg" alt="Anand Agarwal, MD">
+			  <img src="images/team/anand_small.jpg" alt="Anand Agarwal, MD">
 			</picture>
 			<div class="text-container">
 				<h3>Anand Agarwal, MD</h3>
@@ -27,9 +30,7 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 799px)" srcset="images/team/vijay_small.jpg">
-			  <source media="(min-width: 800px)" srcset="images/team/vijay_large.jpg">
-			  <img src="images/team/vijay_large.jpg" alt="Vijay Goel, PhD">
+			  <img src="images/team/vijay_small.jpg" alt="Vijay Goel, PhD">
 			</picture>
 			<div class="text-container">
 				<h3>Vijay Goel, PhD</h3>
@@ -39,9 +40,7 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 799px)" srcset="images/team/sarit_small.jpg">
-			  <source media="(min-width: 800px)" srcset="images/team/sarit_large.jpg">
-			  <img src="images/team/sarit_large.jpg" alt="Sarit Bhaduri, PhD">
+			  <img src="images/team/sarit_small.jpg" alt="Sarit Bhaduri, PhD">
 			</picture>
 			<div class="text-container">
 				<h3>Sarit Bhaduri, PhD</h3>
@@ -51,9 +50,7 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 799px)" srcset="images/team/brian_small.jpg">
-			  <source media="(min-width: 800px)" srcset="images/team/brian_large.jpg">
-			  <img src="images/team/brian_large.jpg" alt="Brian Schlossberg">
+			  <img src="images/team/brian_small.jpg" alt="Brian Schlossberg, PhD">
 			</picture>
 			<div class="text-container">
 				<h3>Brian Schlossberg, PhD</h3>
@@ -63,9 +60,7 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 799px)" srcset="images/team/steve_small.jpg">
-			  <source media="(min-width: 800px)" srcset="images/team/steve_large.jpg">
-			  <img src="images/team/anand_large.jpg" alt="Steve">
+			  <img src="images/team/anand_small.jpg" alt="Steven Nemes, CPA">
 			</picture>
 			<div class="text-container">
 				<h3>Steven Nemes, CPA</h3>
@@ -75,9 +70,7 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 799px)" srcset="images/team/blaine_small.jpg">
-			  <source media="(min-width: 800px)" srcset="images/team/blaine_large.jpg">
-			  <img src="images/team/blaine_large.jpg" alt="Blaine">
+			  <img src="images/team/blaine_small.jpg" alt="Blaine Best">
 			</picture>
 			<div class="text-container">
 				<h3>Blaine Best</h3>
@@ -87,9 +80,7 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 799px)" srcset="images/team/olivia_small.jpg">
-			  <source media="(min-width: 800px)" srcset="images/team/olivia_large.jpg">
-			  <img src="images/team/anand_large.jpg" alt="Olivia">
+			  <img src="images/team/anand_small.jpg" alt="Olivia Norman, MS">
 			</picture>
 			<div class="text-container">
 				<h3>Olivia Norman, MS</h3>
@@ -99,9 +90,7 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 799px)" srcset="images/team/aaron_small.jpg">
-			  <source media="(min-width: 800px)" srcset="images/team/aaron_large.jpg">
-			  <img src="images/team/aaron_large.jpg" alt="Aaron">
+			  <img src="images/team/aaron_small.jpg" alt="Aaron Gao, Phd">
 			</picture>
 			<div class="text-container">
 				<h3>Aaron Gao, Phd</h3>
@@ -111,9 +100,7 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 799px)" srcset="images/team/arthur_small.jpg">
-			  <source media="(min-width: 800px)" srcset="images/team/arthur_large.jpg">
-			  <img src="images/team/arthur_large.jpg" alt="Arthur">
+			  <img src="images/team/arthur_small.jpg" alt="Arthur Karas, MBA">
 			</picture>
 			<div class="text-container">
 				<h3>Arthur Karas, MBA</h3>
@@ -123,9 +110,7 @@
 		</li>
 		<li>
 			<picture>
-			  <source media="(max-width: 799px)" srcset="images/team/neha_small.jpg">
-			  <source media="(min-width: 800px)" srcset="images/team/neha_large.jpg">
-			  <img src="images/team/neha_large.jpg" alt="Neha">
+			  <img src="images/team/neha_small.jpg" alt="Neha Kumar">
 			</picture>
 			<div class="text-container">
 				<h3>Neha Kumar</h3>
@@ -136,6 +121,5 @@
 	</ul>
 </section>
 <?php include 'footer.php'; // Renders page footer ?>
-
 </body>
 </html>

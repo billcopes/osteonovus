@@ -320,6 +320,70 @@ video {
 }
 
 
+.cube {
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: rotateX(  -16deg ) rotateY(  -25deg );
+  left: 27%;
+  top: 30%;
+}
+
+.cube figure {
+  margin: 0;
+  width: 120%;
+  height: 100%;
+  display: block;
+  position: absolute;
+}
+
+
+.cube figure.coronal {
+	/* THIS IS THE VERTICAL-FRONT-FACING SLICE*/
+	background: #7fceea;
+	opacity: .8;
+}
+.cube figure.sagittal {
+	/* THIS IS THE VERTICAL-SIDE-FACING SLICE*/
+	transform: rotateY(90deg) translateY(0px);
+	background: #7f7cbb;
+	opacity: .8;
+} 
+
+.cube figure.axial {
+	/* THIS IS THE SIDEWAYS SLICE*/
+	transform: rotateX(-90deg) translateY(0px);
+	background: #79EAB9;
+	opacity: .8;
+}
+
+
+.cube#axial figure.sagittal,
+.cube#axial figure.coronal {
+	opacity: .1;
+	background: #1f1d36;
+}
+
+
+.cube#sagittal figure.axial,
+.cube#sagittal figure.coronal {
+	opacity: .1;
+	background: #1f1d36;
+}
+ 	
+.cube#coronal figure.axial,
+.cube#coronal figure.sagittal {
+	opacity: .1;
+	background: #1f1d36;
+}	
+
+.cube#axial figure.coronal,
+.cube#sagittal figure.coronal,
+.cube#coronal figure.sagittal {
+	opacity: .05;
+}
+
 /********************* HOME *********************/
 #intro {
 	position: relative;
@@ -517,16 +581,31 @@ video {
 	transform: scale(1.25);
 }
 
-.zoom-nav li.first {
+
+#histology .zoom-nav li.first {
 	top: 8vw;
 	left: 2vw;
 }
 
-.zoom-nav li.second {
+#histology .zoom-nav li.second {
 	top: 22.5vw;
 	left: -2vw;
 }
-.zoom-nav li.third {
+#histology .zoom-nav li.third {
+	top: 37vw;
+	left: 2vw;
+}
+
+#ct .zoom-nav li.first {
+	top: 8vw;
+	left: 2vw;
+}
+
+#ct .zoom-nav li.second {
+	top: 22.5vw;
+	left: -2vw;
+}
+#ct .zoom-nav li.third {
 	top: 37vw;
 	left: 2vw;
 }
@@ -570,6 +649,7 @@ video {
 	position: absolute;
 	left: 19vw;
 	top: 26vw;
+	z-index: 1;
 	max-width: 300px;
 	
 }
@@ -608,37 +688,9 @@ video {
 	/*background-image: url("../images/");*/
 	background-color: #89cda8;
 }
-.key {
-    background: #EFEFEF;
-    position: absolute;
-    z-index: 777;
-    display: block;
-    width: 22vw;
-    height: 22vw;
-	padding: 3.8vw 0 0 3.8vw;
-    right: 0vw;
-    bottom: -10vw;
-	border-radius: 100%;
-	text-transform: uppercase;
-	font-size: .9rem;
-}
-.key span {display: inline-block;}
-.key li {
-	display: block;
-	position: relative;
-	margin: 1rem 0;
-}
-
-.key li:before {
-	content:"";
-	display: inline-block;
-	background: #ccc	;
-	width: 2.5vw;
-	height: 2.5vw;
-	border-radius: 100%;
-	position: relative;
-	top: .75vw;
-	margin: 0 .75rem 0 0;
+#histology .images .fourth {
+	/*background-image: url("../images/");*/
+	background-color: blue;
 }
 
 #ct .images .first {
@@ -902,15 +954,15 @@ p.legal {
 		font-size: 1.5vw;
 		padding-top: 1.5vw;
 	}
-	.zoom-nav li.first {
+	#ct .zoom-nav li.first {
 	    left: 3vw;
 	    top: 7vw;
 	}
-	.zoom-nav li.second {
+	#ct .zoom-nav li.second {
 	    top: 27vw;
 	    left: -3.25vw;
 	}
-	.zoom-nav li.third {
+	#ct .zoom-nav li.third {
 	    top: 45vw;
 	    left: 3vw;
 	}
@@ -970,16 +1022,7 @@ p.legal {
 	.home #intro p, .contact #intro h2 {
 		top: -3vh;
 	}
-	.key {
-		width: 240px;
-		height: 240px;
-		padding: 3.4vw 0 0 3vw;
-	}
-	.key li:before {
-		width: 2vw;
-		height: 2vw;
-		top: .5vw;
-	}
+	
 }
 @media screen and (max-width: 1024px) {
     #intro {
@@ -1062,9 +1105,7 @@ p.legal {
 	.team-members li:first-child {
 		margin-left: 0;
 	}
-	.key {
-		padding: 4.6vw 0 0 3.5vw;
-	}
+	
 }
 @media screen and (max-width: 980px) {
 	footer .section-two {
@@ -1105,18 +1146,7 @@ p.legal {
 		width: 2.5vw;
 		height: 1.8vw;
 	}
-	.key {
-		width: 220px;
-		height: 220px;
-		bottom: -12vw;
-		font-size: .8rem;
-		padding: 4.6vw 0 0 3.87vw;
-	}
-	.key li:before {
-		margin: 0 .5rem 0 0;
-		width: 20px;
-		height: 20px;
-	}
+	
 }
 @media screen and (max-width: 940px) {
 	.team #intro p {
@@ -1202,12 +1232,6 @@ p.legal {
 	}
 	.team-members li {
 		margin-bottom: 3.5rem;
-	}
-	.key {
-	    width: 190px;
-	    height: 190px;
-		font-size: .75rem;
-		padding: 5vw 0 0 4vw;
 	}
 }
 @media screen and (max-width: 600px) {
@@ -1341,14 +1365,14 @@ p.legal {
 		font-size: 3.5vw;
 		padding-top: 3.5vw;
 	}
-	.zoom-nav li.second {
+	#ct .zoom-nav li.second {
 	    top: 38vw;
 	    left: -5.25vw;
 	}
-	.zoom-nav li.third {
+	#ct .zoom-nav li.third {
 		top: 67vw;
 	}
-	.contact #intro h2 {
+	#ct .contact #intro h2 {
 		font-size: 1.2rem;
 	}
 	.team-members li {
@@ -1363,10 +1387,6 @@ p.legal {
 	.toggle a.active::before {
 		width: 4vw;
 		height: 2.5vw;
-	}
-	.key {
-		padding: 7vw 0 0 5vw;
-		font-size: .7rem;
 	}
 }
 @media screen and (max-width: 480px) {
@@ -1438,21 +1458,12 @@ p.legal {
 	.team #intro {
 		padding-top: 22vw;
 	}
-	.key {
-		padding: 9vw 0 0 6vw;
-	}
 }
 @media screen and (max-width: 420px) {
 	progress { top: 48%;}
 	#injectable video {
 		top: 28vw;
 		margin-bottom: 52vw;
-	}
-	.key {
-		width: 170px;
-		height: 170px;
-		bottom: -26vw;
-		padding: 7vw 0 0 6vw;
 	}
 }
 @media screen and (max-width: 400px) {

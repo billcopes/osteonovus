@@ -181,14 +181,14 @@ $(document).ready(function() {
 	  $(".zoom-nav li.first").addClass("selected");
 	  $(".zoom-nav li.second").removeClass("selected");
 	  $(".zoom-nav li.third").removeClass("selected");
+	  $(".zoom-nav li.fourth").removeClass("selected");
 	  $(".image.first").removeClass("hidden");
 	  $(".image.first").addClass("visible");
-	  $(".key").removeClass("hidden");
-	  $(".key").addClass("visible");
 	  $(".image.second").addClass("hidden");
 	  $(".image.third").addClass("hidden");
+	  $(".image.fourth").addClass("hidden");
 	});
-	$( ".vid-nav, .zoom-nav a" ).click(function( event ) {
+	$( ".vid-nav, .zoom-nav a, .zoom-text-container li.six a, .zoom-text-container li.twelve a" ).click(function( event ) {
 		event.preventDefault();
 	});
 	// Add the selected class to the nav
@@ -196,44 +196,69 @@ $(document).ready(function() {
 		$(".zoom-nav li").removeClass("selected");
 		$(this).addClass("selected"); 
 	});
-	//ten
+	//first circle
 	$( ".zoom-nav li.first" ).click(function () {
 		$(".image.first").removeClass("hidden");
 		$(".image.second").addClass("hidden");
 		$(".image.third").addClass("hidden");
+		$(".image.fourth").addClass("hidden");
 		$(this).addClass("visible");
 		//Toggle the related elements
 		$(".zoom-text.first").addClass("visible")
 		$(".zoom-text.first").removeClass("hidden");
-  	  	$(".key").removeClass("hidden");
-  	  	$(".key").addClass("visible");
 		$(".zoom-text.second").addClass("hidden")
 		$(".zoom-text.second").removeClass("visible");
 		$(".zoom-text.third").addClass("hidden");
 		$(".zoom-text.third").removeClass("visible");
+		$(".zoom-text.fourth").addClass("hidden");
+		$(".zoom-text.fourth").removeClass("visible");
 	});
-	//twenty-five
+		//Switch from 6 to 12
+		$( ".zoom-text.first li.six a" ).click(function () {
+			$(".image.first").removeClass("twelve");
+			$(".image.first").removeClass("six");
+			$(".image.first").addClass("six");
+		});
+		$( ".zoom-text.first li.twelve a" ).click(function () {
+			$(".image.first").removeClass("six");
+			$(".image.first").removeClass("twelve");
+			$(".image.first").addClass("twelve");
+		});
+	//second circle
 	$( ".zoom-nav li.second" ).click(function () {
 		$(".image.second").removeClass("hidden");
 		$(".image.first").addClass("hidden");
 		$(".image.third").addClass("hidden");
+		$(".image.fourth").addClass("hidden");
 		$(this).addClass("visible");
 		//Toggle the related elements
 		$(".zoom-text.first").addClass("hidden")
 		$(".zoom-text.first").removeClass("visible");
-  	  	$(".key").addClass("hidden");
-  	  	$(".key").removeClass("visible");
 		$(".zoom-text.second").addClass("visible")
 		$(".zoom-text.second").removeClass("hidden");
 		$(".zoom-text.third").addClass("hidden");
 		$(".zoom-text.third").removeClass("visible");
-		
+		$(".zoom-text.fourth").addClass("hidden");
+		$(".zoom-text.fourth").removeClass("visible");
 	});
-	//fourty
+	//Switch from 6 to 12
+	$( ".zoom-text.second li.six a" ).click(function () {
+		$(".image.second").removeClass("twelve");
+		$(".image.second").removeClass("six");
+		$(".image.second").addClass("six");
+	});
+	$( ".zoom-text.second li.twelve a" ).click(function () {
+		$(".image.second").removeClass("six");
+		$(".image.second").removeClass("twelve");
+		$(".image.second").addClass("twelve");
+	});
+	
+	//third circle
 	$( ".zoom-nav li.third" ).click(function () {
 		$(".image.third").removeClass("hidden");
 		$(".image.first").addClass("hidden");
 		$(".image.second").addClass("hidden");
+		$(".image.fourth").addClass("hidden");
 		$(this).addClass("visible");
 		//Toggle the related elements
 		$(".zoom-text.first").addClass("hidden")
@@ -242,9 +267,49 @@ $(document).ready(function() {
 		$(".zoom-text.second").removeClass("visible");
 		$(".zoom-text.third").addClass("visible");
 		$(".zoom-text.third").removeClass("hidden");
-  	  	$(".key").addClass("hidden");
-  	  	$(".key").removeClass("visible");
-	});		
+		$(".zoom-text.fourth").addClass("hidden");
+		$(".zoom-text.fourth").removeClass("visible");
+	});
+	//Switch from 6 to 12
+	$( ".zoom-text.third li.six a" ).click(function () {
+		$(".image.third").removeClass("twelve");
+		$(".image.third").removeClass("six");
+		$(".image.third").addClass("six");
+	});
+	$( ".zoom-text.third li.twelve a" ).click(function () {
+		$(".image.third").removeClass("six");
+		$(".image.third").removeClass("twelve");
+		$(".image.third").addClass("twelve");
+	});
+	
+	//fourth circle
+	$( ".zoom-nav li.fourth" ).click(function () {
+		$(".image.fourth").removeClass("hidden");
+		$(".image.first").addClass("hidden");
+		$(".image.second").addClass("hidden");
+		$(".image.third").addClass("hidden");
+		$(this).addClass("visible");
+		//Toggle the related elements
+		$(".zoom-text.first").addClass("hidden")
+		$(".zoom-text.first").removeClass("visible");
+		$(".zoom-text.second").addClass("hidden")
+		$(".zoom-text.second").removeClass("visible");
+		$(".zoom-text.third").addClass("hidden");
+		$(".zoom-text.third").removeClass("visible");
+		$(".zoom-text.fourth").addClass("visible");
+		$(".zoom-text.fourth").removeClass("hidden");
+	});
+	//Switch from 6 to 12
+	$( ".zoom-text.fourth li.six a" ).click(function () {
+		$(".image.fourth").removeClass("twelve");
+		$(".image.fourth").removeClass("six");
+		$(".image.fourth").addClass("six");
+	});
+	$( ".zoom-text.fourth li.twelve a" ).click(function () {
+		$(".image.fourth").removeClass("six");
+		$(".image.fourth").removeClass("twelve");
+		$(".image.fourth").addClass("twelve");
+	});
 });
 $(document).ready(function() {
 	var mainVideo = $('#putty-vid');
