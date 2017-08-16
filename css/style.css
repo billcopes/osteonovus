@@ -590,13 +590,19 @@ video {
 }
 
 #histology .zoom-nav li.second {
-	top: 22.5vw;
+	top: 17.5vw;
 	left: -2vw;
 }
 #histology .zoom-nav li.third {
+	top: 28vw;
+	left: -1.5vw;
+}
+#histology .zoom-nav li.fourth {
 	top: 37vw;
 	left: 2vw;
 }
+
+
 
 #ct .zoom-nav li.first {
 	top: 8vw;
@@ -678,34 +684,58 @@ video {
 }
 
 
-#histology .images .first {
-	background-image: url("../images/h010x.jpg");
+#histology .images .first.six {
+	background-image: url("../images/histology/6-125.jpg");
 	background-color: #7f7cbb;
 }
-#histology .images .second {
-	/*background-image: url("../images/");*/
-	background-color: #7fceea;
-}
-#histology .images .third {
-	/*background-image: url("../images/");*/
-	background-color: #89cda8;
-}
-#histology .images .fourth {
-	/*background-image: url("../images/");*/
-	background-color: blue;
+#histology .images .first.twelve {
+	background-image: url("../images/histology/12-125.jpg");
+	background-color: #7f7cbb;
 }
 
-#ct .images .first {
-	/*background-image: url("../images/");*/
-	background-color: #7f7cbb;
-}
-#ct .images .second {
-	/*background-image: url("../images/");*/
+#histology .images .second.six {
+	background-image: url("../images/histology/6-10.jpg");
 	background-color: #7fceea;
 }
-#ct .images .third {
-	/*background-image: url("../images/");*/
+#histology .images .second.twelve {
+	background-image: url("../images/histology/12-10.jpg");
+	background-color: #7fceea;
+}
+#histology .images .third.six {
+	background-image: url("../images/histology/6-20.jpg");
 	background-color: #89cda8;
+}
+#histology .images .third.twelve {
+	background-image: url("../images/histology/12-20.jpg");
+	background-color: #89cda8;
+}
+
+#histology .images .fourth.six {
+	background-image: url("../images/histology/6-40.jpg");
+	background-color: #7f7cbb;
+}
+#histology .images .fourth.twelve {
+	background-image: url("../images/histology/12-40.jpg");
+	background-color: #7f7cbb;
+}
+
+#ct .images .first.six {
+	background-color: #7f7cbb;
+}
+#ct .images .first.twelve {
+	background-color: violet;
+}
+#ct .images .second.six {
+	background-color: #7fceea;
+}
+#ct .images .second.twelve {
+	background-color: magenta;
+}
+#ct .images .third.six {
+	background-color: #89cda8;
+}
+#ct .images .third.twelve {
+	background-color: pink;
 }
 .hidden {
 	opacity: 0;
@@ -719,7 +749,9 @@ video {
 #ct {
 	display: none;
 }
-
+.stupid {
+	border: solid 22px red;
+}
 #ct .zoom-image-container {
 	background: #7f7cbb; /* Old browsers */
 	background: -moz-linear-gradient(left,  -10%, #7fceea 60%, #89cda8 120%);

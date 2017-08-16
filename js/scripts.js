@@ -195,30 +195,38 @@ $(document).ready(function() {
 	  var selector = $(this).data("toggle");  // get corresponding selector from data-toggle
 	  $("#zoom article").hide();
 	  $(selector).show();
+	  //Change Active Class of zoom nav
 	  $(".zoom-nav li.first").addClass("selected");
 	  $(".zoom-nav li.second").removeClass("selected");
 	  $(".zoom-nav li.third").removeClass("selected");
 	  $(".zoom-nav li.fourth").removeClass("selected");
+	  //Toggle Images
+	  $(".image.first").removeClass("hidden twelve");
+	  $(".image.second").removeClass("visible six twelve");
 	  $(".image.second").addClass("hidden");
+	  $(".image.third").removeClass("visible six twelve");
 	  $(".image.third").addClass("hidden");
+      $(".image.fourth").removeClass("visible six twelve");
 	  $(".image.fourth").addClass("hidden");
-	  $(".image.first").removeClass("hidden");
-	  $(".image.first").addClass("visible");
+	  $(".image.first").addClass("visible six");
 	});
 	$("#ct-toggle, #hist-toggle").on("click", function(e) {
 	  e.preventDefault();  // prevent navigating
+		$(".image.second").addClass("hidden");
+		$(".image.second").removeClass("visible");
+		$(".image.third").removeClass("visible");
+		$(".image.third").addClass("hidden");
+		$(".image.fourth").removeClass("visible");
+		$(".image.fourth").addClass("hidden");
 		$(".image.first").removeClass("hidden");
-		$(".image.second").removeClass("hidden");
-		$(".image.third").removeClass("hidden");
-		$(".image.fourth").removeClass("hidden");
 		$(".image.first").addClass("visible");
-		$(".zoom-text.first").removeClass("hidden");
 		$(".zoom-text.second").removeClass("visible");
 		$(".zoom-text.second").addClass("hidden");
 		$(".zoom-text.third").removeClass("visible");
 		$(".zoom-text.third").addClass("hidden");
 		$(".zoom-text.fourth").removeClass("visible");
 		$(".zoom-text.fourth").addClass("hidden");
+		$(".zoom-text.first").removeClass("hidden");
 		$(".zoom-text.first").addClass("visible");
 	});
 	$( ".vid-nav, .zoom-nav a, .zoom-text-container li.six a, .zoom-text-container li.twelve a" ).click(function( event ) {
@@ -231,11 +239,16 @@ $(document).ready(function() {
 	});
 	//first circle
 	$( ".zoom-nav li.first" ).click(function () {
-		$(".image.first").removeClass("hidden");
+		$(".image.first").addClass("visible six");
+		$(".image.first").removeClass("hidden twelve");
 		$(".image.second").addClass("hidden");
+		$(".image.second").removeClass("six twelve");
 		$(".image.third").addClass("hidden");
+		$(".image.third").removeClass("six twelve");
 		$(".image.fourth").addClass("hidden");
-		$(this).addClass("visible");
+		$(".image.fourth").removeClass("six twelve");
+		//$(this).addClass("visible");
+		
 		//Toggle the related elements
 		$(".zoom-text.first").addClass("visible")
 		$(".zoom-text.first").removeClass("hidden");
@@ -259,11 +272,15 @@ $(document).ready(function() {
 		});
 	//second circle
 	$( ".zoom-nav li.second" ).click(function () {
-		$(".image.second").removeClass("hidden");
 		$(".image.first").addClass("hidden");
+		$(".image.first").removeClass("six twelve");
+		$(".image.second").removeClass("hidden twelve");
+		$(".image.second").addClass("visible six");
 		$(".image.third").addClass("hidden");
+		$(".image.third").removeClass("six twelve");
 		$(".image.fourth").addClass("hidden");
-		$(this).addClass("visible");
+		$(".image.fourth").removeClass("six twelve");
+		//$(this).addClass("visible");
 		//Toggle the related elements
 		$(".zoom-text.first").addClass("hidden")
 		$(".zoom-text.first").removeClass("visible");
@@ -285,14 +302,17 @@ $(document).ready(function() {
 		$(".image.second").removeClass("twelve");
 		$(".image.second").addClass("twelve");
 	});
-	
 	//third circle
 	$( ".zoom-nav li.third" ).click(function () {
-		$(".image.third").removeClass("hidden");
 		$(".image.first").addClass("hidden");
+		$(".image.first").removeClass("six twelve");
+		$(".image.second").removeClass("six twelve");
 		$(".image.second").addClass("hidden");
+		$(".image.third").removeClass("hidden twelve");
+		$(".image.third").addClass("visible six");
 		$(".image.fourth").addClass("hidden");
-		$(this).addClass("visible");
+		$(".image.fourth").removeClass("six twelve");
+		//$(this).addClass("visible");
 		//Toggle the related elements
 		$(".zoom-text.first").addClass("hidden")
 		$(".zoom-text.first").removeClass("visible");
@@ -317,11 +337,15 @@ $(document).ready(function() {
 	
 	//fourth circle
 	$( ".zoom-nav li.fourth" ).click(function () {
-		$(".image.fourth").removeClass("hidden");
 		$(".image.first").addClass("hidden");
+		$(".image.first").removeClass("six twelve");
+		$(".image.second").removeClass("six twelve");
 		$(".image.second").addClass("hidden");
+		$(".image.third").removeClass("six twelve");
 		$(".image.third").addClass("hidden");
-		$(this).addClass("visible");
+		$(".image.fourth").removeClass("hidden twelve");
+		$(".image.fourth").addClass("visible six");
+		//$(this).addClass("visible");
 		//Toggle the related elements
 		$(".zoom-text.first").addClass("hidden")
 		$(".zoom-text.first").removeClass("visible");
