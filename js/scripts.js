@@ -66,7 +66,7 @@ $(".vid-nav li a" ).click(function () {
 });
 puttynav1.addEventListener("click", function (event) {
     event.preventDefault();
-    pvideo.currentTime = 0;
+    pvideo.currentTime = 1;
     pvideo.play();
 	return false;
 }, false);
@@ -104,10 +104,11 @@ puttynav6.addEventListener("click", function (event) {
 puttyplay = document.getElementById('putty-toggle');
 puttyplay.addEventListener("click", function (event) {
     event.preventDefault();
-    pvideo.currentTime = 0;
+    pvideo.currentTime = 1;
     pvideo.play();
 	return false;
 }, false);
+
 
 var ivideo = document.getElementById('injectable-vid');
 var iBar = document.getElementById('i');
@@ -177,6 +178,11 @@ injectplay.addEventListener("click", function (event) {
 }, false);
 
 
+document.getElementById('putty-vid')
+.addEventListener('loadedmetadata', function() {
+  this.currentTime = 1;
+}, false);
+
 /* Toggle Between */
 
 $(document).ready(function() {
@@ -228,6 +234,8 @@ $(document).ready(function() {
 		$(".zoom-text.fourth").addClass("hidden");
 		$(".zoom-text.first").removeClass("hidden");
 		$(".zoom-text.first").addClass("visible");
+		$(".zoom-text li.six").addClass("active");
+		$(".zoom-text li.twelve").removeClass("active");
 	});
 	$( ".vid-nav, .zoom-nav a, .zoom-text-container li.six a, .zoom-text-container li.twelve a" ).click(function( event ) {
 		event.preventDefault();
@@ -247,9 +255,6 @@ $(document).ready(function() {
 		$(".image.third").removeClass("six twelve");
 		$(".image.fourth").addClass("hidden");
 		$(".image.fourth").removeClass("six twelve");
-		//$(this).addClass("visible");
-		
-		//Toggle the related elements
 		$(".zoom-text.first").addClass("visible")
 		$(".zoom-text.first").removeClass("hidden");
 		$(".zoom-text.second").addClass("hidden")
@@ -258,6 +263,8 @@ $(document).ready(function() {
 		$(".zoom-text.third").removeClass("visible");
 		$(".zoom-text.fourth").addClass("hidden");
 		$(".zoom-text.fourth").removeClass("visible");
+		$(".zoom-text li.six, .zoom-text li.twelve").removeClass("active");
+		$(".zoom-text li.six").addClass("active");
 	});
 		//Switch from 6 to 12
 		$( ".zoom-text.first li.six a" ).click(function () {
@@ -280,8 +287,6 @@ $(document).ready(function() {
 		$(".image.third").removeClass("six twelve");
 		$(".image.fourth").addClass("hidden");
 		$(".image.fourth").removeClass("six twelve");
-		//$(this).addClass("visible");
-		//Toggle the related elements
 		$(".zoom-text.first").addClass("hidden")
 		$(".zoom-text.first").removeClass("visible");
 		$(".zoom-text.second").addClass("visible")
@@ -290,6 +295,8 @@ $(document).ready(function() {
 		$(".zoom-text.third").removeClass("visible");
 		$(".zoom-text.fourth").addClass("hidden");
 		$(".zoom-text.fourth").removeClass("visible");
+		$(".zoom-text li.six, .zoom-text li.twelve").removeClass("active");
+		$(".zoom-text li.six").addClass("active");
 	});
 	//Switch from 6 to 12
 	$( ".zoom-text.second li.six a" ).click(function () {
@@ -312,8 +319,6 @@ $(document).ready(function() {
 		$(".image.third").addClass("visible six");
 		$(".image.fourth").addClass("hidden");
 		$(".image.fourth").removeClass("six twelve");
-		//$(this).addClass("visible");
-		//Toggle the related elements
 		$(".zoom-text.first").addClass("hidden")
 		$(".zoom-text.first").removeClass("visible");
 		$(".zoom-text.second").addClass("hidden")
@@ -322,6 +327,8 @@ $(document).ready(function() {
 		$(".zoom-text.third").removeClass("hidden");
 		$(".zoom-text.fourth").addClass("hidden");
 		$(".zoom-text.fourth").removeClass("visible");
+		$(".zoom-text li.six, .zoom-text li.twelve").removeClass("active");
+		$(".zoom-text li.six").addClass("active");
 	});
 	//Switch from 6 to 12
 	$( ".zoom-text.third li.six a" ).click(function () {
@@ -345,8 +352,6 @@ $(document).ready(function() {
 		$(".image.third").addClass("hidden");
 		$(".image.fourth").removeClass("hidden twelve");
 		$(".image.fourth").addClass("visible six");
-		//$(this).addClass("visible");
-		//Toggle the related elements
 		$(".zoom-text.first").addClass("hidden")
 		$(".zoom-text.first").removeClass("visible");
 		$(".zoom-text.second").addClass("hidden")
@@ -355,6 +360,8 @@ $(document).ready(function() {
 		$(".zoom-text.third").removeClass("visible");
 		$(".zoom-text.fourth").addClass("visible");
 		$(".zoom-text.fourth").removeClass("hidden");
+		$(".zoom-text li.six, .zoom-text li.twelve").removeClass("active");
+		$(".zoom-text li.six").addClass("active");
 	});
 	//Switch from 6 to 12
 	$( ".zoom-text.fourth li.six a" ).click(function () {
@@ -367,7 +374,22 @@ $(document).ready(function() {
 		$(".image.fourth").removeClass("twelve");
 		$(".image.fourth").addClass("twelve");
 	});
+	
+	//Switch active from 6 to 12
+	$( ".zoom-text li.six a" ).click(function () {
+		$(".zoom-text li.twelve").removeClass("active");
+		$(".zoom-text li.six").addClass("active");
+	});
+	//Switch active from 12 to 6
+	$( ".zoom-text li.twelve a" ).click(function () {
+		$(".zoom-text li.six").removeClass("active");
+		$(".zoom-text li.twelve").addClass("active");
+	});
 });
+$( ".node" ).click(function () {
+	$(this).addClass("active");
+});
+
 $(document).ready(function() {
 	var mainVideo = $('#putty-vid');
 	var medQualVersionSrc = 'vid/putty-mobile.mp4';
@@ -388,5 +410,10 @@ $(document).ready(function() {
 		mainVideo2.append("<source type='video/mp4' src='" + highQualVersionSrc + "' />");
 	}
 });
-
-//$("#putty-vid").css('opacity', 0).animate( { opacity: 1 }, 7000 )
+document.getElementById('putty-vid').addEventListener('loadedmetadata', function() {
+  this.currentTime = 1;
+}, false);
+document.getElementById('injectable-vid').addEventListener('loadedmetadata', function() {
+  this.currentTime = 1;
+}, false);
+$("#putty-vid").css('opacity', 0).animate( { opacity: 1 }, 7000 )

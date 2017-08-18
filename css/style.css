@@ -1,23 +1,12 @@
 /* ERIC MEYER CSS RESET */
+
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -25,9 +14,10 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
@@ -39,8 +29,7 @@ ol, ul {
 blockquote, q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
@@ -48,12 +37,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 /* END RESET */
-html,body {
+
+html, body {
 	background-color: #F6F8FB;
 }
-html, *, :hover {transition: all 0.2s linear;}
+html, *, :hover {
+	transition: all 0.2s linear;
+}
+
 /*********************** HEADER // NAVIGATION ***********************/
+
 header {
 	background-image: linear-gradient(to right, #1f1d36, #4d4d4d);
 	height: 78px;
@@ -64,18 +59,17 @@ header {
 	-webkit-transition: top .5s;
 	transition: top .5s;
 }
-
 header nav {
 	position: absolute;
 	right: 0;
-    right: 5vw;
-    top: 31px;
+	right: 5vw;
+	top: 31px;
 }
 header nav a, footer nav a {
 	color: #fff;
 	font-size: 1rem;
 	letter-spacing: .07rem;
-	margin-left: 2rem;    
+	margin-left: 2rem;
 }
 a.active, a:hover, #attributes h3 {
 	color: #79EAB9;
@@ -93,16 +87,18 @@ a.logo {
 	top: 27px;
 }
 .headroom {
-    will-change: transform;
-    transition: transform 200ms linear;
+	will-change: transform;
+	transition: transform 200ms linear;
 }
 .headroom--pinned {
-    transform: translateY(0%);
+	transform: translateY(0%);
 }
 .headroom--unpinned {
-    transform: translateY(-100%);
+	transform: translateY(-100%);
 }
+
 /**************************** TYPOGRAPHY ****************************/
+
 html {
 	font-family: "Forza SSm A", "Forza SSm B", Forza, sans-serif;
 	font-style: normal;
@@ -150,8 +146,8 @@ p {
 	letter-spacing: 0.6px;
 	color: #000000;
 }
-/********************** OBJECTS/POSITIONING **************************/
 
+/********************** OBJECTS/POSITIONING **************************/
 
 ul li {
 	display: inline-block;
@@ -169,7 +165,7 @@ ul.toggle li {
 progress {
 	display: block;
 	margin: 0 auto;
-    position: absolute;
+	position: absolute;
 	bottom: 18%;
 	width: 76vw;
 	left: 50%;
@@ -184,16 +180,18 @@ progress::-webkit-progress-bar {
 	background: #D8E4EE;
 }
 progress::-webkit-progress-value {
-	background: #7f7cbb; /* Old browsers */
+	background: #7f7cbb;
+	/* Old browsers */
 	background: -moz-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
-	background: -webkit-linear-gradient(left, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
-	background: linear-gradient(to right, #7f7cbb 0%,#7fceea 50%,#89cda8 100%); 
+	background: -webkit-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
+	background: linear-gradient(to right, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 }
 progress::-moz-progress-bar {
-	background: #7f7cbb; /* Old browsers */
-	background: -moz-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%); 
-	background: -webkit-linear-gradient(left, #7f7cbb 0%,#7fceea 50%,#89cda8 100%); 
-	background: linear-gradient(to right, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
+	background: #7f7cbb;
+	/* Old browsers */
+	background: -moz-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
+	background: -webkit-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
+	background: linear-gradient(to right, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 }
 video {
 	width: 100%;
@@ -202,15 +200,17 @@ video {
 	background: #fff;
 	animation: fade-in;
 }
-
 .video-gradient {
 	height: 12vw;
 	width: 100%;
 	z-index: 95;
 	position: absolute;
-	background: -moz-linear-gradient(top, rgba(246,248,251,1) 0%, rgba(246,248,251,0) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, rgba(246,248,251,1) 0%,rgba(246,248,251,0) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(246,248,251,1) 0%,rgba(246,248,251,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: -moz-linear-gradient(top, rgba(246, 248, 251, 1) 0%, rgba(246, 248, 251, 0) 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(246, 248, 251, 1) 0%, rgba(246, 248, 251, 0) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(246, 248, 251, 1) 0%, rgba(246, 248, 251, 0) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .vid-nav {
 	bottom: 4vw;
@@ -221,18 +221,19 @@ video {
 	justify-content: space-around;
 	width: 90%;
 }
-
 #injectable .vid-nav {
 	width: 70%;
 	margin-left: -35%;
 }
 .vid-nav li {
-    position: relative;
-    text-align: left;
+	position: relative;
+	text-align: left;
 	white-space: nowrap;
 	max-width: 92px;
 }
-.vid-nav li:last-child { margin: 0;}
+.vid-nav li:last-child {
+	margin: 0;
+}
 .vid-nav li a {
 	text-align: left;
 	display: block;
@@ -241,13 +242,12 @@ video {
 	line-height: 1.6rem;
 	letter-spacing: .025rem;
 }
-
 .vid-nav li a:hover {
 	color: #7f7cbb;
 	color: #89cda8;
 }
 .vid-nav li a::before {
-	content:"";
+	content: "";
 	display: inline-block;
 	width: 32px;
 	height: 32px;
@@ -307,40 +307,35 @@ video {
 	background: url("../images/clock_icon_active.svg") no-repeat;
 }
 .vid-nav li a.playing {
-	animation: pulse-vid-nav 1s ease-in-out infinite alternate; 
+	animation: pulse-vid-nav 1s ease-in-out infinite alternate;
 }
 @keyframes pulse-vid-nav {
-  0% {
-    color: #7f7cbb;
-  }
-  50% {
-    color: #7fceea;
-  }
-  100% {
-    color: #89cda8;
-  }
+	0% {
+		color: #7f7cbb;
+	}
+	50% {
+		color: #7fceea;
+	}
+	100% {
+		color: #89cda8;
+	}
 }
-
-
 .cube {
-  width: 40%;
-  height: 40%;
-  position: absolute;
-  transform-style: preserve-3d;
-  transform: rotateX(  -16deg ) rotateY(  -25deg );
-  left: 27%;
-  top: 30%;
+	width: 40%;
+	height: 40%;
+	position: absolute;
+	transform-style: preserve-3d;
+	transform: rotateX( -16deg) rotateY( -25deg);
+	left: 27%;
+	top: 30%;
 }
-
 .cube figure {
-  margin: 0;
-  width: 120%;
-  height: 100%;
-  display: block;
-  position: absolute;
+	margin: 0;
+	width: 120%;
+	height: 100%;
+	display: block;
+	position: absolute;
 }
-
-
 .cube figure.coronal {
 	/* THIS IS THE VERTICAL-FRONT-FACING SLICE*/
 	background: #7fceea;
@@ -351,45 +346,34 @@ video {
 	transform: rotateY(90deg) translateY(0px);
 	background: #7f7cbb;
 	opacity: .8;
-} 
-
+}
 .cube figure.axial {
 	/* THIS IS THE SIDEWAYS SLICE*/
 	transform: rotateX(-90deg) translateY(0px);
 	background: #79EAB9;
 	opacity: .8;
 }
-
-
-.cube#axial figure.sagittal,
-.cube#axial figure.coronal {
+.cube#axial figure.sagittal, .cube#axial figure.coronal {
 	opacity: .1;
 	background: #1f1d36;
 }
-
-
-.cube#sagittal figure.axial,
-.cube#sagittal figure.coronal {
+.cube#sagittal figure.axial, .cube#sagittal figure.coronal {
 	opacity: .1;
 	background: #1f1d36;
 }
- 	
-.cube#coronal figure.axial,
-.cube#coronal figure.sagittal {
+.cube#coronal figure.axial, .cube#coronal figure.sagittal {
 	opacity: .1;
 	background: #1f1d36;
-}	
-
-.cube#axial figure.coronal,
-.cube#sagittal figure.coronal,
-.cube#coronal figure.sagittal {
+}
+.cube#axial figure.coronal, .cube#sagittal figure.coronal, .cube#coronal figure.sagittal {
 	opacity: .05;
 }
 
 /********************* HOME *********************/
+
 #intro {
 	position: relative;
-	padding: 12vw 0 8vw 12vw ;
+	padding: 12vw 0 8vw 12vw;
 }
 #intro h1 {
 	white-space: nowrap;
@@ -397,7 +381,6 @@ video {
 #intro p {
 	font-size: 1.4rem;
 }
-
 .home #intro p, .contact #intro h2 {
 	position: relative;
 	left: 34vw;
@@ -405,23 +388,23 @@ video {
 	max-width: 42vw;
 	font-weight: 100;
 }
-#novogro, #zoom{
+#novogro, #zoom {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
 }
 .novogro {
 	position: absolute;
-	top:6vw; 
-	left:8vw;
+	top: 6vw;
+	left: 8vw;
 	font-size: 0px;
 	line-height: 0px;
 	display: inline-block;
 	background: url("../images/novogro.svg") no-repeat;
 	background-size: contain;
-	width:38%;
-	height:24%;
-	z-index:99;
+	width: 38%;
+	height: 24%;
+	z-index: 99;
 }
 .toggle {
 	position: absolute;
@@ -445,7 +428,7 @@ video {
 	transition: all 0.5s ease;
 }
 .toggle a.active::before {
-	content:"";
+	content: "";
 	display: inline-block;
 	background: url("../images/arrow.svg") no-repeat;
 	width: 1rem;
@@ -453,7 +436,7 @@ video {
 	width: 2vw;
 	height: 1.4vw;
 	background-size: contain;
-	margin-right: .6vw;	
+	margin-right: .6vw;
 	transition: all 0.5s ease;
 }
 #putty {
@@ -470,7 +453,6 @@ video {
 	text-align: center;
 	margin-top: -3px;
 }
-
 #attributes ul {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -481,7 +463,7 @@ video {
 	letter-spacing: 0.4px;
 }
 #attributes ul li:before {
-	content:"";
+	content: "";
 	display: block;
 	width: 40px;
 	height: 30px;
@@ -498,11 +480,9 @@ video {
 #weeks:before {
 	background: url("../images/growth_icon.svg");
 }
-
 #zoom {
 	padding: 6rem 0;
 }
-		
 #zoom .toggle {
 	top: 12vw;
 }
@@ -515,10 +495,11 @@ video {
 	border-radius: 100%;
 	border: solid 10px #fff;
 	padding: 3px;
-	background: #7f7cbb; /* Old browsers */
+	background: #7f7cbb;
+	/* Old browsers */
 	background: -moz-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
-	background: -webkit-linear-gradient(left, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
-	background: linear-gradient(to right, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
+	background: -webkit-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
+	background: linear-gradient(to right, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 }
 .zoom-nav li a {
 	display: block;
@@ -527,18 +508,16 @@ video {
 	border-radius: 100%;
 	color: #000;
 	background: #fff;
-    text-align: center;
+	text-align: center;
 	padding-top: 1.25vw;
 	font-size: 1vw;
 }
-
 .zoom-nav li.selected, .zoom-nav li.selected:hover {
 	transform: scale(1.5);
 	position: relative;
 	z-index: 888;
-	box-shadow: 0px 0px 4px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
-
 .zoom-nav li.selected {
 	animation-name: pulse;
 	animation-duration: 1s;
@@ -546,20 +525,18 @@ video {
 	animation-timing-function: ease;
 	animation-iteration-count: infinite;
 }
-
 @keyframes pulse {
-    0% {
+	0% {
 		background: #7f7cbb;
 	}
 	50% {
 		background: #7fceea;
 	}
-    100% {
+	100% {
 		background: #89cda8;
 	}
 }
-
-.zoom-nav li.selected a {
+.zoom-nav li.selected a, li.six.active a, li.twelve.active a  {
 	animation-name: pulse-text;
 	animation-duration: 1s;
 	animation-direction: alternate;
@@ -567,28 +544,23 @@ video {
 	animation-iteration-count: infinite;
 }
 @keyframes pulse-text {
-    0% {
+	0% {
 		color: #7f7cbb;
 	}
 	50% {
 		color: #7fceea;
 	}
-    100% {
+	100% {
 		color: #89cda8;
 	}
 }
-
-
 .zoom-nav li:hover {
 	transform: scale(1.25);
 }
-
-
 #histology .zoom-nav li.first {
 	top: 8vw;
 	left: 2vw;
 }
-
 #histology .zoom-nav li.second {
 	top: 17.5vw;
 	left: -2vw;
@@ -601,14 +573,10 @@ video {
 	top: 37vw;
 	left: 2vw;
 }
-
-
-
 #ct .zoom-nav li.first {
 	top: 8vw;
 	left: 2vw;
 }
-
 #ct .zoom-nav li.second {
 	top: 22.5vw;
 	left: -2vw;
@@ -617,7 +585,6 @@ video {
 	top: 37vw;
 	left: 2vw;
 }
-	
 .zoom-image-container {
 	position: relative;
 	float: right;
@@ -625,10 +592,11 @@ video {
 	height: 50vw;
 	margin-right: -3vw;
 	border-radius: 100%;
-	background: #7f7cbb; /* Old browsers */
+	background: #7f7cbb;
+	/* Old browsers */
 	background: -moz-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
-	background: -webkit-linear-gradient(left, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
-	background: linear-gradient(to right, #7f7cbb 0%,#7fceea 50%,#89cda8 100%);
+	background: -webkit-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
+	background: linear-gradient(to right, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 }
 .zoom-image-container .images {
 	background: #fff;
@@ -644,99 +612,140 @@ video {
 	height: 34vw;
 	margin: 0 auto;
 	border: solid 3px #88CDAF;
-    border-radius: 100%;
-    position: absolute;
-    top: 2vw;
+	border-radius: 100%;
+	position: absolute;
+	top: 2vw;
 	left: 2vw;
 	overflow: hidden;
 	background-position: center center;
 	background-size: 112%;
 }
-
 .zoom-text-container {
 	position: absolute;
 	left: 19vw;
 	top: 26vw;
 	z-index: 1;
-	max-width: 300px;
-	
+	max-width: 400px;
 }
 .zoom-text-container h2 {
 	font-size: 5.4rem;
 	font-weight: 200;
 }
 .zoom-text-container h2 span {
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 	display: block;
-	/*text-transform: uppercase;*/
 }
-
 .zoom-text-container p {
 	font-size: 22px;
 	line-height: 2.6rem;
-	margin: 4rem 0;
+	margin: 2rem 0;
 }
-
 .zoom-text {
 	position: absolute;
 	top: 0;
-	width: 300px;
+	width: 400px;
 }
 
+.zoom-text ul {
+	margin: 2rem 0 0;
+}
+.zoom-text ul li {
+	margin-right: 1rem;
+	font-size: 1.5rem;
+}
+li a, li a {
+	color: #000;
+}
 
+#histology .images, #ct .images {
+	background-color: #fff;
+}
 #histology .images .first.six {
 	background-image: url("../images/histology/6-125.jpg");
-	background-color: #7f7cbb;
 }
 #histology .images .first.twelve {
 	background-image: url("../images/histology/12-125.jpg");
-	background-color: #7f7cbb;
 }
-
 #histology .images .second.six {
 	background-image: url("../images/histology/6-10.jpg");
-	background-color: #7fceea;
 }
 #histology .images .second.twelve {
 	background-image: url("../images/histology/12-10.jpg");
-	background-color: #7fceea;
 }
 #histology .images .third.six {
 	background-image: url("../images/histology/6-20.jpg");
-	background-color: #89cda8;
 }
 #histology .images .third.twelve {
 	background-image: url("../images/histology/12-20.jpg");
-	background-color: #89cda8;
 }
-
 #histology .images .fourth.six {
 	background-image: url("../images/histology/6-40.jpg");
-	background-color: #7f7cbb;
 }
 #histology .images .fourth.twelve {
 	background-image: url("../images/histology/12-40.jpg");
-	background-color: #7f7cbb;
 }
-
 #ct .images .first.six {
-	background-color: #7f7cbb;
+	background-image: url("../images/ct/6-axial.jpg");
 }
 #ct .images .first.twelve {
-	background-color: violet;
+	background-image: url("../images/ct/12-axial.jpg");
 }
 #ct .images .second.six {
-	background-color: #7fceea;
+	background-image: url("../images/ct/6-sagittal.jpg");
 }
 #ct .images .second.twelve {
-	background-color: magenta;
+	background-image: url("../images/ct/12-sagittal.jpg");
 }
 #ct .images .third.six {
-	background-color: #89cda8;
+	background-image: url("../images/ct/6-coronal.jpg");
 }
 #ct .images .third.twelve {
-	background-color: pink;
+	background-image: url("../images/ct/12-coronal.jpg");
 }
+
+.node {
+	position: absolute;
+	display: block;
+	border-radius: 100%;
+	border: solid 2px #7f7cbb;
+	width: 3.5vw;
+	height: 3.5vw;
+	left: 0;
+	top: 0;
+	/*animation: pulse-vid-nav 1s ease-in-out infinite alternate;*/
+	animation: node .75s ease infinite alternate-reverse;
+	background-color: rgba(127,124,187,0.8);
+}
+
+@keyframes node {
+	0% {
+		transform: scale(.8);
+		background-color: rgba(127,124,187,0.0);
+		border-color: #fff;
+	}
+	50% {
+		background-color: rgba(127,206,234,0.4);
+		border-color: #fff;
+	}
+	100% {
+		transform: scale(1);
+		background-color: rgba(137,205,168,0.2);
+		border-color: #fff;
+	}
+}
+
+.node.active {
+	transform: scale(2);
+	animation: none;
+}
+
+#histology .first.six .node.implant { left: 81%; top: 43.5%; }
+#histology .first.six .node.newbone { left: 24.5%; top: 54.5%; }
+#histology .first.six .node.marrow { left: 52%; top: 27.5%; }
+#histology .first.twelve .node.implant { left: 72%; top: 39.5%; }
+#histology .first.twelve .node.newbone { left: 29.5%; top: 62.5%; }
+#histology .first.twelve .node.marrow { left: 29%; top: 27.5%; }
+
 .hidden {
 	opacity: 0;
 	transform: scale(0);
@@ -745,27 +754,23 @@ video {
 	opacity: 1;
 	transform: scale(1);
 }
-
 #ct {
 	display: none;
 }
-.stupid {
-	border: solid 22px red;
-}
 #ct .zoom-image-container {
-	background: #7f7cbb; /* Old browsers */
-	background: -moz-linear-gradient(left,  -10%, #7fceea 60%, #89cda8 120%);
-	background: -webkit-linear-gradient(left, #7f7cbb -10%,#7fceea 60%,#89cda8 120%);
-	background: linear-gradient(to right, #7f7cbb -10%,#7fceea 60%,#89cda8 120%);
+	background: #7f7cbb;
+	/* Old browsers */
+	background: -moz-linear-gradient(left, -10%, #7fceea 60%, #89cda8 120%);
+	background: -webkit-linear-gradient(left, #7f7cbb -10%, #7fceea 60%, #89cda8 120%);
+	background: linear-gradient(to right, #7f7cbb -10%, #7fceea 60%, #89cda8 120%);
 }
-
 
 /******************************* TEAM ******************************/
+
 #team {
 	position: relative;
 	margin-top: -28vw;
 }
-
 .team.logomark, .contact.logomark {
 	background-image: url("../images/logomark.svg");
 	background-repeat: no-repeat;
@@ -777,10 +782,9 @@ video {
 .team #intro {
 	padding: 14vw 0 8vw 7vw;
 }
-
 .team #intro p {
-    width: 32%;
-    margin: 3rem 0 0;
+	width: 32%;
+	margin: 3rem 0 0;
 }
 .team h3 {
 	margin: 0;
@@ -798,12 +802,10 @@ picture {
 	width: 105%;
 	left: -5%;
 }
-
 .team-members picture img.aaron {
 	width: 114%;
 	top: -16%;
 }
-
 .team-members {
 	padding-left: 14vw;
 }
@@ -817,7 +819,7 @@ picture {
 	margin-left: 32%;
 }
 .team-members li h3 {
-	margin: 1.5rem 0 1rem;	
+	margin: 1.5rem 0 1rem;
 	font-size: 1.6rem;
 }
 .team-members li h4 {
@@ -827,16 +829,15 @@ picture {
 .team-members li p {
 	font-size: 1rem;
 }
-
 .team-members li .text-container {
 	padding-right: 4vw;
 }
 
 /**************************** CONTACT ******************************/
+
 .contact.logomark {
 	background-position-y: -12rem;
 }
-
 .contact #intro h2 {
 	font-size: 1.6rem;
 	line-height: 2.6rem;
@@ -850,7 +851,6 @@ picture {
 	margin-top: 1rem;
 	font-size: 80%;
 }
-
 .contact iframe {
 	display: block;
 	width: 87%;
@@ -866,16 +866,13 @@ footer {
 	background-size: 25%;
 	color: #fff;
 }
-
 footer nav a:first-child {
 	margin: 0;
 }
-
 footer p {
 	color: #fff;
 	font-size: 22px;
 }
-
 footer h2 {
 	font-family: "Georgia", serif;
 	font-size: 3.6rem;
@@ -886,32 +883,26 @@ footer h2 {
 	text-align: right;
 	margin: 0 3.25rem 0 0;
 }
-
 footer a.logo {
 	position: static;
 }
-
 footer .left p {
 	max-width: 500px;
 }
-
 footer .section-two {
 	padding-top: 12rem;
 }
-
 p.legal {
 	font-size: 13px;
 	margin: 1.6rem 0 2rem;
 }
-
 .ut p {
 	font-size: 14px;
-    float: right;
-    max-width: 400px;
+	float: right;
+	max-width: 400px;
 }
-
 .ut p:before {
-	content:"";
+	content: "";
 	float: left;
 	background: url("../images/ut.png") no-repeat;
 	background-size: contain;
@@ -919,7 +910,6 @@ p.legal {
 	height: 55px;
 	margin: .6rem 2rem 0 0;
 }
-
 .left, .right {
 	display: inline-block;
 	width: 49.3%;
@@ -933,13 +923,11 @@ p.legal {
 	margin: 2rem 0 0;
 }
 
-
-
 /*************************** MEDIA QUERIES *************************/
 
-@media screen and (min-width: 1800px){
+@media screen and (min-width: 1800px) {
 	.team-members li h3 {
-		margin: 2rem 0 1rem;	
+		margin: 2rem 0 1rem;
 		font-size: 2.4rem;
 	}
 	.team-members li h4 {
@@ -950,8 +938,6 @@ p.legal {
 		font-size: 1.4rem;
 	}
 }
-
-
 @media screen and (max-width: 1480px) {
 	.vid-nav li a {
 		font-size: .9rem;
@@ -993,16 +979,16 @@ p.legal {
 		padding-top: 1.5vw;
 	}
 	#ct .zoom-nav li.first {
-	    left: 3vw;
-	    top: 7vw;
+		left: 3vw;
+		top: 7vw;
 	}
 	#ct .zoom-nav li.second {
-	    top: 27vw;
-	    left: -3.25vw;
+		top: 27vw;
+		left: -3.25vw;
 	}
 	#ct .zoom-nav li.third {
-	    top: 45vw;
-	    left: 3vw;
+		top: 45vw;
+		left: 3vw;
 	}
 	.zoom-text {
 		width: 270px;
@@ -1060,13 +1046,12 @@ p.legal {
 	.home #intro p, .contact #intro h2 {
 		top: -3vh;
 	}
-	
 }
 @media screen and (max-width: 1024px) {
-    #intro {
-    	padding: 14vw 0 8vw 8vw;
+	#intro {
+		padding: 14vw 0 8vw 8vw;
 		padding: 16vw 0 8vw 80px;
-    }
+	}
 	#intro h1 {
 		font-size: 7.4vw;
 		line-height: 7.87vw;
@@ -1075,14 +1060,15 @@ p.legal {
 		font-size: 11.8vw;
 		line-height: 11vw;
 	}
-	#intro p, { font-size:1.2rem; }
-	.home #intro p,
-	.contact #intro h2 {
-    	left: 0vw;
+	#intro p, {
+		font-size: 1.2rem;
+	}
+	.home #intro p, .contact #intro h2 {
+		left: 0vw;
 		top: 2.4rem;
 		max-width: 62vw;
 		padding: 2vw 0 0 .9vw;
-    }
+	}
 	.novogro {
 		width: 42%;
 		height: 25%;
@@ -1143,18 +1129,14 @@ p.legal {
 	.team-members li:first-child {
 		margin-left: 0;
 	}
-	
 }
 @media screen and (max-width: 980px) {
 	footer .section-two {
 		padding-top: 6rem;
 	}
-	.section-one .left,
-	.section-one .right,
-	.section-two .left,
-	.section-two .right {
+	.section-one .left, .section-one .right, .section-two .left, .section-two .right {
 		width: 100%;
-	} 
+	}
 	.footnote {
 		text-align: left;
 		margin: 4rem 0 0;
@@ -1163,14 +1145,16 @@ p.legal {
 		float: none;
 		margin-top: 6rem;
 	}
-	.footnote { margin: 1rem 0 0; }
+	.footnote {
+		margin: 1rem 0 0;
+	}
 	.zoom-text {
 		width: 220px;
 	}
 	.zoom-text-container p {
 		line-height: 2rem;
 		font-size: 16px;
-	}	
+	}
 	.zoom-text-container h2 {
 		font-size: 3.4rem;
 	}
@@ -1184,7 +1168,6 @@ p.legal {
 		width: 2.5vw;
 		height: 1.8vw;
 	}
-	
 }
 @media screen and (max-width: 940px) {
 	.team #intro p {
@@ -1198,10 +1181,10 @@ p.legal {
 	}
 }
 @media screen and (max-width: 768px) {
-    #intro {
-    	padding: 22vw 0 10vw 18vw;
+	#intro {
+		padding: 22vw 0 10vw 18vw;
 		padding: 160px 0 10vw 110px;
-    }
+	}
 	.novogro {
 		left: 28px;
 		width: 50%;
@@ -1222,12 +1205,10 @@ p.legal {
 	.vid-nav {
 		bottom: 3.5vw;
 	}
-	#intro p,
-	.contact #intro h2 {
+	#intro p, .contact #intro h2 {
 		font-size: 19px;
 	}
-	.home #intro p,
-	.contact #intro h2 {
+	.home #intro p, .contact #intro h2 {
 		padding: 0;
 	}
 	#attributes h3 {
@@ -1274,24 +1255,19 @@ p.legal {
 }
 @media screen and (max-width: 600px) {
 	*::-webkit-media-controls-panel {
-	  display: none!important;
-	  -webkit-appearance: none;
+		display: none!important;
+		-webkit-appearance: none;
 	}
-
 	/* Old shadow dom for play button */
-
 	*::--webkit-media-controls-play-button {
-	  display: none!important;
-	  -webkit-appearance: none;
+		display: none!important;
+		-webkit-appearance: none;
 	}
-
 	/* New shadow dom for play button */
-
 	/* This one works */
-
 	*::-webkit-media-controls-start-playback-button {
-	  display: none!important;
-	  -webkit-appearance: none;
+		display: none!important;
+		-webkit-appearance: none;
 	}
 	progress {
 		bottom: initial;
@@ -1325,26 +1301,36 @@ p.legal {
 		top: 10px;
 		margin-right: 1rem;
 	}
-	.vid-nav li br { display: none;}
+	.vid-nav li br {
+		display: none;
+	}
 	header a.logo {
 		background: url("../images/mark-full.svg") no-repeat;
 		background-size: contain;
 		background-position: center center;
 		height: 30px;
 		width: 44px;
-		top: 14px;	
+		top: 14px;
 	}
-	.logomark { background-position-y: -3rem;}
-	header { height: 58px;}
-	header nav { top: 21px;}
+	.logomark {
+		background-position-y: -3rem;
+	}
+	header {
+		height: 58px;
+	}
+	header nav {
+		top: 21px;
+	}
 	header nav a {
 		font-size: .8rem;
 		margin-left: 1.5rem;
 	}
-    #intro {
-    	padding: 120px 0 8vw 12vw;
-    }
-	#attributes { padding: 4rem 2rem;}
+	#intro {
+		padding: 120px 0 8vw 12vw;
+	}
+	#attributes {
+		padding: 4rem 2rem;
+	}
 	#attributes h3 {
 		margin: 0 auto;
 		padding: 0;
@@ -1361,11 +1347,15 @@ p.legal {
 	#attributes ul li:last-child {
 		margin-bottom: 0;
 	}
-	footer {padding: 4rem 3rem 2rem;}
+	footer {
+		padding: 4rem 3rem 2rem;
+	}
 	footer h2 {
 		margin-bottom: 1rem;
 	}
-	.mailto {margin: 1rem 0 0;}
+	.mailto {
+		margin: 1rem 0 0;
+	}
 	#zoom {
 		padding: 8rem 0 14rem;
 	}
@@ -1404,8 +1394,8 @@ p.legal {
 		padding-top: 3.5vw;
 	}
 	#ct .zoom-nav li.second {
-	    top: 38vw;
-	    left: -5.25vw;
+		top: 38vw;
+		left: -5.25vw;
 	}
 	#ct .zoom-nav li.third {
 		top: 67vw;
@@ -1433,17 +1423,17 @@ p.legal {
 		margin-left: .8rem;
 	}
 	#intro h1 {
-	    font-size: 10vw;
-	    line-height: 10vw;
+		font-size: 10vw;
+		line-height: 10vw;
 	}
 	#intro h1 strong {
-	    font-size: 17vw;
-	    line-height: 17vw;
-	}	
-	
-	#intro p {font-size: 3.6vw;}
-	.home #intro p,
-	.contact #intro h2 {
+		font-size: 17vw;
+		line-height: 17vw;
+	}
+	#intro p {
+		font-size: 3.6vw;
+	}
+	.home #intro p, .contact #intro h2 {
 		max-width: 82vw;
 		padding: 0 0 12vw;
 	}
@@ -1455,12 +1445,21 @@ p.legal {
 		width: 150%;
 		margin: 0 0 5rem -40%;
 	}
-
-	footer {padding: 4rem 2rem 2rem;}
-	footer h2 { font-size: 2rem;}
-	footer p { font-size: 18px;}
-	footer nav a{ font-size: 12px;	}
-	.mailto {font-size: 22px;}
+	footer {
+		padding: 4rem 2rem 2rem;
+	}
+	footer h2 {
+		font-size: 2rem;
+	}
+	footer p {
+		font-size: 18px;
+	}
+	footer nav a {
+		font-size: 12px;
+	}
+	.mailto {
+		font-size: 22px;
+	}
 	.ut p:before {
 		display: block;
 		float: none;
@@ -1480,25 +1479,27 @@ p.legal {
 		padding-left: 6vw;
 	}
 	.toggle {
-	    top: 90vw;
+		top: 90vw;
 		top: 390px;
-	    left: 7.2vw;
-	    font-size: 1.2rem;
+		left: 7.2vw;
+		font-size: 1.2rem;
 	}
 	ul.toggle li {
 		display: inline-block;
 		margin-right: 1rem;
 	}
 	.toggle a.active::before {
-	    width: 6vw;
-	    height: 3vw;
+		width: 6vw;
+		height: 3vw;
 	}
 	.team #intro {
 		padding-top: 22vw;
 	}
 }
 @media screen and (max-width: 420px) {
-	progress { top: 48%;}
+	progress {
+		top: 48%;
+	}
 	#injectable video {
 		top: 28vw;
 		margin-bottom: 52vw;
@@ -1513,8 +1514,8 @@ p.legal {
 		top: 120vw;
 	}
 	.toggle a.active::before {
-	    width: 9vw;
-	    height: 5vw;
+		width: 9vw;
+		height: 5vw;
 	}
 	.novogro {
 		width: 74%;
@@ -1527,7 +1528,6 @@ p.legal {
 	#putty, .video-gradient {
 		top: 28vw;
 	}
-	
 }
 @media screen and (max-width: 360px) {
 	.vid-nav {
