@@ -10,21 +10,22 @@
 <?php include 'header.php'; // Renders navigation ?>
 <section id="intro" class="logomark">
 	<div class="text-container">
-		<h1>Do you really need <strong>BMP?</strong></h1>
-		<p>Introducing <strong>NovoGro<sup>&reg;</sup></strong>, a breakthrough bone regeneration biomaterial that grows robust bone, with excellent handling properties, in just six weeks. Only from Osteonovus.</p>
+		<h1 class="fadeout">Do you really need <strong>BMP?</strong></h1>
+		<p class="fadein">Introducing <strong>NovoGro<sup>&reg;</sup></strong>, a breakthrough bone regeneration biomaterial that grows robust bone, with excellent handling properties, in just six weeks. Only from Osteonovus.</p>
 	</div>
 </section>
 <section id="novogro">
-	<h2 class="novogro">Novgro <span>Moldable Bone Substitute</span></h2>
-	<ul class="toggle">
+	<h2 class="novogro fadein">Novgro <span>Moldable Bone Substitute</span></h2>
+	<ul class="toggle fadein">
 		<li><a href="#" id="putty-toggle" class="active" data-toggle="#putty">Putty</a></li>
-		<li><a href="#" id="injectable-toggle" class="" data-toggle="#injectable">Injectable</a></li>
+		<li><a href="#" id="injectable-toggle" data-toggle="#injectable">Injectable</a></li>
 	</ul>
 	<div class="video-gradient"></div>
+	<div class="video-gradient video-gradient-bottom"></div>
 	<article id="putty">
-		<progress id='p' max='100' value='0'></progress>
-		<video id="putty-vid" preload="auto" poster="images/putty.jpg" autoplay loop muted></video>
-			<ul class="vid-nav putty">
+		<progress id='p' max='100' value='0' class="fadein"></progress>
+		<video id="putty-vid" preload="auto" poster="images/putty.jpg" class="fadein" autoplay loop muted></video>
+			<ul class="vid-nav putty fadein">
 				<li><a href="#" id="vid1-1">Moldable <br/>and cohesive</a></li>
 				<li><a href="#" id="vid1-2">Will not <br/>Wash Out</a></li>
 				<li><a href="#" id="vid1-3">Conforms to <br/>Graft Site</a></li>
@@ -34,9 +35,9 @@
 			</ul>
 	</article>
 	<article id="injectable">
-		<progress id='i' max='100' value='0'></progress>
-		<video id="injectable-vid" preload="auto" poster="images/injectable.jpg" loop muted></video>
-			<ul class="vid-nav injectable">
+		<progress id='i' max='100' value='0' class="fadein"></progress>
+		<video id="injectable-vid" preload="auto" poster="images/injectable.jpg" class="fadein" loop muted></video>
+			<ul class="vid-nav injectable fadein">
 				<li><a href="#" id="vid2-1">Injectable <br/>for 10 minutes</a></li>
 				<li><a href="#" id="vid2-2">Will not <br/>Wash Out</a></li>
 				<li><a href="#" id="vid2-3">Conforms<br/>to Bone</a></li>
@@ -44,12 +45,21 @@
 			</ul>
 	</article>
 </section>
-<section id="attributes">
-	<h3>Let's put a statement here  that says what these bullets are</h3>
+<section class="attributes">
+	<h3>Introducing NovoGro. The breakthrough biomaterial made from a patented blend of calcium, magnesium, sodium and silica salts.</h3>
 	<ul>
-		<li id="zero-exotherm">zero exotherm</li>
-		<li id="ph-neutral">PH NEUTRAL</li>
-		<li id="weeks">NEW BONE IN 6 WEEKS</li>
+		<li id="zero-exotherm">
+			<h4>ZERO EXOTHERM</h4>
+			<p>Lorem ipsum dolor sit amet consecteteur.</p>
+		</li>
+		<li id="ph-neutral">
+			<h4>PH NEUTRAL</h4>
+			<p>Lorem ipsum dolor sit amet consecteteur.</p>
+		</li>
+		<li id="weeks">
+			<h4>NEW BONE IN 6 WEEKS</h4>
+			<p>Lorem ipsum dolor sit amet consecteteur.</p>
+		</li>
 	</ul>
 </section>
 <section id="zoom">
@@ -60,7 +70,7 @@
 	<article id="histology">
 		<div class="zoom-text-container">
 			<div class="zoom-text first visible">
-				<h2>1.25x<span>Histology</span></h2>
+				<h2>1.25x<span>Objective Lens Magnification</span></h2>
 				<ul>
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
@@ -68,7 +78,7 @@
 				<p>NovoGro Putty in a Rabbit Distal Femoral Condyle, post-op.</p>
 			</div>
 			<div class="zoom-text second hidden">
-				<h2>10x<span>Histology</span></h2>
+				<h2>10x<span>Objective Lens Magnification</span></h2>
 				<ul>
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
@@ -76,7 +86,7 @@
 				<p>Need a statement about the new marrow or some such.</p>
 			</div>
 			<div class="zoom-text third hidden">
-				<h2>20x<span>Histology</span></h2>
+				<h2>20x<span>Objective Lens Magnification</span></h2>
 				<ul>
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
@@ -84,7 +94,7 @@
 				<p>Robust new bone formation in the center of the defect.</p>
 			</div>
 			<div class="zoom-text fourth hidden">
-				<h2>40x<span>Histology</span></h2>
+				<h2>40x<span>Objective Lens Magnification</span></h2>
 				<ul>
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
@@ -100,6 +110,9 @@
 				<li class="fourth"><a href="#">40x</a></li>
 			</ul>
 			<div class="images">
+				<div class="popup implant"></div>
+				<div class="popup newbone"></div>
+				<div class="popup marrow"></div>				
 				<div class="image first six visible">
 					<a class="node implant"></a>
 					<a class="node newbone"></a>

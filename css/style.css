@@ -41,9 +41,14 @@ table {
 /* END RESET */
 
 html, body {
-	background-color: #F6F8FB;
+	background: #eaeef7; /* Old browsers */
+	background: -moz-linear-gradient(top,  #eaeef7 0%, #dee6f7 50%, #f4f6f9 86%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #eaeef7 0%,#dee6f7 50%,#f4f6f9 86%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #eaeef7 0%,#dee6f7 50%,#f4f6f9 86%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeef7', endColorstr='#f4f6f9',GradientType=0 ); /* IE6-9 */
+	
 }
-html, *, :hover {
+:hover {
 	transition: all 0.2s linear;
 }
 
@@ -71,7 +76,7 @@ header nav a, footer nav a {
 	letter-spacing: .07rem;
 	margin-left: 2rem;
 }
-a.active, a:hover, #attributes h3 {
+a.active, a:hover, .attributes h3, .toggle a:hover {
 	color: #79EAB9;
 }
 a.logo {
@@ -123,6 +128,7 @@ h1 {
 	letter-spacing: -.07rem;
 	font-weight: normal;
 	color: #000000;
+	white-space: nowrap;
 }
 h1 strong {
 	font-weight: bold;
@@ -135,6 +141,7 @@ h3 {
 	line-height: 2rem;
 	margin: 0 auto 4rem;
 	font-weight: 100;
+	max-width: 50rem;
 }
 p {
 	font-family: "Forza SSm A", "Forza SSm B", Forza, sans-serif;
@@ -149,6 +156,7 @@ p {
 
 /********************** OBJECTS/POSITIONING **************************/
 
+
 ul li {
 	display: inline-block;
 }
@@ -156,17 +164,31 @@ ul.toggle li {
 	display: block;
 }
 .logomark {
+	display: block;
+	position: relative;
+}
+
+.logomark::after {
+	content: "";
 	background-image: url("../images/logomark.svg");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position-x: -2rem;
 	background-position-y: -6rem;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
 }
+
+
 progress {
 	display: block;
 	margin: 0 auto;
 	position: absolute;
-	bottom: 18%;
+	bottom: 24%;
 	width: 76vw;
 	left: 50%;
 	margin-left: -38vw;
@@ -194,8 +216,8 @@ progress::-moz-progress-bar {
 	background: linear-gradient(to right, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 }
 video {
-	width: 100%;
-	margin-bottom: -1vh;
+	width: 125%;
+	margin: 0 0 0 -24vw;
 	position: relative;
 	background: #fff;
 	animation: fade-in;
@@ -212,14 +234,22 @@ video {
 	background: linear-gradient(to bottom, rgba(246, 248, 251, 1) 0%, rgba(246, 248, 251, 0) 100%);
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+.video-gradient-bottom {
+	bottom: 0;
+    -moz-transform: scaleY(-1);
+           -o-transform: scaleY(-1);
+           -webkit-transform: scaleY(-1);
+           transform: scaleY(-1);
+}
 .vid-nav {
-	bottom: 4vw;
+	bottom: 10vw;
 	position: absolute;
 	left: 50%;
 	margin-left: -45%;
 	display: flex;
 	justify-content: space-around;
 	width: 90%;
+	z-index: 99;
 }
 #injectable .vid-nav {
 	width: 70%;
@@ -370,22 +400,77 @@ video {
 }
 
 /********************* HOME *********************/
+.opaque {
+	opacity: .6;
+}
+.home #intro {
+	position: absolute;
+	padding: 14vw 0 8vw 12vw;
+	z-index: 80;
+}
+.fadeout {
+	animation: fadeOut 1s ease;
+	-webkit-animation-delay: 1.5s; 
+	animation-delay: 1.5s;
+	animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards; 
+	animation-fill-mode: forwards;
+}
 
-#intro {
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		display: none;
+	}
+}
+.fadein {
+	animation: fadeIn 1s ease;
+	-webkit-animation-delay: 2.5s; 
+	animation-delay: 2.5s;
+	animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards; 
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		display: none;
+	}
+	100% {
+		opacity: 1;
+		display: block;
+	}
+}
+
+.fast {
+	-webkit-animation-delay: .5s; 
+	animation-delay: .5s;
+}
+
+.home h1 {
+	font-size: 8.4vw;
+	position: absolute;
+	padding: 9vw 0 0 6vw;
+}
+.home h1 strong {
+	font-size: 12.8vw;
+	line-height: 12vw;
+}
+.home #intro p {
+	font-size: 1.5rem;
+	padding-top: 6.5rem;
 	position: relative;
-	padding: 12vw 0 8vw 12vw;
+	top: 12vw;
+	max-width: 48rem;
 }
-#intro h1 {
-	white-space: nowrap;
-}
-#intro p {
-	font-size: 1.4rem;
-}
-.home #intro p, .contact #intro h2 {
+.contact #intro h2 {
 	position: relative;
-	left: 34vw;
-	top: -6vh;
-	max-width: 42vw;
+	max-width: 36vw;
 	font-weight: 100;
 }
 #novogro, #zoom {
@@ -395,14 +480,15 @@ video {
 }
 .novogro {
 	position: absolute;
-	top: 6vw;
-	left: 8vw;
+	top: 14vw;
+	left: 12vw;
 	font-size: 0px;
 	line-height: 0px;
 	display: inline-block;
 	background: url("../images/novogro.svg") no-repeat;
 	background-size: contain;
 	width: 38%;
+	width: 24%;
 	height: 24%;
 	z-index: 99;
 }
@@ -439,13 +525,14 @@ video {
 	margin-right: .6vw;
 	transition: all 0.5s ease;
 }
-#putty {
+#putty, #injectable {
 	position: relative;
+	padding-top: 5rem;
 }
 #injectable {
 	display: none;
 }
-#attributes {
+.attributes {
 	background-color: #2E2D38;
 	padding: 4rem;
 	color: #fff;
@@ -453,16 +540,24 @@ video {
 	text-align: center;
 	margin-top: -3px;
 }
-#attributes ul {
+.attributes ul {
 	max-width: 1200px;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
 	font-size: 1.4rem;
-	text-transform: uppercase;
 	letter-spacing: 0.4px;
 }
-#attributes ul li:before {
+.attributes p {
+	color: #fff;
+	font-size: 1.1rem;
+	max-width: 15rem;
+	padding: 2rem 0 0;
+}
+.attributes h4 {
+	text-transform: uppercase;
+}
+.attributes ul li:before {
 	content: "";
 	display: block;
 	width: 40px;
@@ -472,13 +567,13 @@ video {
 	background-size: contain;
 }
 #zero-exotherm:before {
-	background: url("../images/exotherm_icon.svg");
+	background-image: url("../images/exotherm_icon.svg");
 }
 #ph-neutral:before {
-	background: url("../images/ph_icon.svg");
+	background-image: url("../images/ph_icon.svg");
 }
 #weeks:before {
-	background: url("../images/growth_icon.svg");
+	background-image: url("../images/growth_icon.svg");
 }
 #zoom {
 	padding: 6rem 0;
@@ -511,6 +606,7 @@ video {
 	text-align: center;
 	padding-top: 1.25vw;
 	font-size: 1vw;
+	text-decoration: none;
 }
 .zoom-nav li.selected, .zoom-nav li.selected:hover {
 	transform: scale(1.5);
@@ -632,7 +728,7 @@ video {
 	font-weight: 200;
 }
 .zoom-text-container h2 span {
-	font-size: 2.5rem;
+	font-size: 1.75rem;
 	display: block;
 }
 .zoom-text-container p {
@@ -647,17 +743,39 @@ video {
 }
 
 .zoom-text ul {
-	margin: 2rem 0 0;
+	margin: 4rem 0 0;
 }
 .zoom-text ul li {
 	margin-right: 1rem;
 	font-size: 1.5rem;
 }
-li a, li a {
+li a {
 	color: #000;
 }
 
-#histology .images, #ct .images {
+
+.zoom-text ul li.active a {
+	border-bottom: solid 2px #ccc;
+	animation: pulselink .75s ease infinite alternate-reverse;
+	padding: 0 0 2px;
+}
+
+@keyframes pulselink {
+	0% {
+		color: #7f7cbb;
+		border-color: #7f7cbb;
+	}
+	50% {
+		color: #7fceea;
+		border-color: #7fceea;
+	}
+	100% {
+		color: #89cda8;
+		border-color: #89cda8;
+	}
+}
+
+#histology .images, #ct .images .visible {
 	background-color: #fff;
 }
 #histology .images .first.six {
@@ -708,14 +826,14 @@ li a, li a {
 	display: block;
 	border-radius: 100%;
 	border: solid 2px #7f7cbb;
-	width: 3.5vw;
-	height: 3.5vw;
+	width: 2.5vw;
+	height: 2.5vw;
 	left: 0;
 	top: 0;
-	/*animation: pulse-vid-nav 1s ease-in-out infinite alternate;*/
 	animation: node .75s ease infinite alternate-reverse;
 	background-color: rgba(127,124,187,0.8);
 }
+
 
 @keyframes node {
 	0% {
@@ -734,9 +852,10 @@ li a, li a {
 	}
 }
 
-.node.active {
-	transform: scale(2);
+.node:hover {
 	animation: none;
+	background-color: rgba(127,206,234,0.8);
+	border-color: #fff;
 }
 
 #histology .first.six .node.implant { left: 81%; top: 43.5%; }
@@ -746,6 +865,50 @@ li a, li a {
 #histology .first.twelve .node.newbone { left: 29.5%; top: 62.5%; }
 #histology .first.twelve .node.marrow { left: 29%; top: 27.5%; }
 
+#histology .second.six .node.implant { left: 81%; top: 43.5%; }
+#histology .second.six .node.newbone { left: 24.5%; top: 54.5%; }
+#histology .second.six .node.marrow { left: 52%; top: 27.5%; }
+#histology .second.twelve .node.implant { left: 72%; top: 39.5%; }
+#histology .second.twelve .node.newbone { left: 29.5%; top: 62.5%; }
+#histology .second.twelve .node.marrow { left: 29%; top: 27.5%; }
+
+#histology .third.six .node.implant { left: 81%; top: 43.5%; }
+#histology .third.six .node.newbone { left: 24.5%; top: 54.5%; }
+#histology .third.six .node.marrow { left: 52%; top: 27.5%; }
+#histology .third.twelve .node.implant { left: 72%; top: 39.5%; }
+#histology .third.twelve .node.newbone { left: 29.5%; top: 62.5%; }
+#histology .third.twelve .node.marrow { left: 29%; top: 27.5%; }
+
+#histology .fourth.six .node.implant { left: 81%; top: 43.5%; }
+#histology .fourth.six .node.newbone { left: 24.5%; top: 54.5%; }
+#histology .fourth.six .node.marrow { left: 52%; top: 27.5%; }
+#histology .fourth.twelve .node.implant { left: 72%; top: 39.5%; }
+#histology .fourth.twelve .node.newbone { left: 29.5%; top: 62.5%; }
+#histology .fourth.twelve .node.marrow { left: 29%; top: 27.5%; }
+
+.popup {
+	display: none;
+	border: solid 3px red;
+	width: 50%;
+	height: 50%;
+	border-radius: 100%;
+	z-index: 888;
+	position: absolute;
+	left: 25%;
+	top: 25%;
+}
+
+.popup.implant {
+	border-color: red;
+}
+
+.popup.newbone {
+	border-color: green;
+}
+
+.popup.marrow {
+	border-color: blue;
+}
 .hidden {
 	opacity: 0;
 	transform: scale(0);
@@ -771,7 +934,7 @@ li a, li a {
 	position: relative;
 	margin-top: -28vw;
 }
-.team.logomark, .contact.logomark {
+.team .logomark, .contact .logomark {
 	background-image: url("../images/logomark.svg");
 	background-repeat: no-repeat;
 	background-size: 120%;
@@ -779,7 +942,7 @@ li a, li a {
 	background-position: 0;
 	background-position-y: -6rem;
 }
-.team #intro {
+.team #intro, .contact #intro {
 	padding: 14vw 0 8vw 7vw;
 }
 .team #intro p {
@@ -926,6 +1089,12 @@ p.legal {
 /*************************** MEDIA QUERIES *************************/
 
 @media screen and (min-width: 1800px) {
+	.vid-nav {
+		bottom: 16vw;
+	}
+	progress {
+		bottom: 30%;
+	}
 	.team-members li h3 {
 		margin: 2rem 0 1rem;
 		font-size: 2.4rem;
@@ -1005,11 +1174,15 @@ p.legal {
 	}
 }
 @media screen and (max-width: 1200px) {
+	.home #intro p {
+		font-size: 1.25rem;
+		max-width: 38rem;
+	}
 	.vid-nav li a {
 		font-size: .8rem;
 		line-height: 1.2rem;
 	}
-	#attributes ul {
+	.attributes ul {
 		font-size: 1.2rem;
 	}
 	.toggle {
@@ -1043,7 +1216,7 @@ p.legal {
 		display: block;
 		margin-top: .8rem;
 	}
-	.home #intro p, .contact #intro h2 {
+	.contact #intro h2 {
 		top: -3vh;
 	}
 }
@@ -1063,16 +1236,11 @@ p.legal {
 	#intro p, {
 		font-size: 1.2rem;
 	}
-	.home #intro p, .contact #intro h2 {
+	.contact #intro h2 {
 		left: 0vw;
 		top: 2.4rem;
 		max-width: 62vw;
 		padding: 2vw 0 0 .9vw;
-	}
-	.novogro {
-		width: 42%;
-		height: 25%;
-		left: 60px;
 	}
 	.toggle {
 		left: 180px;
@@ -1092,7 +1260,7 @@ p.legal {
 		left: 44%;
 	}
 	.vid-nav {
-		bottom: 2.5vw;
+		bottom: 5.5vw;
 	}
 	.vid-nav li a {
 		font-size: 12px;
@@ -1185,16 +1353,8 @@ p.legal {
 		padding: 22vw 0 10vw 18vw;
 		padding: 160px 0 10vw 110px;
 	}
-	.novogro {
-		left: 28px;
-		width: 50%;
-	}
 	progress {
 		bottom: 18vw;
-	}
-	video {
-		width: 120%;
-		left: -20%;
 	}
 	.toggle {
 		top: 26vw;
@@ -1208,23 +1368,23 @@ p.legal {
 	#intro p, .contact #intro h2 {
 		font-size: 19px;
 	}
-	.home #intro p, .contact #intro h2 {
+	.contact #intro h2 {
 		padding: 0;
 	}
-	#attributes h3 {
+	.attributes h3 {
 		margin: 0 auto 2rem;
 		padding: 0 4rem;
 	}
-	#attributes ul {
+	.attributes ul {
 		display: block;
 		font-size: 1.2rem;
 	}
-	#attributes ul li {
+	.attributes ul li {
 		display: block;
 		width: 100%;
 		margin: 4rem auto 2rem;
 	}
-	#attributes ul li:last-child {
+	.attributes ul li:last-child {
 		margin-bottom: 0;
 	}
 	footer h2 {
@@ -1273,10 +1433,6 @@ p.legal {
 		bottom: initial;
 		top: 58%;
 		display: none;
-	}
-	video {
-		width: 100%;
-		left: 0%;
 	}
 	.vid-nav, #injectable .vid-nav {
 		position: relative;
@@ -1328,23 +1484,23 @@ p.legal {
 	#intro {
 		padding: 120px 0 8vw 12vw;
 	}
-	#attributes {
+	.attributes {
 		padding: 4rem 2rem;
 	}
-	#attributes h3 {
+	.attributes h3 {
 		margin: 0 auto;
 		padding: 0;
 	}
-	#attributes ul {
+	.attributes ul {
 		display: block;
 		font-size: 1.2rem;
 	}
-	#attributes ul li {
+	.attributes ul li {
 		display: block;
 		width: 100%;
 		margin: 4rem auto 2rem;
 	}
-	#attributes ul li:last-child {
+	.attributes ul li:last-child {
 		margin-bottom: 0;
 	}
 	footer {
@@ -1433,17 +1589,9 @@ p.legal {
 	#intro p {
 		font-size: 3.6vw;
 	}
-	.home #intro p, .contact #intro h2 {
+	.contact #intro h2 {
 		max-width: 82vw;
 		padding: 0 0 12vw;
-	}
-	.novogro {
-		left: 44px;
-		top: 0;
-	}
-	video {
-		width: 150%;
-		margin: 0 0 5rem -40%;
 	}
 	footer {
 		padding: 4rem 2rem 2rem;
@@ -1500,10 +1648,6 @@ p.legal {
 	progress {
 		top: 48%;
 	}
-	#injectable video {
-		top: 28vw;
-		margin-bottom: 52vw;
-	}
 }
 @media screen and (max-width: 400px) {
 	#intro p {
@@ -1516,10 +1660,6 @@ p.legal {
 	.toggle a.active::before {
 		width: 9vw;
 		height: 5vw;
-	}
-	.novogro {
-		width: 74%;
-		top: 6vw;
 	}
 	.zoom-text {
 		width: 300px;
