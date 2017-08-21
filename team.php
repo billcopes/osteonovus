@@ -16,7 +16,7 @@
 		</div>
 	</section>
 	<section id="<?php echo $page ?>">
-		<ul class="team-members">
+		<ul class="team-members fadein fast">
 			<li>
 				<picture>
 				  <img src="images/team/anand_small.jpg" alt="Anand Agarwal, MD">

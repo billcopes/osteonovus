@@ -188,15 +188,11 @@ progress {
 	display: block;
 	margin: 0 auto;
 	position: absolute;
-	bottom: 24%;
-	width: 76vw;
-	left: 50%;
-	margin-left: -38vw;
+	bottom: 0;
+	width: 100vw;
 	background: #D8E4EE;
-	height: 6px;
+	height: 8px;
 	z-index: 96;
-	border: solid 1px #C7CDD3;
-	border: solid .5px #fff;
 }
 progress::-webkit-progress-bar {
 	background: #D8E4EE;
@@ -216,11 +212,11 @@ progress::-moz-progress-bar {
 	background: linear-gradient(to right, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 }
 video {
-	width: 125%;
-	margin: 0 0 0 -24vw;
+	width: 100%;
 	position: relative;
 	background: #fff;
 	animation: fade-in;
+	margin-top: -4vw;
 }
 .video-gradient {
 	height: 12vw;
@@ -242,7 +238,7 @@ video {
            transform: scaleY(-1);
 }
 .vid-nav {
-	bottom: 10vw;
+	bottom: 4vw;
 	position: absolute;
 	left: 50%;
 	margin-left: -45%;
@@ -448,24 +444,29 @@ video {
 }
 
 .fast {
-	-webkit-animation-delay: .5s; 
-	animation-delay: .5s;
+	-webkit-animation-delay: .25s; 
+	animation-delay: .25s;
 }
 
 .home h1 {
 	font-size: 8.4vw;
 	position: absolute;
-	padding: 9vw 0 0 6vw;
+	/*padding: 4vw 0 0 6vw;*/
+    top: 50%;
+    left: 25%;
 }
 .home h1 strong {
-	font-size: 12.8vw;
-	line-height: 12vw;
+    font-size: 14.8vw;
+    line-height: 16vw;
 }
+.home #intro {
+	width: 60vw;
+}
+
 .home #intro p {
 	font-size: 1.5rem;
-	padding-top: 6.5rem;
-	position: relative;
-	top: 12vw;
+    position: relative;
+    top: 14vw;
 	max-width: 48rem;
 }
 .contact #intro h2 {
@@ -480,23 +481,22 @@ video {
 }
 .novogro {
 	position: absolute;
-	top: 14vw;
+	top: 9vw;
 	left: 12vw;
 	font-size: 0px;
 	line-height: 0px;
 	display: inline-block;
 	background: url("../images/novogro.svg") no-repeat;
 	background-size: contain;
-	width: 38%;
-	width: 24%;
-	height: 24%;
+	width: 20%;
+	height: 20%;
 	z-index: 99;
 }
 .toggle {
 	position: absolute;
 	z-index: 999;
-	left: 19vw;
-	top: 22vw;
+	left: 16vw;
+	top: 16vw;
 	font-size: 2vw;
 	font-size: 2rem;
 	line-height: 4vw;
@@ -538,7 +538,6 @@ video {
 	color: #fff;
 	z-index: 97;
 	text-align: center;
-	margin-top: -3px;
 }
 .attributes ul {
 	max-width: 1200px;
@@ -718,7 +717,7 @@ video {
 }
 .zoom-text-container {
 	position: absolute;
-	left: 19vw;
+	left: 16vw;
 	top: 26vw;
 	z-index: 1;
 	max-width: 400px;
@@ -729,12 +728,13 @@ video {
 }
 .zoom-text-container h2 span {
 	font-size: 1.75rem;
+	padding-top: 1rem;
 	display: block;
 }
 .zoom-text-container p {
 	font-size: 22px;
 	line-height: 2.6rem;
-	margin: 2rem 0;
+	margin: 1rem 0;
 }
 .zoom-text {
 	position: absolute;
@@ -825,7 +825,7 @@ li a {
 	position: absolute;
 	display: block;
 	border-radius: 100%;
-	border: solid 2px #7f7cbb;
+	border: solid 3px #fff;
 	width: 2.5vw;
 	height: 2.5vw;
 	left: 0;
@@ -1089,12 +1089,6 @@ p.legal {
 /*************************** MEDIA QUERIES *************************/
 
 @media screen and (min-width: 1800px) {
-	.vid-nav {
-		bottom: 16vw;
-	}
-	progress {
-		bottom: 30%;
-	}
 	.team-members li h3 {
 		margin: 2rem 0 1rem;
 		font-size: 2.4rem;
@@ -1254,11 +1248,6 @@ p.legal {
 	.zoom-text-container {
 		top: 30vw;
 	}
-	progress {
-		bottom: 22%;
-		width: 87vw;
-		left: 44%;
-	}
 	.vid-nav {
 		bottom: 5.5vw;
 	}
@@ -1329,9 +1318,6 @@ p.legal {
 	.zoom-text-container h2 span {
 		font-size: 1rem;
 	}
-	progress {
-		bottom: 26%;
-	}
 	.toggle a.active::before {
 		width: 2.5vw;
 		height: 1.8vw;
@@ -1352,9 +1338,6 @@ p.legal {
 	#intro {
 		padding: 22vw 0 10vw 18vw;
 		padding: 160px 0 10vw 110px;
-	}
-	progress {
-		bottom: 18vw;
 	}
 	.toggle {
 		top: 26vw;
@@ -1431,7 +1414,6 @@ p.legal {
 	}
 	progress {
 		bottom: initial;
-		top: 58%;
 		display: none;
 	}
 	.vid-nav, #injectable .vid-nav {

@@ -9,9 +9,9 @@
 <body class="<?php echo $page ?>">
 <?php include 'header.php'; // Renders navigation ?>
 <section id="intro" class="logomark">
+	<p class="fadein">Introducing <strong>NovoGro<sup>&reg;</sup></strong>, a breakthrough bone regeneration biomaterial that grows robust bone, with excellent handling properties, in just six weeks. Only from Osteonovus.</p>
 	<div class="text-container">
 		<h1 class="fadeout">Do you really need <strong>BMP?</strong></h1>
-		<p class="fadein">Introducing <strong>NovoGro<sup>&reg;</sup></strong>, a breakthrough bone regeneration biomaterial that grows robust bone, with excellent handling properties, in just six weeks. Only from Osteonovus.</p>
 	</div>
 </section>
 <section id="novogro">
@@ -20,8 +20,8 @@
 		<li><a href="#" id="putty-toggle" class="active" data-toggle="#putty">Putty</a></li>
 		<li><a href="#" id="injectable-toggle" data-toggle="#injectable">Injectable</a></li>
 	</ul>
-	<div class="video-gradient"></div>
-	<div class="video-gradient video-gradient-bottom"></div>
+	<div class="video-gradient fadein"></div>
+	<div class="video-gradient video-gradient-bottom fadein"></div>
 	<article id="putty">
 		<progress id='p' max='100' value='0' class="fadein"></progress>
 		<video id="putty-vid" preload="auto" poster="images/putty.jpg" class="fadein" autoplay loop muted></video>
@@ -45,7 +45,7 @@
 			</ul>
 	</article>
 </section>
-<section class="attributes">
+<section class="attributes fadein">
 	<h3>Introducing NovoGro. The breakthrough biomaterial made from a patented blend of calcium, magnesium, sodium and silica salts.</h3>
 	<ul>
 		<li id="zero-exotherm">
@@ -68,7 +68,7 @@
 		<li><a href="#" class="" id="ct-toggle" data-toggle="#ct">&mu;CT</a></li>
 	</ul>
 	<article id="histology">
-		<div class="zoom-text-container">
+		<div class="zoom-text-container fadein fast">
 			<div class="zoom-text first visible">
 				<h2>1.25x<span>Objective Lens Magnification</span></h2>
 				<ul>
@@ -102,7 +102,7 @@
 				<p>Robust new bone formation in the center of the defect.</p>
 			</div>
 		</div>
-		<div class="zoom-image-container">
+		<div class="zoom-image-container fadein fast">
 			<ul class="zoom-nav">
 				<li class="first selected"><a href="#">1.25x</a></li>
 				<li class="second"><a href="#">10x</a></li>
@@ -137,7 +137,7 @@
 		</div>
 	</article>
 	<article id="ct">
-		<div class="zoom-text-container">
+		<div class="zoom-text-container fadein fast">
 			<div id="" class="zoom-text first visible">
 				<h2>Axial<span>44&mu;M</span></h2>
 				<ul>
@@ -163,7 +163,7 @@
 				<p>Robust new bone formation in the center of the defect.</p>
 			</div>
 		</div>
-		<div class="zoom-image-container">
+		<div class="zoom-image-container fadein fast">
 			<ul class="zoom-nav">
 				<li class="first selected">
 					<a href="#">
