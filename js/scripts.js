@@ -173,10 +173,36 @@ injectplay.addEventListener("click", function(event) {
 	ivideo.play();
 	return false;
 }, false);
+
+$(document).ready(function() {
+	var mainVideo = $('#putty-vid');
+	var medQualVersionSrc = 'https://s3.amazonaws.com/osteonovus/vid/putty-mobile.mp4';
+	var highQualVersionSrc = 'https://s3.amazonaws.com/osteonovus/vid/putty.mp4';
+	if ($(window).width() < 800) {
+		mainVideo.append("<source type='video/mp4' src='" + medQualVersionSrc + "' />");
+	} else {
+		mainVideo.append("<source type='video/mp4' src='" + highQualVersionSrc + "' />");
+	}
+});
+$(document).ready(function() {
+	var mainVideo2 = $('#injectable-vid');
+	var medQualVersionSrc = 'https://s3.amazonaws.com/osteonovus/vid/injectable-mobile.mp4';
+	var highQualVersionSrc = 'https://s3.amazonaws.com/osteonovus/vid/injectable.mp4';
+	if ($(window).width() < 800) {
+		mainVideo2.append("<source type='video/mp4' src='" + medQualVersionSrc + "' />");
+	} else {
+		mainVideo2.append("<source type='video/mp4' src='" + highQualVersionSrc + "' />");
+	}
+});
+
 document.getElementById('putty-vid').addEventListener('loadedmetadata', function() {
 	this.currentTime = 1;
 }, false);
-/* Toggle Between */
+document.getElementById('injectable-vid').addEventListener('loadedmetadata', function() {
+	this.currentTime = 1;
+}, false);
+
+/* Toggle Between Things */
 $(document).ready(function() {
 	$("#novogro a[data-toggle]").on("click", function(e) {
 		e.preventDefault(); // prevent navigating
@@ -393,53 +419,57 @@ $(document).ready(function() {
 		$(".node").removeClass("active");
 	});
 });
-$(".node").click(function() {
-	//$(this).addClass('active');
-});
-$(document).ready(function() {
-	var mainVideo = $('#putty-vid');
-	var medQualVersionSrc = 'vid/putty-mobile.mp4';
-	var highQualVersionSrc = 'vid/putty.mp4';
-	if ($(window).width() < 800) {
-		mainVideo.append("<source type='video/mp4' src='" + medQualVersionSrc + "' />");
-	} else {
-		mainVideo.append("<source type='video/mp4' src='" + highQualVersionSrc + "' />");
-	}
-});
-$(document).ready(function() {
-	var mainVideo2 = $('#injectable-vid');
-	var medQualVersionSrc = 'vid/injectable-mobile.mp4';
-	var highQualVersionSrc = 'vid/injectable.mp4';
-	if ($(window).width() < 800) {
-		mainVideo2.append("<source type='video/mp4' src='" + medQualVersionSrc + "' />");
-	} else {
-		mainVideo2.append("<source type='video/mp4' src='" + highQualVersionSrc + "' />");
-	}
-});
-document.getElementById('putty-vid').addEventListener('loadedmetadata', function() {
-	this.currentTime = 1;
-}, false);
-document.getElementById('injectable-vid').addEventListener('loadedmetadata', function() {
-	this.currentTime = 1;
-}, false);
 
+$(".node.implant").click(function() {
+	$(".popup.implant").addClass("fadein fast").delay(3500).queue(function(next){
+	    //$(this).css('opacity', 1).animate({	opacity: 0}, 3500);
+		//$(this).removeClass("popup-visible");
+		next();
+	});
+});
+$(".node.newbone").click(function() {
+	$(".popup.newbone").addClass("fadein fast").delay(3500).queue(function(next){
+		next();
+	});
+});
+$(".node.marrow").click(function() {
+	$(".popup.marrow").addClass("fadein fast").delay(3500).queue(function(next){
+		next();
+	});
+});
+$(".popup").click(function() {
+	$(this).removeClass("fadein");
+});
 $(".home .logomark").css('opacity', 1).animate({
 	opacity: .6
 }, 3500);
-
-/*$(".home #intro").addClass("logomark").delay(5000).queue(function(next){
-    next();
+$(document).ready(function() {
+	$("#introMessage").delay(3500).queue(function(next){
+	    $(this).css('display','none');
+		next();
+	});
 });
 
-$(document).ready(function(){
-    setTimeout(function(){
-       $("h1.fadeout").hide();
-   }, 2000);
+$(window).scroll(function () {
+    var $this = $(this),
+        $vidnav = $('.vid-nav');
+		$progress = $('progress');
+    if ($this.scrollTop() < 122) {
+       $vidnav.addClass('fixed-vidstuff');
+	   $progress.addClass('fixed-vidstuff');
+    } else {
+       $vidnav.removeClass('fixed-vidstuff');
+	   $progress.removeClass('fixed-vidstuff');
+    }
 });
-*/
 
-
-/*
-$("#injectable-vid").css('opacity', 0).animate({
-	opacity: 1
-}, 3500);*/
+$(window).ready(function() {
+	var $winheight = $(window).height();
+    $vidnav = $('.vid-nav');
+	$progress = $('progress');
+	//if ($win < 956) {
+	if ($winheight < 768) {
+	   $vidnav.addClass('fixed-vidstuff');
+	   $progress.addClass('fixed-vidstuff');
+	}
+});

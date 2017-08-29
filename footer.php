@@ -1,4 +1,4 @@
-<footer>
+<footer class="fadein fast">
 	<div class="section-one">
 		<div class="left">
 			<h2>Want to know more?</h2>

@@ -1,10 +1,7 @@
 /* ERIC MEYER CSS RESET */
 
-html {
+html, *, *:before, *:after {
 	box-sizing: border-box;
-}
-*, *:before, *:after {
-	box-sizing: inherit;
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
@@ -56,40 +53,43 @@ html, body {
 
 header {
 	background-image: linear-gradient(to right, #1f1d36, #4d4d4d);
-	height: 78px;
+	height: 54px;
 	width: 100%;
 	position: fixed;
 	z-index: 999;
 	top: 0;
 	-webkit-transition: top .5s;
+	-moz-transition: top .5s;
+	-o-transition: top .5s;
 	transition: top .5s;
+	border-bottom: solid 1px #3f3f4a;
 }
 header nav {
 	position: absolute;
 	right: 0;
 	right: 5vw;
-	top: 31px;
+	top: 18px;
 }
 header nav a, footer nav a {
 	color: #fff;
-	font-size: 1rem;
+	font-size: .9rem;
 	letter-spacing: .07rem;
 	margin-left: 2rem;
 }
-a.active, a:hover, .attributes h3, .toggle a:hover {
+a.active, a:hover, .toggle a:hover {
 	color: #79EAB9;
 }
 a.logo {
 	display: inline-block;
 	background: url("../images/logo-wordmark.svg") no-repeat;
-	background-size: cover;
-	font-size: 0px;
-	line-height: 0px;
-	width: 212px;
-	height: 22px;
+	background-size: contain;
+	font-size: 0;
+	line-height: 0;
+	width: 172px;
+	height: 18px;
 	position: absolute;
 	left: 4vw;
-	top: 27px;
+	top: 18px;
 }
 .headroom {
 	will-change: transform;
@@ -105,14 +105,14 @@ a.logo {
 /**************************** TYPOGRAPHY ****************************/
 
 html {
-	font-family: "Forza SSm A", "Forza SSm B", Forza, sans-serif;
+	font-family: "Forza SSm A", "Forza SSm B", sans-serif;
 	font-style: normal;
 }
 strong {
 	font-weight: 500;
 }
 a {
-	font-family: "Forza SSm A", "Forza SSm B", Forza, sans-serif;
+	font-family: "Forza SSm A", "Forza SSm B", sans-serif;
 	font-style: normal;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -122,7 +122,6 @@ a {
 	color: #7f7cbb;
 }
 h1 {
-	font-family: Georgia;
 	font-size: 4.4vw;
 	line-height: 4.87vw;
 	letter-spacing: -.07rem;
@@ -136,6 +135,12 @@ h1 strong {
 	line-height: 8vw;
 	display: block;
 }
+h2 {
+	font-size: 4.8vw;
+	line-height: 6vw;
+	display: block;
+	text-transform: uppercase;
+}
 h3 {
 	font-size: 1.4rem;
 	line-height: 2rem;
@@ -145,7 +150,7 @@ h3 {
 }
 p {
 	font-family: "Forza SSm A", "Forza SSm B", Forza, sans-serif;
-	font-size: 1.4rem;
+	font-size: 1.1375rem;
 	font-weight: 100;
 	font-style: normal;
 	font-stretch: normal;
@@ -153,15 +158,15 @@ p {
 	letter-spacing: 0.6px;
 	color: #000000;
 }
+.team p {
+	margin: 0;
+}
 
 /********************** OBJECTS/POSITIONING **************************/
 
 
 ul li {
 	display: inline-block;
-}
-ul.toggle li {
-	display: block;
 }
 .logomark {
 	display: block;
@@ -173,8 +178,7 @@ ul.toggle li {
 	background-image: url("../images/logomark.svg");
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-position-x: -2rem;
-	background-position-y: -6rem;
+	background-position: -2rem -6rem;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -216,7 +220,7 @@ video {
 	position: relative;
 	background: #fff;
 	animation: fade-in;
-	margin-top: -4vw;
+	margin-top: -2vw;
 }
 .video-gradient {
 	height: 12vw;
@@ -233,12 +237,12 @@ video {
 .video-gradient-bottom {
 	bottom: 0;
     -moz-transform: scaleY(-1);
-           -o-transform: scaleY(-1);
-           -webkit-transform: scaleY(-1);
-           transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
 }
 .vid-nav {
-	bottom: 4vw;
+	bottom: 3.5vw;
 	position: absolute;
 	left: 50%;
 	margin-left: -45%;
@@ -269,7 +273,6 @@ video {
 	letter-spacing: .025rem;
 }
 .vid-nav li a:hover {
-	color: #7f7cbb;
 	color: #89cda8;
 }
 .vid-nav li a::before {
@@ -332,7 +335,7 @@ video {
 .vid-nav li a.playing#vid2-4::before {
 	background: url("../images/clock_icon_active.svg") no-repeat;
 }
-.vid-nav li a.playing {
+.vid-nav li a.playing, .toggle a.active {
 	animation: pulse-vid-nav 1s ease-in-out infinite alternate;
 }
 @keyframes pulse-vid-nav {
@@ -419,7 +422,6 @@ video {
 	}
 	100% {
 		opacity: 0;
-		display: none;
 	}
 }
 .fadein {
@@ -448,25 +450,27 @@ video {
 	animation-delay: .25s;
 }
 
-.home h1 {
+.home h1#introMessage {
 	font-size: 8.4vw;
-	position: absolute;
+	position: fixed;
 	/*padding: 4vw 0 0 6vw;*/
-    top: 50%;
-    left: 25%;
+    top: 35vh;
+    left: 8vw;
 }
-.home h1 strong {
+.home h1#introMessage strong {
     font-size: 14.8vw;
     line-height: 16vw;
 }
 .home #intro {
 	width: 60vw;
 }
-
+.home .text-container {
+	padding: 6rem;
+}
 .home #intro p {
 	font-size: 1.5rem;
     position: relative;
-    top: 14vw;
+    top: 18vw;
 	max-width: 48rem;
 }
 .contact #intro h2 {
@@ -481,27 +485,34 @@ video {
 }
 .novogro {
 	position: absolute;
-	top: 9vw;
-	left: 12vw;
+    top: 12vw;
+    left: 8.5vw;
 	font-size: 0px;
 	line-height: 0px;
 	display: inline-block;
 	background: url("../images/novogro.svg") no-repeat;
 	background-size: contain;
-	width: 20%;
-	height: 20%;
+	width: 20vw;
+	height: 8vw;
 	z-index: 99;
 }
 .toggle {
+	
+	font-size: 2rem;
+}
+
+#novogro .toggle {
 	position: absolute;
 	z-index: 999;
-	left: 16vw;
-	top: 16vw;
-	font-size: 2vw;
-	font-size: 2rem;
-	line-height: 4vw;
-	line-height: 4rem;
+	left: 8.5vw;
+	top: 32vw;
 }
+
+.toggle li {
+	display: block;
+	margin: 0 0 1rem;
+}
+
 .toggle a {
 	text-transform: none;
 	color: #2e2d38;
@@ -539,46 +550,19 @@ video {
 	z-index: 97;
 	text-align: center;
 }
-.attributes ul {
-	max-width: 1200px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-around;
-	font-size: 1.4rem;
-	letter-spacing: 0.4px;
-}
-.attributes p {
-	color: #fff;
-	font-size: 1.1rem;
-	max-width: 15rem;
-	padding: 2rem 0 0;
-}
-.attributes h4 {
-	text-transform: uppercase;
-}
-.attributes ul li:before {
-	content: "";
-	display: block;
-	width: 40px;
-	height: 30px;
-	margin: 0 auto 1.5rem;
-	background-repeat: no-repeat;
-	background-size: contain;
-}
-#zero-exotherm:before {
-	background-image: url("../images/exotherm_icon.svg");
-}
-#ph-neutral:before {
-	background-image: url("../images/ph_icon.svg");
-}
-#weeks:before {
-	background-image: url("../images/growth_icon.svg");
-}
 #zoom {
-	padding: 6rem 0;
+	padding: 8vw 0 6vw 6vw;
 }
 #zoom .toggle {
 	top: 12vw;
+}
+#zoom p {
+	max-width: 40vw;
+	margin: 4vw 0;
+	font-size: 1.5vw;
+}
+#zoom h2 {
+	padding-right: 24vw;
 }
 .zoom-nav {
 	position: absolute;
@@ -686,6 +670,7 @@ video {
 	width: 50vw;
 	height: 50vw;
 	margin-right: -3vw;
+	margin-top: -18vw;
 	border-radius: 100%;
 	background: #7f7cbb;
 	/* Old browsers */
@@ -716,17 +701,18 @@ video {
 	background-size: 112%;
 }
 .zoom-text-container {
-	position: absolute;
+	margin-top:;
+/*	position: absolute;
 	left: 16vw;
 	top: 26vw;
 	z-index: 1;
-	max-width: 400px;
+	max-width: 400px;*/
 }
-.zoom-text-container h2 {
+.zoom-text-container h3 {
 	font-size: 5.4rem;
 	font-weight: 200;
 }
-.zoom-text-container h2 span {
+.zoom-text-container h3 span {
 	font-size: 1.75rem;
 	padding-top: 1rem;
 	display: block;
@@ -738,8 +724,7 @@ video {
 }
 .zoom-text {
 	position: absolute;
-	top: 0;
-	width: 400px;
+	top: 48vw;
 }
 
 .zoom-text ul {
@@ -832,6 +817,7 @@ li a {
 	top: 0;
 	animation: node .75s ease infinite alternate-reverse;
 	background-color: rgba(127,124,187,0.8);
+	z-index: 1000;
 }
 
 
@@ -887,8 +873,11 @@ li a {
 #histology .fourth.twelve .node.marrow { left: 29%; top: 27.5%; }
 
 .popup {
+	cursor: pointer;
 	display: none;
-	border: solid 3px red;
+	z-index: -1;
+	opacity: 0;
+	border: solid 3px;
 	width: 50%;
 	height: 50%;
 	border-radius: 100%;
@@ -896,6 +885,14 @@ li a {
 	position: absolute;
 	left: 25%;
 	top: 25%;
+	background: #fff;
+	
+}
+
+.popup-visible {
+	opacity: 1;
+	display: block;
+	z-index: 1;
 }
 
 .popup.implant {
@@ -913,6 +910,7 @@ li a {
 	opacity: 0;
 	transform: scale(0);
 }
+.gone {display: none;}
 .visible {
 	opacity: 1;
 	transform: scale(1);
@@ -1037,7 +1035,6 @@ footer p {
 	font-size: 22px;
 }
 footer h2 {
-	font-family: "Georgia", serif;
 	font-size: 3.6rem;
 	margin-bottom: 3rem;
 	white-space: nowrap;
@@ -1087,6 +1084,11 @@ p.legal {
 }
 
 /*************************** MEDIA QUERIES *************************/
+@media screen and (max-height: 956px) and (min-width:600px) {
+	.fixed-vidstuff {
+		position: fixed;
+	}
+}
 
 @media screen and (min-width: 1800px) {
 	.team-members li h3 {
@@ -1109,7 +1111,7 @@ p.legal {
 	footer {
 		padding: 8rem 6rem 4rem;
 	}
-	.zoom-text-container, #zoom .toggle {
+	.zoom-text-container {
 		left: 10vw;
 	}
 	.team #intro h1 {
@@ -1153,10 +1155,6 @@ p.legal {
 		top: 45vw;
 		left: 3vw;
 	}
-	.zoom-text {
-		width: 270px;
-		top: 4vw;
-	}
 	.team #intro h1 {
 		padding-top: 2vw;
 	}
@@ -1172,16 +1170,12 @@ p.legal {
 		font-size: 1.25rem;
 		max-width: 38rem;
 	}
+	.toggle {
+		font-size: 1.5rem;
+	}
 	.vid-nav li a {
 		font-size: .8rem;
 		line-height: 1.2rem;
-	}
-	.attributes ul {
-		font-size: 1.2rem;
-	}
-	.toggle {
-		font-size: 24px;
-		line-height: 40px;
 	}
 	footer {
 		padding: 6rem 4rem 4rem;
@@ -1190,10 +1184,10 @@ p.legal {
 		font-size: 18px;
 		margin: 3rem 0;
 	}
-	.zoom-text-container h2 {
+	.zoom-text-container h3 {
 		font-size: 4.4rem;
 	}
-	.zoom-text-container h2 span {
+	.zoom-text-container h3 span {
 		font-size: 1.25rem;
 	}
 	.zoom-nav li {
@@ -1227,7 +1221,7 @@ p.legal {
 		font-size: 11.8vw;
 		line-height: 11vw;
 	}
-	#intro p, {
+	#intro p {
 		font-size: 1.2rem;
 	}
 	.contact #intro h2 {
@@ -1236,13 +1230,10 @@ p.legal {
 		max-width: 62vw;
 		padding: 2vw 0 0 .9vw;
 	}
-	.toggle {
-		left: 180px;
-	}
 	#zoom .toggle {
 		top: 18vw;
 	}
-	.zoom-text-container, #zoom .toggle {
+	.zoom-text-container {
 		left: 8vw;
 	}
 	.zoom-text-container {
@@ -1305,17 +1296,14 @@ p.legal {
 	.footnote {
 		margin: 1rem 0 0;
 	}
-	.zoom-text {
-		width: 220px;
-	}
 	.zoom-text-container p {
 		line-height: 2rem;
 		font-size: 16px;
 	}
-	.zoom-text-container h2 {
+	.zoom-text-container h3 {
 		font-size: 3.4rem;
 	}
-	.zoom-text-container h2 span {
+	.zoom-text-container h3 span {
 		font-size: 1rem;
 	}
 	.toggle a.active::before {
@@ -1333,17 +1321,14 @@ p.legal {
 	picture {
 		height: 28vw;
 	}
+	.toggle {
+		font-size: 1rem;
+	}
 }
 @media screen and (max-width: 768px) {
 	#intro {
 		padding: 22vw 0 10vw 18vw;
 		padding: 160px 0 10vw 110px;
-	}
-	.toggle {
-		top: 26vw;
-		left: 18.2vw;
-		font-size: 1.4rem;
-		line-height: 2.4rem;
 	}
 	.vid-nav {
 		bottom: 3.5vw;
@@ -1353,22 +1338,6 @@ p.legal {
 	}
 	.contact #intro h2 {
 		padding: 0;
-	}
-	.attributes h3 {
-		margin: 0 auto 2rem;
-		padding: 0 4rem;
-	}
-	.attributes ul {
-		display: block;
-		font-size: 1.2rem;
-	}
-	.attributes ul li {
-		display: block;
-		width: 100%;
-		margin: 4rem auto 2rem;
-	}
-	.attributes ul li:last-child {
-		margin-bottom: 0;
 	}
 	footer h2 {
 		font-size: 3rem;
@@ -1386,9 +1355,6 @@ p.legal {
 		font-size: 2vw;
 		padding-top: 2.25vw;
 	}
-	.zoom-text {
-		width: 200px;
-	}
 	.contact #intro h2 {
 		line-height: 2rem;
 	}
@@ -1401,21 +1367,19 @@ p.legal {
 		display: none!important;
 		-webkit-appearance: none;
 	}
-	/* Old shadow dom for play button */
 	*::--webkit-media-controls-play-button {
 		display: none!important;
 		-webkit-appearance: none;
 	}
-	/* New shadow dom for play button */
-	/* This one works */
 	*::-webkit-media-controls-start-playback-button {
 		display: none!important;
 		-webkit-appearance: none;
 	}
-	progress {
-		bottom: initial;
-		display: none;
+	
+	.logomark::after {
+		background-position: -2rem -4rem;
 	}
+	progress { display: none; }
 	.vid-nav, #injectable .vid-nav {
 		position: relative;
 		display: block;
@@ -1442,48 +1406,28 @@ p.legal {
 	.vid-nav li br {
 		display: none;
 	}
+	progress {
+		bottom: 100%;
+	}
+	
 	header a.logo {
 		background: url("../images/mark-full.svg") no-repeat;
 		background-size: contain;
 		background-position: center center;
 		height: 30px;
-		width: 44px;
-		top: 14px;
+		width: 30px;
+		top: 11px;
+		left: 5vw;
 	}
 	.logomark {
 		background-position-y: -3rem;
 	}
-	header {
-		height: 58px;
-	}
-	header nav {
-		top: 21px;
-	}
 	header nav a {
-		font-size: .8rem;
+		font-size: .7rem;
 		margin-left: 1.5rem;
 	}
 	#intro {
 		padding: 120px 0 8vw 12vw;
-	}
-	.attributes {
-		padding: 4rem 2rem;
-	}
-	.attributes h3 {
-		margin: 0 auto;
-		padding: 0;
-	}
-	.attributes ul {
-		display: block;
-		font-size: 1.2rem;
-	}
-	.attributes ul li {
-		display: block;
-		width: 100%;
-		margin: 4rem auto 2rem;
-	}
-	.attributes ul li:last-child {
-		margin-bottom: 0;
 	}
 	footer {
 		padding: 4rem 3rem 2rem;
@@ -1494,21 +1438,11 @@ p.legal {
 	.mailto {
 		margin: 1rem 0 0;
 	}
-	#zoom {
-		padding: 8rem 0 14rem;
-	}
-	#zoom .toggle {
-		top: 6vw;
-	}
 	.zoom-text-container {
 		top: 114vw;
 	}
 	.zoom-text-container p {
 		margin: 1.5rem 0;
-	}
-	.zoom-text {
-		top: 2vw;
-		width: 360px;
 	}
 	.zoom-image-container {
 		width: 90vw;
@@ -1556,17 +1490,40 @@ p.legal {
 	}
 }
 @media screen and (max-width: 480px) {
+	.home #intro {
+	    width: 90vw;
+	}
+	video {
+		width: 150%;
+		right: 40vw;
+		margin-top: -31vw;
+	}
+	video#injectable-vid {
+		margin-top: -2vw;
+	}
+	#putty, #injectable {
+		padding-top: 4rem;
+		top: 28vw;
+	}
+	.novogro {
+	    width: 52vw;
+	    height: 18vw;
+	    top: 26vw;
+	}
+	#novogro .toggle {
+		top: 70vw;
+	}
 	header nav a {
 		font-size: .8rem;
 		margin-left: .8rem;
 	}
 	#intro h1 {
-		font-size: 10vw;
-		line-height: 10vw;
+		font-size: 9.5vw;
+		line-height: 9.5vw;
 	}
 	#intro h1 strong {
-		font-size: 17vw;
-		line-height: 17vw;
+		font-size: 16vw;
+		line-height: 16vw;
 	}
 	#intro p {
 		font-size: 3.6vw;
@@ -1608,16 +1565,6 @@ p.legal {
 	.vid-nav li {
 		padding-left: 6vw;
 	}
-	.toggle {
-		top: 90vw;
-		top: 390px;
-		left: 7.2vw;
-		font-size: 1.2rem;
-	}
-	ul.toggle li {
-		display: inline-block;
-		margin-right: 1rem;
-	}
 	.toggle a.active::before {
 		width: 6vw;
 		height: 3vw;
@@ -1626,28 +1573,16 @@ p.legal {
 		padding-top: 22vw;
 	}
 }
-@media screen and (max-width: 420px) {
-	progress {
-		top: 48%;
-	}
-}
 @media screen and (max-width: 400px) {
 	#intro p {
 		font-size: 5vw;
 		top: 2rem;
 	}
-	.toggle {
-		top: 120vw;
-	}
 	.toggle a.active::before {
 		width: 9vw;
 		height: 5vw;
 	}
-	.zoom-text {
-		width: 300px;
-		top: 6vw;
-	}
-	#putty, .video-gradient {
+	#putty {
 		top: 28vw;
 	}
 }

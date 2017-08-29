@@ -9,9 +9,8 @@
 <body class="<?php echo $page ?>">
 <?php include 'header.php'; // Renders navigation ?>
 <section id="intro" class="logomark">
-	<p class="fadein">Introducing <strong>NovoGro<sup>&reg;</sup></strong>, a breakthrough bone regeneration biomaterial that grows robust bone, with excellent handling properties, in just six weeks. Only from Osteonovus.</p>
 	<div class="text-container">
-		<h1 class="fadeout">Do you really need <strong>BMP?</strong></h1>
+		<h1 class="fadeout" id="introMessage">NEW BONE IN <strong>SIX WEEKS</strong></h1>
 	</div>
 </section>
 <section id="novogro">
@@ -46,23 +45,14 @@
 	</article>
 </section>
 <section class="attributes fadein">
-	<h3>Introducing NovoGro. The breakthrough biomaterial made from a patented blend of calcium, magnesium, sodium and silica salts.</h3>
-	<ul>
-		<li id="zero-exotherm">
-			<h4>ZERO EXOTHERM</h4>
-			<p>Lorem ipsum dolor sit amet consecteteur.</p>
-		</li>
-		<li id="ph-neutral">
-			<h4>PH NEUTRAL</h4>
-			<p>Lorem ipsum dolor sit amet consecteteur.</p>
-		</li>
-		<li id="weeks">
-			<h4>NEW BONE IN 6 WEEKS</h4>
-			<p>Lorem ipsum dolor sit amet consecteteur.</p>
-		</li>
-	</ul>
+	<h3>Change this seciton to BIOACTIVE from brocure.</h3>
 </section>
-<section id="zoom">
+<section id="zoom" class="fadein">
+		<h2>NovoGro is remodeled and replaced by bone.</h2>
+		<p>NovoGro Putty was implanted into bilateral crticially sized (6x10 mm) defects in the rabbit distal 
+	femoral condyle. The amounts of new bone and residual graft were quantified at 
+	6 and 12 weeks post-operatively using histology and micro CT.</p>
+	
 	<ul class="toggle">
 		<li><a href="#" class="active" id="hist-toggle" data-toggle="#histology">Histology</a></li>
 		<li><a href="#" class="" id="ct-toggle" data-toggle="#ct">&mu;CT</a></li>
@@ -70,36 +60,32 @@
 	<article id="histology">
 		<div class="zoom-text-container fadein fast">
 			<div class="zoom-text first visible">
-				<h2>1.25x<span>Objective Lens Magnification</span></h2>
+				<h3>1.25x<span>Objective Lens Magnification</span></h3>
 				<ul>
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
 				</ul>
-				<p>NovoGro Putty in a Rabbit Distal Femoral Condyle, post-op.</p>
 			</div>
 			<div class="zoom-text second hidden">
-				<h2>10x<span>Objective Lens Magnification</span></h2>
+				<h3>10x<span>Objective Lens Magnification</span></h3>
 				<ul>
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
 				</ul>
-				<p>Need a statement about the new marrow or some such.</p>
 			</div>
 			<div class="zoom-text third hidden">
-				<h2>20x<span>Objective Lens Magnification</span></h2>
+				<h3>20x<span>Objective Lens Magnification</span></h3>
 				<ul>
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
 				</ul>
-				<p>Robust new bone formation in the center of the defect.</p>
 			</div>
 			<div class="zoom-text fourth hidden">
-				<h2>40x<span>Objective Lens Magnification</span></h2>
+				<h3>40x<span>Objective Lens Magnification</span></h3>
 				<ul>
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
 				</ul>
-				<p>Robust new bone formation in the center of the defect.</p>
 			</div>
 		</div>
 		<div class="zoom-image-container fadein fast">
@@ -110,9 +96,10 @@
 				<li class="fourth"><a href="#">40x</a></li>
 			</ul>
 			<div class="images">
-				<div class="popup implant"></div>
-				<div class="popup newbone"></div>
-				<div class="popup marrow"></div>				
+				<!--div class="popup implant">Implant</div>
+				<div class="popup newbone">New Bone</div>
+				<div class="popup marrow">Marrow</div-->
+								
 				<div class="image first six visible">
 					<a class="node implant"></a>
 					<a class="node newbone"></a>

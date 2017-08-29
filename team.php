@@ -102,7 +102,7 @@
 				  <img src="images/team/aaron_small.jpg" alt="Aaron Gao, Phd" class="aaron">
 				</picture>
 				<div class="text-container">
-					<h3>Aaron Gao, Phd</h3>
+					<h3>Aaron Gao, PhD</h3>
 					<h4>Lead Scientist</h4>
 					<p>Aaron is a material scientist who enjoys problem solving and finding the important facts hidden behind the trivial details. He earned his Ph.D.in chemistry from University of Toledo, and brings experience in inorganic synthesis and material characterization. He's motivated by exploring ways to make novel materials and searching for connections between their material structure and properties.</p>
 				</div>
