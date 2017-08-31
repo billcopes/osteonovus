@@ -38,12 +38,16 @@ table {
 /* END RESET */
 
 html, body {
-	background: #eaeef7; /* Old browsers */
-	background: -moz-linear-gradient(top,  #eaeef7 0%, #dee6f7 50%, #f4f6f9 86%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  #eaeef7 0%,#dee6f7 50%,#f4f6f9 86%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  #eaeef7 0%,#dee6f7 50%,#f4f6f9 86%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeef7', endColorstr='#f4f6f9',GradientType=0 ); /* IE6-9 */
-	
+	background: #eaeef7;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #eaeef7 0%, #dee6f7 50%, #f4f6f9 86%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #eaeef7 0%, #dee6f7 50%, #f4f6f9 86%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #eaeef7 0%, #dee6f7 50%, #f4f6f9 86%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#eaeef7', endColorstr='#f4f6f9', GradientType=0);
+	/* IE6-9 */
 }
 :hover {
 	transition: all 0.2s linear;
@@ -164,7 +168,6 @@ p {
 
 /********************** OBJECTS/POSITIONING **************************/
 
-
 ul li {
 	display: inline-block;
 }
@@ -172,7 +175,6 @@ ul li {
 	display: block;
 	position: relative;
 }
-
 .logomark::after {
 	content: "";
 	background-image: url("../images/logomark.svg");
@@ -186,8 +188,6 @@ ul li {
 	position: absolute;
 	z-index: -1;
 }
-
-
 progress {
 	display: block;
 	margin: 0 auto;
@@ -236,10 +236,10 @@ video {
 }
 .video-gradient-bottom {
 	bottom: 0;
-    -moz-transform: scaleY(-1);
-    -o-transform: scaleY(-1);
-    -webkit-transform: scaleY(-1);
-    transform: scaleY(-1);
+	-moz-transform: scaleY(-1);
+	-o-transform: scaleY(-1);
+	-webkit-transform: scaleY(-1);
+	transform: scaleY(-1);
 }
 .vid-nav {
 	bottom: 3.5vw;
@@ -402,6 +402,7 @@ video {
 }
 
 /********************* HOME *********************/
+
 .opaque {
 	opacity: .6;
 }
@@ -412,13 +413,12 @@ video {
 }
 .fadeout {
 	animation: fadeOut 1s ease;
-	-webkit-animation-delay: 1.5s; 
+	-webkit-animation-delay: 1.5s;
 	animation-delay: 1.5s;
 	animation-iteration-count: 1;
-	-webkit-animation-fill-mode: forwards; 
+	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
 }
-
 @keyframes fadeOut {
 	0% {
 		opacity: 1;
@@ -429,14 +429,13 @@ video {
 }
 .fadein {
 	animation: fadeIn 1s ease;
-	-webkit-animation-delay: 2.5s; 
+	-webkit-animation-delay: 2.5s;
 	animation-delay: 2.5s;
 	animation-iteration-count: 1;
-	-webkit-animation-fill-mode: forwards; 
+	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
 	opacity: 0;
 }
-
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -447,22 +446,20 @@ video {
 		display: block;
 	}
 }
-
 .fast {
-	-webkit-animation-delay: .25s; 
+	-webkit-animation-delay: .25s;
 	animation-delay: .25s;
 }
-
 .home h1#introMessage {
 	font-size: 8.4vw;
 	position: fixed;
 	/*padding: 4vw 0 0 6vw;*/
-    top: 35vh;
-    left: 8vw;
+	top: 35vh;
+	left: 8vw;
 }
 .home h1#introMessage strong {
-    font-size: 14.8vw;
-    line-height: 16vw;
+	font-size: 14.8vw;
+	line-height: 16vw;
 }
 .home #intro {
 	width: 60vw;
@@ -472,8 +469,8 @@ video {
 }
 .home #intro p {
 	font-size: 1.5rem;
-    position: relative;
-    top: 18vw;
+	position: relative;
+	top: 18vw;
 	max-width: 48rem;
 }
 .contact #intro h2 {
@@ -488,8 +485,8 @@ video {
 }
 .novogro {
 	position: absolute;
-    top: 8vw;
-    left: 8.5vw;
+	top: 8vw;
+	left: 8.5vw;
 	font-size: 0px;
 	line-height: 0px;
 	display: inline-block;
@@ -500,22 +497,18 @@ video {
 	z-index: 99;
 }
 .toggle {
-	
 	font-size: 2rem;
 }
-
 #novogro .toggle {
 	position: absolute;
 	z-index: 999;
 	left: 8.5vw;
 	top: 22vw;
 }
-
 .toggle li {
 	display: block;
 	margin: 0 0 1rem;
 }
-
 .toggle a {
 	text-transform: none;
 	color: #2e2d38;
@@ -560,7 +553,7 @@ video {
 }
 .attributes p {
 	top: 4vw;
-    margin-right: 6vw;
+	margin-right: 6vw;
 	font-size: 1.75vw;
 }
 .day {
@@ -568,33 +561,32 @@ video {
 	font-size: 0;
 	height: 25vw;
 	border-radius: 100%;
-    top: -9.75vw;
-    margin-bottom: -9.75vw;
+	top: -9.75vw;
+	margin-bottom: -9.75vw;
 	text-align: center;
 	box-shadow: inset 0 0 2vw #000;
 }
 .day::before {
-	content:;
+	content: ;
 	display: block;
 	font-size: 1.5vw;
-    top: -4vw;
-    position: relative;
+	top: -4vw;
+	position: relative;
 }
 .zero {
 	background: url("../images/zero.jpg");
 	background-size: cover;
 }
 .zero::before {
-	content:"DAY 0";
+	content: "DAY 0";
 }
 .seven {
 	background: url("../images/seven.jpg");
 	background-size: cover;
 }
 .seven::before {
-	content:"DAY 7";
+	content: "DAY 7";
 }
-
 #zoom {
 	padding: 8vw 0 6vw 8vw;
 }
@@ -657,7 +649,7 @@ video {
 		background: #89cda8;
 	}
 }
-.zoom-nav li.selected a, li.six.active a, li.twelve.active a  {
+.zoom-nav li.selected a, li.six.active a, li.twelve.active a {
 	animation-name: pulse-text;
 	animation-duration: 1s;
 	animation-direction: alternate;
@@ -763,7 +755,6 @@ video {
 	position: absolute;
 	top: 40vw;
 }
-
 .zoom-text ul {
 	margin: 1.5vw 0 0;
 }
@@ -771,15 +762,11 @@ video {
 	margin-right: 1rem;
 	font-size: 1.25rem;
 }
-
-
-
 .zoom-text ul li.active a {
 	border-bottom: solid 2px #ccc;
 	animation: pulselink .75s ease infinite alternate-reverse;
 	padding: 0 0 2px;
 }
-
 @keyframes pulselink {
 	0% {
 		color: #7f7cbb;
@@ -794,7 +781,6 @@ video {
 		border-color: #89cda8;
 	}
 }
-
 #histology .images, #ct .images .visible {
 	background-color: #fff;
 }
@@ -840,7 +826,6 @@ video {
 #ct .images .third.twelve {
 	background-image: url("../images/ct/12-coronal.jpg");
 }
-
 .node {
 	position: absolute;
 	display: block;
@@ -851,57 +836,55 @@ video {
 	left: 0;
 	top: 0;
 	animation: node .75s ease infinite alternate-reverse;
-	background-color: rgba(127,124,187,0.8);
+	background-color: rgba(127, 124, 187, 0.8);
 	z-index: 1000;
 }
-
-
 @keyframes node {
 	0% {
 		transform: scale(.8);
-		background-color: rgba(127,124,187,0.0);
+		background-color: rgba(127, 124, 187, 0.0);
 		border-color: #fff;
 	}
 	50% {
-		background-color: rgba(127,206,234,0.2);
+		background-color: rgba(127, 206, 234, 0.2);
 		border-color: #fff;
 	}
 	100% {
 		transform: scale(1);
-		background-color: rgba(137,205,168,0.1);
+		background-color: rgba(137, 205, 168, 0.1);
 		border-color: #fff;
 	}
 }
-
 .node:hover {
 	animation: none;
-	background-color: rgba(127,206,234,0.6);
+	background-color: rgba(127, 206, 234, 0.6);
 	border-color: #fff;
 }
-
 .node::before {
-    display: none;
-    background: rgba(255,255,255,0.9);
-    position: absolute;
-    padding: 12px 16px;
-    color: #000;
-    text-align: center;
-    font-size: 1.25vw;
-    top: -160%;
+	display: none;
+	background: rgba(255, 255, 255, 0.9);
+	position: absolute;
+	padding: 12px 16px;
+	color: #000;
+	text-align: center;
+	font-size: 1.25vw;
+	top: -160%;
 	border-radius: 8px;
-	-webkit-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.39);
-	-moz-box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.39);
-	box-shadow: 10px 10px 32px -4px rgba(0,0,0,0.39);
+	-webkit-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.39);
+	-moz-box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.39);
+	box-shadow: 10px 10px 32px -4px rgba(0, 0, 0, 0.39);
 }
-.node:hover::before, .node:active::before{display: block;}
+.node:hover::before, .node:active::before {
+	display: block;
+}
 .node.implant::before {
 	content: "Implant";
-    left: -38px;
+	left: -38px;
 	width: 128px;
 }
 .node.marrow::before {
 	content: "Bone Marrow";
-    left: -82px;
+	left: -82px;
 	width: 206px;
 }
 .node.newbone::before {
@@ -909,35 +892,102 @@ video {
 	left: -54px;
 	width: 148px;
 }
-
-#histology .first.six .node.implant { left: 81%; top: 43.5%; }
-#histology .first.six .node.newbone { left: 24.5%; top: 54.5%; }
-#histology .first.six .node.marrow { left: 52%; top: 27.5%; }
-#histology .first.twelve .node.implant { left: 19%; top: 44.5%; }
-#histology .first.twelve .node.newbone { left: 43.5%; top: 18.5%; }
-#histology .first.twelve .node.marrow { left: 56%; top: 70.5%; }
-
-#histology .second.six .node.implant { left: 61%; top: 81.5%; }
-#histology .second.six .node.newbone { left: 71.5%; top: 40.5%; }
-#histology .second.six .node.marrow { left: 52%; top: 53.5%; }
-#histology .second.twelve .node.implant { left: 72%; top: 39.5%; }
-#histology .second.twelve .node.newbone { left: 29.5%; top: 62.5%; }
-#histology .second.twelve .node.marrow { left: 29%; top: 27.5%; }
-
-#histology .third.six .node.implant { left: 81%; top: 43.5%; }
-#histology .third.six .node.newbone { left: 24.5%; top: 54.5%; }
-#histology .third.six .node.marrow { left: 52%; top: 27.5%; }
-#histology .third.twelve .node.implant { left: 72%; top: 39.5%; }
-#histology .third.twelve .node.newbone { left: 29.5%; top: 62.5%; }
-#histology .third.twelve .node.marrow { left: 29%; top: 27.5%; }
-
-#histology .fourth.six .node.implant { left: 81%; top: 43.5%; }
-#histology .fourth.six .node.newbone { left: 24.5%; top: 54.5%; }
-#histology .fourth.six .node.marrow { left: 52%; top: 27.5%; }
-#histology .fourth.twelve .node.implant { left: 72%; top: 39.5%; }
-#histology .fourth.twelve .node.newbone { left: 29.5%; top: 62.5%; }
-#histology .fourth.twelve .node.marrow { left: 29%; top: 27.5%; }
-
+#histology .first.six .node.implant {
+	left: 81%;
+	top: 43.5%;
+}
+#histology .first.six .node.newbone {
+	left: 24.5%;
+	top: 54.5%;
+}
+#histology .first.six .node.marrow {
+	left: 52%;
+	top: 27.5%;
+}
+#histology .first.twelve .node.implant {
+	left: 19%;
+	top: 44.5%;
+}
+#histology .first.twelve .node.newbone {
+	left: 43.5%;
+	top: 18.5%;
+}
+#histology .first.twelve .node.marrow {
+	left: 56%;
+	top: 70.5%;
+}
+#histology .second.six .node.implant {
+	left: 61%;
+	top: 81.5%;
+}
+#histology .second.six .node.newbone {
+	left: 71.5%;
+	top: 40.5%;
+}
+#histology .second.six .node.marrow {
+	left: 52%;
+	top: 53.5%;
+}
+#histology .second.twelve .node.implant {
+	left: 72%;
+	top: 39.5%;
+}
+#histology .second.twelve .node.newbone {
+	left: 29.5%;
+	top: 62.5%;
+}
+#histology .second.twelve .node.marrow {
+	left: 29%;
+	top: 27.5%;
+}
+#histology .third.six .node.implant {
+	left: 81%;
+	top: 43.5%;
+}
+#histology .third.six .node.newbone {
+	left: 24.5%;
+	top: 54.5%;
+}
+#histology .third.six .node.marrow {
+	left: 52%;
+	top: 27.5%;
+}
+#histology .third.twelve .node.implant {
+	left: 72%;
+	top: 39.5%;
+}
+#histology .third.twelve .node.newbone {
+	left: 29.5%;
+	top: 62.5%;
+}
+#histology .third.twelve .node.marrow {
+	left: 29%;
+	top: 27.5%;
+}
+#histology .fourth.six .node.implant {
+	left: 81%;
+	top: 43.5%;
+}
+#histology .fourth.six .node.newbone {
+	left: 24.5%;
+	top: 54.5%;
+}
+#histology .fourth.six .node.marrow {
+	left: 52%;
+	top: 27.5%;
+}
+#histology .fourth.twelve .node.implant {
+	left: 72%;
+	top: 39.5%;
+}
+#histology .fourth.twelve .node.newbone {
+	left: 29.5%;
+	top: 62.5%;
+}
+#histology .fourth.twelve .node.marrow {
+	left: 29%;
+	top: 27.5%;
+}
 .popup {
 	cursor: pointer;
 	display: none;
@@ -952,23 +1002,18 @@ video {
 	left: 25%;
 	top: 25%;
 	background: #fff;
-	
 }
-
 .popup-visible {
 	opacity: 1;
 	display: block;
 	z-index: 1;
 }
-
 .popup.implant {
 	border-color: red;
 }
-
 .popup.newbone {
 	border-color: green;
 }
-
 .popup.marrow {
 	border-color: blue;
 }
@@ -976,7 +1021,9 @@ video {
 	opacity: 0;
 	transform: scale(0);
 }
-.gone {display: none;}
+.gone {
+	display: none;
+}
 .visible {
 	opacity: 1;
 	transform: scale(1);
@@ -1150,9 +1197,6 @@ p.legal {
 }
 
 /*************************** MEDIA QUERIES *************************/
-/*@media screen and (max-height: 956px) and (min-width:600px) {
-	
-}*/
 
 @media screen and (min-width: 1800px) {
 	.team-members li h3 {
@@ -1186,39 +1230,6 @@ p.legal {
 	}
 }
 @media screen and (max-width: 1300px) {
-	/*.zoom-image-container {
-		width: 60vw;
-		height: 60vw;
-	}
-	.zoom-image-container .images {
-		width: 47vw;
-		height: 47vw;
-		top: 6vw;
-	}
-	.zoom-image-container .images .image {
-		width: 41vw;
-		height: 41vw;
-		left: 3vw;
-		top: 3vw;
-	}
-	.zoom-nav li a {
-		width: 4.25vw;
-		height: 4.25vw;
-		font-size: 1.5vw;
-		padding-top: 1.5vw;
-	}
-	#ct .zoom-nav li.first {
-		left: 3vw;
-		top: 7vw;
-	}
-	#ct .zoom-nav li.second {
-		top: 27vw;
-		left: -3.25vw;
-	}
-	#ct .zoom-nav li.third {
-		top: 45vw;
-		left: 3vw;
-	}*/
 	.team #intro h1 {
 		padding-top: 2vw;
 	}
@@ -1442,11 +1453,12 @@ p.legal {
 		display: none!important;
 		-webkit-appearance: none;
 	}
-	
 	.logomark::after {
 		background-position: -2rem -4rem;
 	}
-	progress { display: none; }
+	progress {
+		display: none;
+	}
 	.vid-nav, #injectable .vid-nav {
 		position: relative;
 		display: block;
@@ -1476,7 +1488,6 @@ p.legal {
 	progress {
 		bottom: 100%;
 	}
-	
 	header a.logo {
 		background: url("../images/mark-full.svg") no-repeat;
 		background-size: contain;
@@ -1558,7 +1569,7 @@ p.legal {
 }
 @media screen and (max-width: 480px) {
 	.home #intro {
-	    width: 90vw;
+		width: 90vw;
 	}
 	video {
 		width: 150%;
@@ -1573,9 +1584,9 @@ p.legal {
 		top: 28vw;
 	}
 	.novogro {
-	    width: 52vw;
-	    height: 18vw;
-	    top: 26vw;
+		width: 52vw;
+		height: 18vw;
+		top: 26vw;
 	}
 	#novogro .toggle {
 		top: 70vw;
