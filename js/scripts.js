@@ -106,8 +106,6 @@ puttyplay.addEventListener("click", function(event) {
 	pvideo.play();
 	return false;
 }, false);
-
-
 var ivideo = document.getElementById('injectable-vid');
 var iBar = document.getElementById('i');
 ivideo.addEventListener('timeupdate', function() {
@@ -173,7 +171,6 @@ injectplay.addEventListener("click", function(event) {
 	ivideo.play();
 	return false;
 }, false);
-
 $(document).ready(function() {
 	var mainVideo = $('#putty-vid');
 	var medQualVersionSrc = 'https://s3.amazonaws.com/osteonovus/vid/putty-mobile.mp4';
@@ -186,13 +183,23 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
 	var mainVideo2 = $('#injectable-vid');
-	var medQualVersionSrc = 'https://s3.amazonaws.com/osteonovus/vid/injectable-mobile.mp4';
-	var highQualVersionSrc = 'https://s3.amazonaws.com/osteonovus/vid/injectable.mp4';
+	var medQualVersionSrc2 = 'https://s3.amazonaws.com/osteonovus/vid/injectable-mobile.mp4';
+	var highQualVersionSrc2 = 'https://s3.amazonaws.com/osteonovus/vid/injectable.mp4';
 	if ($(window).width() < 800) {
-		mainVideo2.append("<source type='video/mp4' src='" + medQualVersionSrc + "' />");
+		mainVideo2.append("<source type='video/mp4' src='" + medQualVersionSrc2 + "' />");
 	} else {
-		mainVideo2.append("<source type='video/mp4' src='" + highQualVersionSrc + "' />");
+		mainVideo2.append("<source type='video/mp4' src='" + highQualVersionSrc2 + "' />");
 	}
+});
+$(document).ready(function() {
+	var pvideo = $('#putty-vid');
+	var ivideo = $('#injectable-vid');
+	$("#injectable-toggle").click(function() {
+		$(pvideo).get(0).pause()
+	});
+	$("#putty-toggle").click(function() {
+		$(ivideo).get(0).pause()
+	});
 });
 
 document.getElementById('putty-vid').addEventListener('loadedmetadata', function() {
@@ -441,7 +448,7 @@ $(".popup").click(function() {
 	$(this).removeClass("fadein");
 });
 $(".home .logomark").css('opacity', 1).animate({
-	opacity: .6
+	opacity: .4
 }, 3500);
 $(document).ready(function() {
 	$("#introMessage").delay(3500).queue(function(next){
@@ -451,25 +458,27 @@ $(document).ready(function() {
 });
 
 $(window).scroll(function () {
-    var $this = $(this),
-        $vidnav = $('.vid-nav');
-		$progress = $('progress');
-    if ($this.scrollTop() < 122) {
-       $vidnav.addClass('fixed-vidstuff');
+	var $winheight = $(window).height();
+    $vidnav = $('.vid-nav');
+	$progress = $('progress');
+	if ($winheight < 468) {
+	   $vidnav.addClass('fixed-vidstuff');
 	   $progress.addClass('fixed-vidstuff');
-    } else {
+	} else {
        $vidnav.removeClass('fixed-vidstuff');
 	   $progress.removeClass('fixed-vidstuff');
     }
 });
 
-$(window).ready(function() {
+$(window).resize(function() {
 	var $winheight = $(window).height();
     $vidnav = $('.vid-nav');
 	$progress = $('progress');
-	//if ($win < 956) {
-	if ($winheight < 768) {
+	if ($winheight < 468) {
 	   $vidnav.addClass('fixed-vidstuff');
 	   $progress.addClass('fixed-vidstuff');
-	}
+	} else {
+       $vidnav.removeClass('fixed-vidstuff');
+	   $progress.removeClass('fixed-vidstuff');
+    }
 });

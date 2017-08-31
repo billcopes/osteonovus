@@ -45,14 +45,16 @@
 	</article>
 </section>
 <section class="attributes fadein">
-	<h3>Change this seciton to BIOACTIVE from brocure.</h3>
+	<h2>BIOACTIVE.</h2>
+	<p>The surface of NovoGro, shown at 10,000x, grows biomimetic apatite crystals after seven days in simulated body fluid.</p>
+	<div class="day zero">Day 0</div>
+	<div class="day seven">Day 7</div>
 </section>
 <section id="zoom" class="fadein">
-		<h2>NovoGro is remodeled and replaced by bone.</h2>
+		<h2>NovoGro is <span>remodeled</span> and <span>replaced</span> by bone.</h2>
 		<p>NovoGro Putty was implanted into bilateral crticially sized (6x10 mm) defects in the rabbit distal 
 	femoral condyle. The amounts of new bone and residual graft were quantified at 
 	6 and 12 weeks post-operatively using histology and micro CT.</p>
-	
 	<ul class="toggle">
 		<li><a href="#" class="active" id="hist-toggle" data-toggle="#histology">Histology</a></li>
 		<li><a href="#" class="" id="ct-toggle" data-toggle="#ct">&mu;CT</a></li>
@@ -87,6 +89,7 @@
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
 				</ul>
 			</div>
+			<p>Extensive new trabecular bone formations were observed from the margins through the center of the NovoGro treated defects in just six weeks post-op. NovoGro continued to remodel and was replaced by significantly more bone at twelve weeks.</p>
 		</div>
 		<div class="zoom-image-container fadein fast">
 			<ul class="zoom-nav">
@@ -126,7 +129,7 @@
 	<article id="ct">
 		<div class="zoom-text-container fadein fast">
 			<div id="" class="zoom-text first visible">
-				<h2>Axial<span>44&mu;M</span></h2>
+				<h3>Axial<span>44&mu;M</span></h3>
 				<ul>
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
@@ -134,7 +137,7 @@
 				<p>NovoGro Putty in a Rabbit Distal Femoral Condyle, post-op.</p>
 			</div>
 			<div id="" class="zoom-text second hidden">
-				<h2>Sagittal<span>44&mu;M</span></h2>
+				<h3>Sagittal<span>44&mu;M</span></h3>
 				<ul>
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
@@ -142,13 +145,15 @@
 				<p>Ipsum dolor sit amet consecteeteur</p>
 			</div>
 			<div id="" class="zoom-text third hidden">
-				<h2>Coronal<span>44&mu;M</span></h2>
+				<h3>Coronal<span>44&mu;M</span></h3>
 				<ul>
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
 				</ul>
 				<p>Robust new bone formation in the center of the defect.</p>
 			</div>
+			<p>A progression in healing of the NovoGro treated defects was observed radiographically by the change in trabecular density and thickness from 6 to 12 wks.  NovoGro appeared more radiolucent at 12 wks., and  the distinct spherical shape, size and porosity of the 
+particles changed as the graft remodeled. </p>
 		</div>
 		<div class="zoom-image-container fadein fast">
 			<ul class="zoom-nav">
