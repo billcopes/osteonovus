@@ -146,6 +146,7 @@ h2 {
 	display: block;
 	text-transform: uppercase;
 }
+h2 span { color: #7f7cbb;}
 h3 {
 	font-size: 1.4rem;
 	line-height: 2rem;
@@ -167,7 +168,9 @@ p {
 }
 
 /********************** OBJECTS/POSITIONING **************************/
-
+.flex-container {
+	display: flex;
+}
 ul li {
 	display: inline-block;
 }
@@ -485,7 +488,7 @@ video {
 }
 .novogro {
 	position: absolute;
-	top: 8vw;
+	top: 13vw;
 	left: 8.5vw;
 	font-size: 0px;
 	line-height: 0px;
@@ -539,59 +542,79 @@ video {
 #injectable {
 	display: none;
 }
+
 .attributes {
 	background-color: #2E2D38;
 	padding: 8vw 0 8vw 8vw;
 	color: #fff;
 	z-index: 97;
 }
-.attributes p, .day {
-	display: inline-block;
-	position: relative;
-	margin-right: 3vw;
-	width: 25vw;
-}
 .attributes p {
-	top: 4vw;
-	margin-right: 6vw;
-	font-size: 1.75vw;
+	width: 29vw;
+	margin: 3vw 4vw 3vw 0;
+	font-size: 1.25vw;
+}
+.product {
+	display: block;
+	background: url("../images/product.png");
+	background-size: cover;
+	position: absolute;
+    width: 40vw;
+    height: 28vw;
+	margin-top: 1vw;
+	left: 4vw;
 }
 .day {
-	border: solid 4px #fff;
-	font-size: 0;
-	height: 25vw;
-	border-radius: 100%;
-	top: -9.75vw;
-	margin-bottom: -9.75vw;
-	text-align: center;
-	box-shadow: inset 0 0 2vw #000;
-}
-.day::before {
-	content: ;
-	display: block;
-	font-size: 1.5vw;
-	top: -4vw;
 	position: relative;
+	top: -5vw;
+    height: 23vw;
+    width: 23vw;
+	border: solid 4px #fff;
+	border-radius: 100%;
+	box-shadow: inset 0 0 2vw #000;
+	text-align: center;
+	font-size: 0;
+}
+.day::after {
+	display: block;
+	font-size: 2vw;
+	margin-top: 1vw;
+}
+
+.day::before {
+    content: "";
+    display: block;
+    position: relative;
+    left: -.75vw;
+    top: -.75vw;
+    z-index: -1;
+    height: 24vw;
+    width: 24vw;
+	border-radius: 100%;
+	background: -moz-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
+	background: -webkit-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
+	background: linear-gradient(to right, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 }
 .zero {
 	background: url("../images/zero.jpg");
 	background-size: cover;
+	margin-right: 3vw;
 }
-.zero::before {
+.zero::after {
 	content: "DAY 0";
 }
 .seven {
 	background: url("../images/seven.jpg");
 	background-size: cover;
 }
-.seven::before {
+.seven::after {
 	content: "DAY 7";
 }
 #zoom {
 	padding: 8vw 0 6vw 8vw;
 }
 #zoom p {
-	width: 36vw;
+	width: 38vw;
 	margin: 3vw 0;
 }
 #zoom h2 {
@@ -704,7 +727,7 @@ video {
 	width: 50vw;
 	height: 50vw;
 	margin-right: -3vw;
-	margin-top: -18vw;
+	margin-top: -10vw;
 	border-radius: 100%;
 	background: #7f7cbb;
 	/* Old browsers */
@@ -734,6 +757,10 @@ video {
 	background-position: center center;
 	background-size: 112%;
 }
+.zoom-text-container {
+	position: relative;
+	top: 14vw;
+}
 .zoom-text-container h3 {
 	font-size: 4.4vw;
 	font-weight: 200;
@@ -745,16 +772,15 @@ video {
 	display: block;
 }
 .zoom-text-container p {
-	font-size: 1vw;
-	line-height: 1.6vw;
+	/*font-size: .8vw;
+	line-height: 1.6vw;*/
+	font-size: 14px;
+    line-height: 24px;
 	position: absolute;
-	top: 47.5vw;
-	max-width: 33vw;
+	top: 8.5vw;
+	max-width: 31rem;
 }
-.zoom-text {
-	position: absolute;
-	top: 40vw;
-}
+.zoom-text { position: absolute;}
 .zoom-text ul {
 	margin: 1.5vw 0 0;
 }
@@ -831,8 +857,10 @@ video {
 	display: block;
 	border-radius: 100%;
 	border: solid 2px #fff;
-	width: 2.5vw;
-	height: 2.5vw;
+	/*width: 2.5vw;
+	height: 2.5vw;*/
+	width: 40px;
+	height: 40px;
 	left: 0;
 	top: 0;
 	animation: node .75s ease infinite alternate-reverse;
@@ -1218,9 +1246,6 @@ p.legal {
 	}
 	footer {
 		padding: 8rem 6rem 4rem;
-	}
-	.zoom-text-container {
-		left: 10vw;
 	}
 	.team #intro h1 {
 		padding-top: 2vw;
