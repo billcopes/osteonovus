@@ -620,6 +620,7 @@ video {
 #zoom h2 {
 	padding-right: 24vw;
 	letter-spacing: -.15vw;
+	margin: 6vw 0 0 0;
 }
 .zoom-nav {
 	position: absolute;
