@@ -428,21 +428,21 @@ $(document).ready(function() {
 });
 
 $(".node.implant").click(function() {
-	$(".popup.implant").addClass("fadein fast").delay(3500).queue(function(next){
-	    //$(this).css('opacity', 1).animate({	opacity: 0}, 3500);
-		//$(this).removeClass("popup-visible");
+	$(".node.implant::before").css('background-color', '#ff0000');
+	console.log("clicked");
+	/*$(this).addClass("fadein fast").delay(3500).queue(function(next){
 		next();
-	});
+	});*/
 });
 $(".node.newbone").click(function() {
-	$(".popup.newbone").addClass("fadein fast").delay(3500).queue(function(next){
+	/*$(".popup.newbone").addClass("fadein fast").delay(3500).queue(function(next){
 		next();
-	});
+	});*/
 });
 $(".node.marrow").click(function() {
-	$(".popup.marrow").addClass("fadein fast").delay(3500).queue(function(next){
+	/*$(".popup.marrow").addClass("fadein fast").delay(3500).queue(function(next){
 		next();
-	});
+	});*/
 });
 $(".popup").click(function() {
 	$(this).removeClass("fadein");

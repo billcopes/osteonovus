@@ -1433,10 +1433,6 @@ p.legal {
 	footer {
 		padding: 6rem 4rem 4rem;
 	}
-	.zoom-text-container p {
-		font-size: 18px;
-		margin: 3rem 0;
-	}
 	.zoom-text-container h3 {
 		font-size: 4.4rem;
 	}
@@ -1486,12 +1482,7 @@ p.legal {
 	#zoom .toggle {
 		top: 18vw;
 	}
-	.zoom-text-container {
-		left: 8vw;
-	}
-	.zoom-text-container {
-		top: 30vw;
-	}
+
 	.vid-nav {
 		bottom: 5.5vw;
 	}
@@ -1548,10 +1539,6 @@ p.legal {
 	}
 	.footnote {
 		margin: 1rem 0 0;
-	}
-	.zoom-text-container p {
-		line-height: 2rem;
-		font-size: 16px;
 	}
 	.zoom-text-container h3 {
 		font-size: 3.4rem;
