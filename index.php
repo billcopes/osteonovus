@@ -56,7 +56,7 @@
 	</div>
 </section>
 <section id="zoom" class="fadein">
-		<h2>NovoGro is remodeled and replaced by bone.</h2>
+		<h2>NovoGro is remodeled<br/>and replaced by bone.</h2>
 		<p>NovoGro Putty was implanted into bilateral crticially sized (6x10 mm) defects in the rabbit distal 
 	femoral condyle. The amounts of new bone and residual graft were quantified at 
 	6 and 12 weeks post-operatively using histology and micro CT.</p>
@@ -139,7 +139,6 @@
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
 				</ul>
-				<p>NovoGro Putty in a Rabbit Distal Femoral Condyle, post-op.</p>
 			</div>
 			<div id="" class="zoom-text second hidden">
 				<h3>Sagittal<span>44&mu;M</span></h3>
@@ -147,7 +146,6 @@
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
 				</ul>
-				<p>Ipsum dolor sit amet consecteeteur</p>
 			</div>
 			<div id="" class="zoom-text third hidden">
 				<h3>Coronal<span>44&mu;M</span></h3>
@@ -155,7 +153,6 @@
 					<li class="six active"><a href="#">6 Weeks</a></li>
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
 				</ul>
-				<p>Robust new bone formation in the center of the defect.</p>
 			</div>
 			<p>A progression in healing of the NovoGro treated defects was observed radiographically by the change in trabecular density and thickness from 6 to 12 wks.  NovoGro appeared more radiolucent at 12 wks., and  the distinct spherical shape, size and porosity of the 
 particles changed as the graft remodeled. </p>
