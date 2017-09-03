@@ -94,7 +94,7 @@
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
 				</ul>
 			</div>
-			<p>Extensive new trabecular bone formations were observed from the margins through the center of the NovoGro treated defects in just six weeks post-op. NovoGro continued to remodel and was replaced by significantly more bone at twelve weeks.</p>
+			<p class="detail">Extensive new trabecular bone formations were observed from the margins through the center of the NovoGro treated defects in just six weeks post-op. NovoGro continued to remodel and was replaced by significantly more bone at twelve weeks.</p>
 		</div>
 		<div class="zoom-image-container fadein fast">
 			<ul class="zoom-nav">
@@ -104,10 +104,6 @@
 				<li class="fourth"><a href="#">40x</a></li>
 			</ul>
 			<div class="images">
-				<!--div class="popup implant">Implant</div>
-				<div class="popup newbone">New Bone</div>
-				<div class="popup marrow">Marrow</div-->
-								
 				<div class="image first six visible">
 					<a class="node implant"></a>
 					<a class="node newbone"></a>
@@ -154,7 +150,7 @@
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
 				</ul>
 			</div>
-			<p>A progression in healing of the NovoGro treated defects was observed radiographically by the change in trabecular density and thickness from 6 to 12 wks.  NovoGro appeared more radiolucent at 12 wks., and  the distinct spherical shape, size and porosity of the 
+			<p class="detail">A progression in healing of the NovoGro treated defects was observed radiographically by the change in trabecular density and thickness from 6 to 12 wks.  NovoGro appeared more radiolucent at 12 wks., and  the distinct spherical shape, size and porosity of the 
 particles changed as the graft remodeled. </p>
 		</div>
 		<div class="zoom-image-container fadein fast">

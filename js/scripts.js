@@ -456,29 +456,22 @@ $(document).ready(function() {
 		next();
 	});
 });
-
-$(window).scroll(function () {
-	var $winheight = $(window).height();
-    $vidnav = $('.vid-nav');
-	$progress = $('progress');
-	if ($winheight < 468) {
-	   $vidnav.addClass('fixed-vidstuff');
-	   $progress.addClass('fixed-vidstuff');
-	} else {
-       $vidnav.removeClass('fixed-vidstuff');
-	   $progress.removeClass('fixed-vidstuff');
-    }
-});
-
-$(window).resize(function() {
-	var $winheight = $(window).height();
-    $vidnav = $('.vid-nav');
-	$progress = $('progress');
-	if ($winheight < 468) {
-	   $vidnav.addClass('fixed-vidstuff');
-	   $progress.addClass('fixed-vidstuff');
-	} else {
-       $vidnav.removeClass('fixed-vidstuff');
-	   $progress.removeClass('fixed-vidstuff');
-    }
-});
+// $(window).on('scroll', function() {
+// 	 var $ratio = $(window).width()/$(window).height();
+//     console.log( $(this).scrollTop() );
+// });
+// $( window ).resize(function() {
+//     var $ratio = $(window).width()/$(window).height(),
+//     	$this = $(this),
+// 		$vidnav = $('.vid-nav'),
+// 		$progress = $('progress');
+// 		console.log( $(this).scrollTop() );
+// 		console.log($ratio);
+// 	if ( ($ratio > 1.61) && ($this.scrollTop() < 146 )  ){
+//  	   $vidnav.addClass('fixed-vidstuff');
+//  	   $progress.addClass('fixed-vidstuff');
+// 	} else {
+//       $vidnav.removeClass('fixed-vidstuff');
+// 	  $progress.removeClass('fixed-vidstuff');
+// 	}
+// });

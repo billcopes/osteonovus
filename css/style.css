@@ -837,6 +837,7 @@ video {
 	height: 50vw;
 	margin-right: -3vw;
 	margin-top: -24vw;
+	margin-bottom: 4vw;
 	border-radius: 100%;
 	background: #7f7cbb;
 	/* Old browsers */
@@ -882,12 +883,12 @@ video {
 	padding-top: 1vw;
 	display: block;
 }
-.zoom-text-container p {
+p.detail {
 	font-size: 14px;
 	line-height: 24px;
 	position: absolute;
-	top: 6vw;
-	max-width: 31rem;
+	top: 12vw;
+	max-width: 32rem;
 }
 .zoom-text {
 	position: absolute;
@@ -1433,12 +1434,7 @@ p.legal {
 	footer {
 		padding: 6rem 4rem 4rem;
 	}
-	.zoom-text-container h3 {
-		font-size: 4.4rem;
-	}
-	.zoom-text-container h3 span {
-		font-size: 1.25rem;
-	}
+	
 	.zoom-nav li {
 		border: solid 6px #fff;
 	}
