@@ -47,16 +47,16 @@
 <section class="attributes fadein">
 	<h2>BIOACTIVE.</h2>
 	<div class="flex-container">
-		<div>
+		<div class="text">
 			<p>The surface of NovoGro, shown at 10,000x, grows biomimetic apatite crystals after seven days in simulated body fluid.</p>
-			<div class="product"></div>
 		</div>
 		<div class="day zero">Day 0</div>
 		<div class="day seven">Day 7</div>
 	</div>
+	<div class="product"></div>
 </section>
 <section id="zoom" class="fadein">
-		<h2>NovoGro is remodeled<br/>and replaced by bone.</h2>
+		<h2>NovoGro is remodeled <br/>and replaced by bone.</h2>
 		<p>NovoGro Putty was implanted into bilateral crticially sized (6x10 mm) defects in the rabbit distal 
 	femoral condyle. The amounts of new bone and residual graft were quantified at 
 	6 and 12 weeks post-operatively using histology and micro CT.</p>

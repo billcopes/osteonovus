@@ -610,6 +610,7 @@ video {
 	display: none;
 }
 .attributes {
+	position: relative;
 	background-color: #2E2D38;
 	padding: 8vw 0 8vw 8vw;
 	color: #fff;
@@ -629,6 +630,7 @@ video {
 	height: 28vw;
 	margin-top: 1vw;
 	left: 4vw;
+	top: 25vw;
 }
 .day {
 	position: relative;
@@ -643,11 +645,12 @@ video {
 	font-size: 0;
 }
 .day::after {
-	display: block;
-	font-size: 2vw;
-	margin-top: 1vw;
+    display: block;
+    font-size: 2vw;
+    position: relative;
+    top: 21.5vw;
 }
-.day::before {
+/*.day::before {
 	content: "";
 	display: block;
 	position: relative;
@@ -661,7 +664,8 @@ video {
 	background: -webkit-gradient(linear, left top, right top, from(#7f7cbb), color-stop(50%, #7fceea), to(#89cda8));
 	background: -o-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 	background: linear-gradient(to right, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
-}
+	
+}*/
 .zero {
 	background: url("../images/zero.jpg");
 	background-size: cover;
@@ -884,11 +888,11 @@ video {
 	display: block;
 }
 p.detail {
-	font-size: 14px;
-	line-height: 24px;
-	position: absolute;
-	top: 12vw;
-	max-width: 32rem;
+    font-size: 16px;
+    line-height: 28px;
+    position: absolute;
+    top: 12vw;
+    max-width: 36rem;
 }
 .zoom-text {
 	position: absolute;
@@ -1438,6 +1442,9 @@ p.legal {
 	.zoom-nav li {
 		border: solid 6px #fff;
 	}
+	.zoom-image-container {
+		margin-bottom: 12vw;
+	}
 	.contact #intro h2 {
 		font-size: 1.4rem;
 		line-height: 2.4rem;
@@ -1475,10 +1482,6 @@ p.legal {
 		max-width: 62vw;
 		padding: 2vw 0 0 .9vw;
 	}
-	#zoom .toggle {
-		top: 18vw;
-	}
-
 	.vid-nav {
 		bottom: 5.5vw;
 	}
@@ -1557,11 +1560,60 @@ p.legal {
 	picture {
 		height: 28vw;
 	}
-	.toggle {
+	.attributes p {
+		width: 40vw;
+		margin: 3vw 4vw 3vw 0;
+		font-size: 1.75vw;
+	}
+	.product {
+		top: 29vw;
+	    width: 58vw;
+	    height: 40vw;
+	    margin-top: 1vw;
+	    left: 0;
+	}
+	#zoom h2 {
+	    margin: 25vw 0 6vw 0;
+	    font-size: 6.2vw;
+	    line-height: 6.4vw;
+	}
+	#zoom p {
 		font-size: 1rem;
+		width: 62vw;
+	}
+	.zoom-text-container {
+		top: 6vw;
+	}
+	#zoom .zoom-text-container p {
+		width: 35vw;
+		margin-top: 4vw;
+	}
+	.zoom-image-container {
+	    width: 58vw;
+	    height: 58vw;
+		margin-top: -8vw;
+	}
+	.zoom-image-container .images {
+	    width: 46vw;
+	    height: 46vw;
+	}
+	.zoom-image-container .images .image {
+	    width: 42vw;
+	    height: 42vw;
+	}
+	.zoom-nav {
+	    top: 3vw;
+	    left: -1vw;
+	}
+	.zoom-nav li a {
+	    width: 4.25vw;
+	    height: 4.25vw;
+		font-size: 1.5vw;
+		padding-top: 1.5vw;
 	}
 }
 @media screen and (max-width: 768px) {
+	h2 { font-size: 8.8vw; }
 	#intro {
 		padding: 22vw 0 10vw 18vw;
 		padding: 160px 0 10vw 110px;
@@ -1597,10 +1649,83 @@ p.legal {
 	.team-members li {
 		margin-bottom: 3.5rem;
 	}
-}
-@media screen and (max-width: 600px) {
-	body {
+	#zoom h2 {
+		margin: 40vw 0 6vw 0;
+	}
+	#zoom p {
+		width: 82vw;
+	}
+	#zoom .toggle {
+		top: 2vw;
+	    position: relative;
+	}
+	.zoom-image-container {
+		margin-top: -2vw;
+		margin-bottom: 38vw;
+	    width: 94vw;
+	    height: 94vw;
+	}
+	.zoom-text-container {
+		top: 86vw;
+	}
+	#zoom .zoom-text-container p {
+		margin-top: 8vw;
+		width: 90vw;
+	}
+	.zoom-nav li.selected, .zoom-nav li.selected:hover {
+	    -webkit-transform: scale(1.25);
+	    -ms-transform: scale(1.25);
+	    transform: scale(1.25);
+	}
+	#histology .zoom-nav li.first { top: 4vw; }
+	#histology .zoom-nav li.second { top: 15.5vw; }
+	#histology .zoom-nav li.third { top: 28vw; }
+	#histology .zoom-nav li.fourth { top: 40vw; }
+	.flex-container {
+		flex-wrap: wrap;
+	}
+	.attributes {
+		padding: 10vw 0 32vw 8vw;
+	}
+	.attributes p {
+		width: 88vw;
+		font-size: 2.75vw;
+		margin: 4vw 4vw 6vw 0;
+	}
+	.day {
+		height: 38.1vw;
+		width: 38.1vw;
+		top: 0;
+		margin: 0 2vw;
+	}
+	.product {
+	    top: 84vw;
+	    width: 84vw;
+	    height: 62vw;
+	}
+	#putty, #injectable {
+		padding-top: 4rem;
 		background: #fff;
+	}
+	.zoom-image-container .images {
+	    width: 78vw;
+	    height: 78vw;
+		top: 8vw;
+	}
+	.zoom-image-container .images .image {
+	    width: 74vw;
+	    height: 74vw;
+	}
+}
+@media screen and (max-width: 660px) {
+	
+	.novogro {
+	    width: 40vw;
+	    height: 10vw;
+		top: 18vw;
+	}
+	#novogro .toggle {
+		top: 44vw;
 	}
 	*::-webkit-media-controls-panel {
 		display: none!important;
@@ -1632,11 +1757,12 @@ p.legal {
 	.vid-nav li {
 		display: block;
 		max-width: 100%;
-		padding-left: 14vw;
+		padding-left: 7vw;
 	}
 	.vid-nav li a {
 		display: block;
-		padding: .55rem;
+		padding: 0.75rem 0;
+		font-size: 16px;
 	}
 	.vid-nav li a::before {
 		display: inline-block;
@@ -1677,43 +1803,7 @@ p.legal {
 	.mailto {
 		margin: 1rem 0 0;
 	}
-	.zoom-text-container {
-		top: 114vw;
-	}
-	.zoom-text-container p {
-		margin: 1.5rem 0;
-	}
-	.zoom-image-container {
-		width: 90vw;
-		height: 90vw;
-	}
-	.zoom-image-container .images {
-		width: 74vw;
-		height: 74vw;
-		top: 7.5vw;
-	}
-	.zoom-image-container .images .image {
-		width: 64vw;
-		height: 64vw;
-		left: 5vw;
-		top: 5vw;
-	}
-	.zoom-nav li a {
-		width: 10vw;
-		height: 10vw;
-		font-size: 3.5vw;
-		padding-top: 3.5vw;
-	}
-	#ct .zoom-nav li.second {
-		top: 38vw;
-		left: -5.25vw;
-	}
-	#ct .zoom-nav li.third {
-		top: 67vw;
-	}
-	#ct .contact #intro h2 {
-		font-size: 1.2rem;
-	}
+
 	.team-members li {
 		width: 96.8%;
 	}
@@ -1791,9 +1881,6 @@ p.legal {
 		display: block;
 		float: none;
 		margin-bottom: 1rem;
-	}
-	.zoom-text-container {
-		top: 124vw;
 	}
 	.contact #intro h2 {
 		font-size: 1rem;
