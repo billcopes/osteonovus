@@ -16,7 +16,7 @@
 		</div>
 	</section>
 	<section id="<?php echo $page ?>">
-		<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA4Bomr1gxPzKqkjgCnEVbaUjud-zovBak&q=The+University+of+Toledo,Toledo+Ohio"  frameborder="0" style="border:0"></iframe>
+		<!--iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA4Bomr1gxPzKqkjgCnEVbaUjud-zovBak&q=The+University+of+Toledo,Toledo+Ohio"  frameborder="0" style="border:0"></iframe-->
 	</section>
 </div>
 <?php include 'footer.php'; // Renders page footer ?>

@@ -360,6 +360,7 @@ video {
 }
 .vid-nav li a.playing#vid2-4::before {
 	background: url("../images/clock_icon_active.svg") no-repeat;
+	background-size: 95%;
 }
 .vid-nav li a.playing, .toggle a.active {
 	-webkit-animation: pulse-vid-nav 1s ease-in-out infinite alternate;
@@ -636,7 +637,7 @@ video {
 	position: relative;
 	top: -5vw;
 	height: 20.1vw;
-    width: 20.1vw;
+	width: 20.1vw;
 	border: solid 4px #fff;
 	border-radius: 100%;
 	-webkit-box-shadow: inset 0 0 2vw #000;
@@ -645,11 +646,12 @@ video {
 	font-size: 0;
 }
 .day::after {
-    display: block;
-    font-size: 2vw;
-    position: relative;
-    top: 21.5vw;
+	display: block;
+	font-size: 2vw;
+	position: relative;
+	top: 21.5vw;
 }
+
 /*.day::before {
 	content: "";
 	display: block;
@@ -666,6 +668,7 @@ video {
 	background: linear-gradient(to right, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 	
 }*/
+
 .zero {
 	background: url("../images/zero.jpg");
 	background-size: cover;
@@ -688,7 +691,6 @@ video {
 	width: 38vw;
 	margin: 3vw 0;
 }
-
 #zoom h2 {
 	/*padding-right: 24vw;*/
 	letter-spacing: -.15vw;
@@ -868,7 +870,6 @@ video {
 	position: absolute;
 	top: 2vw;
 	left: 2vw;
-	overflow: hidden;
 	background-position: center center;
 	background-size: 112%;
 }
@@ -888,11 +889,11 @@ video {
 	display: block;
 }
 p.detail {
-    font-size: 16px;
-    line-height: 28px;
-    position: absolute;
-    top: 12vw;
-    max-width: 36rem;
+	font-size: 16px;
+	line-height: 28px;
+	position: absolute;
+	top: 12vw;
+	max-width: 36rem;
 }
 .zoom-text {
 	position: absolute;
@@ -1048,7 +1049,7 @@ p.detail {
 	padding: 8px;
 	color: #000;
 	text-align: center;
-	font-size: .8vw;
+	font-size: 16px;
 	top: -110%;
 	left: -30px;
 	width: 100px;
@@ -1114,12 +1115,12 @@ p.detail {
 	top: 39.5%;
 }
 #histology .second.twelve .node.newbone {
-    left: 20.5%;
-    top: 52.5%;
+	left: 20.5%;
+	top: 52.5%;
 }
 #histology .second.twelve .node.marrow {
 	left: 30%;
-    top: 22.5%;
+	top: 22.5%;
 }
 #histology .third.six .node.implant {
 	left: 81%;
@@ -1134,16 +1135,16 @@ p.detail {
 	top: 37.5%;
 }
 #histology .third.twelve .node.implant {
-    left: 12%;
-    top: 49.5%;
+	left: 12%;
+	top: 49.5%;
 }
 #histology .third.twelve .node.newbone {
 	left: 30.5%;
-    top: 26.5%;
+	top: 26.5%;
 }
 #histology .third.twelve .node.marrow {
-    left: 61%;
-    top: 43.5%;
+	left: 61%;
+	top: 43.5%;
 }
 #histology .fourth.six .node.implant {
 	left: 69%;
@@ -1154,20 +1155,20 @@ p.detail {
 	top: 54.5%;
 }
 #histology .fourth.six .node.marrow {
-    left: 19%;
-    top: 30.5%;
+	left: 19%;
+	top: 30.5%;
 }
 #histology .fourth.twelve .node.implant {
-    left: 34%;
-    top: 73.5%;
+	left: 34%;
+	top: 73.5%;
 }
 #histology .fourth.twelve .node.newbone {
 	left: 36.5%;
 	top: 28.5%;
 }
 #histology .fourth.twelve .node.marrow {
-    left: 67%;
-    top: 45.5%;
+	left: 67%;
+	top: 45.5%;
 }
 .popup {
 	cursor: pointer;
@@ -1218,7 +1219,6 @@ p.detail {
 }
 #ct .zoom-image-container {
 	background: #7f7cbb;
-	/* Old browsers */
 	background: -webkit-linear-gradient(left, #7f7cbb -10%, #7fceea 60%, #89cda8 120%);
 	background: -webkit-gradient(linear, left top, right top, color-stop(-10%, #7f7cbb), color-stop(60%, #7fceea), color-stop(120%, #89cda8));
 	background: -o-linear-gradient(left, #7f7cbb -10%, #7fceea 60%, #89cda8 120%);
@@ -1438,7 +1438,6 @@ p.legal {
 	footer {
 		padding: 6rem 4rem 4rem;
 	}
-	
 	.zoom-nav li {
 		border: solid 6px #fff;
 	}
@@ -1497,10 +1496,9 @@ p.legal {
 		position: relative;
 		left: 0;
 		top: -6px;
-		background-size: contain;
 	}
 	.contact .text-container {
-		margin-bottom: 3rem;
+		margin: 3rem 0;
 	}
 	.contact iframe {
 		height: 75vw;
@@ -1567,15 +1565,15 @@ p.legal {
 	}
 	.product {
 		top: 29vw;
-	    width: 58vw;
-	    height: 40vw;
-	    margin-top: 1vw;
-	    left: 0;
+		width: 58vw;
+		height: 40vw;
+		margin-top: 1vw;
+		left: 0;
 	}
 	#zoom h2 {
-	    margin: 25vw 0 6vw 0;
-	    font-size: 6.2vw;
-	    line-height: 6.4vw;
+		margin: 25vw 0 6vw 0;
+		font-size: 6.2vw;
+		line-height: 6.4vw;
 	}
 	#zoom p {
 		font-size: 1rem;
@@ -1589,31 +1587,33 @@ p.legal {
 		margin-top: 4vw;
 	}
 	.zoom-image-container {
-	    width: 58vw;
-	    height: 58vw;
+		width: 58vw;
+		height: 58vw;
 		margin-top: -8vw;
 	}
 	.zoom-image-container .images {
-	    width: 46vw;
-	    height: 46vw;
+		width: 46vw;
+		height: 46vw;
 	}
 	.zoom-image-container .images .image {
-	    width: 42vw;
-	    height: 42vw;
+		width: 42vw;
+		height: 42vw;
 	}
 	.zoom-nav {
-	    top: 3vw;
-	    left: -1vw;
+		top: 3vw;
+		left: -1vw;
 	}
 	.zoom-nav li a {
-	    width: 4.25vw;
-	    height: 4.25vw;
+		width: 4.25vw;
+		height: 4.25vw;
 		font-size: 1.5vw;
 		padding-top: 1.5vw;
 	}
 }
 @media screen and (max-width: 768px) {
-	h2 { font-size: 8.8vw; }
+	h2 {
+		font-size: 8.8vw;
+	}
 	#intro {
 		padding: 22vw 0 10vw 18vw;
 		padding: 160px 0 10vw 110px;
@@ -1628,11 +1628,13 @@ p.legal {
 		padding: 0;
 	}
 	footer h2 {
-		font-size: 3rem;
+		font-size: 2.5rem;
+		line-height: 3rem;
 		white-space: normal;
 	}
 	.zoom-nav {
-		left: -1.5vw;
+		left: -3vw;
+		top: 21vw;
 	}
 	.zoom-nav li {
 		border: solid 5px #fff;
@@ -1657,30 +1659,38 @@ p.legal {
 	}
 	#zoom .toggle {
 		top: 2vw;
-	    position: relative;
+		position: relative;
 	}
 	.zoom-image-container {
 		margin-top: -2vw;
 		margin-bottom: 38vw;
-	    width: 94vw;
-	    height: 94vw;
+		width: 94vw;
+		height: 94vw;
 	}
 	.zoom-text-container {
-		top: 86vw;
+		top: 92vw;
 	}
 	#zoom .zoom-text-container p {
-		margin-top: 8vw;
+		margin-top: 2.5rem;
 		width: 90vw;
 	}
 	.zoom-nav li.selected, .zoom-nav li.selected:hover {
-	    -webkit-transform: scale(1.25);
-	    -ms-transform: scale(1.25);
-	    transform: scale(1.25);
+		-webkit-transform: scale(1.25);
+		-ms-transform: scale(1.25);
+		transform: scale(1.25);
 	}
-	#histology .zoom-nav li.first { top: 4vw; }
-	#histology .zoom-nav li.second { top: 15.5vw; }
-	#histology .zoom-nav li.third { top: 28vw; }
-	#histology .zoom-nav li.fourth { top: 40vw; }
+	#histology .zoom-nav li.first {
+		top: 4vw;
+	}
+	#histology .zoom-nav li.second {
+		top: 15.5vw;
+	}
+	#histology .zoom-nav li.third {
+		top: 28vw;
+	}
+	#histology .zoom-nav li.fourth {
+		top: 40vw;
+	}
 	.flex-container {
 		flex-wrap: wrap;
 	}
@@ -1698,30 +1708,32 @@ p.legal {
 		top: 0;
 		margin: 0 2vw;
 	}
+	.day::after {
+		font-size: 4vw;
+		top: 41.5vw;
+	}
 	.product {
-	    top: 84vw;
-	    width: 84vw;
-	    height: 62vw;
+		top: 84vw;
+		width: 84vw;
+		height: 62vw;
 	}
 	#putty, #injectable {
 		padding-top: 4rem;
-		background: #fff;
 	}
 	.zoom-image-container .images {
-	    width: 78vw;
-	    height: 78vw;
+		width: 78vw;
+		height: 78vw;
 		top: 8vw;
 	}
 	.zoom-image-container .images .image {
-	    width: 74vw;
-	    height: 74vw;
+		width: 74vw;
+		height: 74vw;
 	}
 }
 @media screen and (max-width: 660px) {
-	
 	.novogro {
-	    width: 40vw;
-	    height: 10vw;
+		width: 40vw;
+		height: 10vw;
 		top: 18vw;
 	}
 	#novogro .toggle {
@@ -1744,6 +1756,19 @@ p.legal {
 	}
 	progress {
 		display: none;
+	}
+	video {
+		margin-bottom: -1vw;
+	}
+	#injectable {
+		padding-bottom: 8rem;
+	}
+	.bar {
+		height: 1px;
+		background: -webkit-linear-gradient(left, #7f7cbb -10%, #7fceea 60%, #89cda8 120%);
+		background: -webkit-gradient(linear, left top, right top, color-stop(-10%, #7f7cbb), color-stop(60%, #7fceea), color-stop(120%, #89cda8));
+		background: -o-linear-gradient(left, #7f7cbb -10%, #7fceea 60%, #89cda8 120%);
+		background: linear-gradient(to right, #7f7cbb -10%, #7fceea 60%, #89cda8 120%);
 	}
 	.vid-nav, #injectable .vid-nav {
 		position: relative;
@@ -1797,13 +1822,9 @@ p.legal {
 	footer {
 		padding: 4rem 3rem 2rem;
 	}
-	footer h2 {
-		margin-bottom: 1rem;
-	}
 	.mailto {
 		margin: 1rem 0 0;
 	}
-
 	.team-members li {
 		width: 96.8%;
 	}
@@ -1819,6 +1840,16 @@ p.legal {
 		height: 2.5vw;
 	}
 }
+@media screen and (max-width: 600px) {
+	#zoom {
+		padding: 8vw 0 22vw 8vw;
+	}
+	#zoom .zoom-text-container p {
+		top: 16vw;
+		font-size: 15px;
+		line-height: 25px;
+	}
+}
 @media screen and (max-width: 480px) {
 	.home #intro {
 		width: 90vw;
@@ -1829,7 +1860,7 @@ p.legal {
 		margin-top: -31vw;
 	}
 	video#injectable-vid {
-		margin-top: -2vw;
+		margin-top: -15vw;
 	}
 	#putty, #injectable {
 		padding-top: 4rem;
@@ -1857,6 +1888,51 @@ p.legal {
 	}
 	#intro p {
 		font-size: 3.6vw;
+	}
+	.attributes {
+		padding: 16vw 0 32vw 8vw;
+	}
+	.attributes p {
+		font-size: 1rem;
+		margin: 6vw 4vw 6vw 0;
+	}
+	.product {
+		top: 115vw;
+	}
+	#zoom {
+		padding: 8vw 0 92vw 8vw;
+	}
+	#zoom p {
+		margin-bottom: 8vw;
+	}
+	.zoom-text-container {
+		top: 97vw;
+	}
+	.zoom-text-container h3 {
+		font-size: 3rem;
+	}
+	#zoom .zoom-text-container p {
+		top: 24vw;
+	}
+	.zoom-nav {
+		-webkit-transform: scale(1.5);
+		-ms-transform: scale(1.5);
+		transform: scale(1.5);
+		top: 9vw;
+		left: -1vw;
+		z-index: 999;
+	}
+	#histology .zoom-nav li.first {
+		top: 2vw;
+	}
+	#histology .zoom-nav li.second {
+		top: ;
+	}
+	#histology .zoom-nav li.third {
+		top: 29vw;
+	}
+	#histology .zoom-nav li.fourth {
+		top: 42vw;
 	}
 	.contact #intro h2 {
 		max-width: 82vw;

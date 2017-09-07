@@ -20,10 +20,11 @@
 		<li><a href="#" id="injectable-toggle" data-toggle="#injectable">Injectable</a></li>
 	</ul>
 	<div class="video-gradient fadein"></div>
-	<div class="video-gradient video-gradient-bottom fadein"></div>
-	<article id="putty">
+	
+	<article id="putty" class="fadein fast">
 		<progress id='p' max='100' value='0' class="fadein"></progress>
 		<video id="putty-vid" preload="auto" poster="images/putty.jpg" class="fadein" autoplay loop muted></video>
+		<div class="bar fadein"></div>
 			<ul class="vid-nav putty fadein">
 				<li><a href="#" id="vid1-1">Moldable <br/>and cohesive</a></li>
 				<li><a href="#" id="vid1-2">Will not <br/>Wash Out</a></li>
@@ -32,16 +33,19 @@
 				<li><a href="#" id="vid1-5">Sticks to <br/>Wet Bone</a></li>
 				<li><a href="#" id="vid1-6">No-mess <br/>Removal</a></li>
 			</ul>
+			<div class="video-gradient video-gradient-bottom fadein"></div>
 	</article>
-	<article id="injectable">
+	<article id="injectable" class="fadein fast">
 		<progress id='i' max='100' value='0' class="fadein"></progress>
 		<video id="injectable-vid" preload="auto" poster="images/injectable.jpg" class="fadein" loop muted></video>
+		<div class="bar fadein"></div>
 			<ul class="vid-nav injectable fadein">
 				<li><a href="#" id="vid2-1">Injectable <br/>for 10 minutes</a></li>
 				<li><a href="#" id="vid2-2">Will not <br/>Wash Out</a></li>
 				<li><a href="#" id="vid2-3">Conforms<br/>to Bone</a></li>
 				<li><a href="#" id="vid2-4">Sets hard in <br/>20 minutes</a></li>
 			</ul>
+			<div class="video-gradient video-gradient-bottom fadein"></div>
 	</article>
 </section>
 <section class="attributes fadein">
