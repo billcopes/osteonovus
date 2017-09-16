@@ -1,25 +1,91 @@
-<?php include 'gzip.php'; // Compress Stuff ?>
-<?php $page = "contact"; ?>
-<!doctype html>
-<html lang="en">
-<head>
-	<?php include 'document-head.php'; // Renders HEAD elements of page?>
-</head>
-<body class="<?php echo $page ?>">
-<?php include 'header.php'; // Renders navigation ?>
-<div class="logomark">
-	<section id="intro">
-		<div class="text-container">
-			<h1>Made in the <strong>USA.</strong></h1>
-			<h2><strong>OsteoNovus</strong><br>Nitschke UT Commercialization Complex<br>2801 W Bancroft Street<br>Toledo, Ohio, USA<br><a href="mailto:&#115;&#105;&#120;&#119;&#101;&#101;&#107;&#115;&#064;&#111;&#115;&#116;&#101;&#111;&#110;&#111;&#118;&#117;&#115;&#046;&#099;&#111;&#109;">hello@osteonovus.com</a>
-			</h2>
-		</div>
-	</section>
-	<section id="<?php echo $page ?>">
-		<!--iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA4Bomr1gxPzKqkjgCnEVbaUjud-zovBak&q=The+University+of+Toledo,Toledo+Ohio"  frameborder="0" style="border:0"></iframe-->
-	</section>
-</div>
-<?php include 'footer.php'; // Renders page footer ?>
-</body>
-</html>
+<?php
+// require ReCaptcha class
+require('recaptcha-master/src/autoload.php');
 
+// configure
+$from = 'Osteonovus Contact Form <hello@osteonovus.com>';
+$contact = $_POST['contact'];
+$subject = 'Osteonovus Contact Form Submission';
+$fields = array('name' => 'First Name', 'surname' => 'Last Name', 'phone' => 'Phone', 'contact' => 'Department', 'email' => 'Customer Email', 'message' => 'Message'); // array variable name => Text to appear in the email
+$okMessage = 'Thank you, we will be in touch soon!';
+$errorMessage = 'There was an error while submitting the form. Please try again.';
+$recaptchaSecret = '6LfjgjAUAAAAABGxnHjK68VUlbanf5OP0iKoh2yC';
+switch($contact) {
+   case 'business':
+       $sendTo = "hello@osteonovus.com";
+       break;
+   case 'customerservice':
+       $sendTo = "customerservice@osteonovus.com";
+       break;
+   case 'ordering':
+       $sendTo = "customerservice@osteonovus.com";
+       break;
+   case 'billing':
+       $sendTo = "customerservice@osteonovus.com";
+       break;
+
+}
+// let's do the sending
+try
+{
+    if (!empty($_POST)) {
+
+        // validate the ReCaptcha, if something is wrong, we throw an Exception, 
+        // i.e. code stops executing and goes to catch() block
+        
+        if (!isset($_POST['g-recaptcha-response'])) {
+            throw new \Exception('ReCaptcha is not set.');
+        }
+
+        // do not forget to enter your secret key in the config above 
+        // from https://www.google.com/recaptcha/admin
+        
+        $recaptcha = new \ReCaptcha\ReCaptcha($recaptchaSecret, new \ReCaptcha\RequestMethod\CurlPost());
+        
+        // we validate the ReCaptcha field together with the user's IP address
+        
+        $response = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+
+
+        if (!$response->isSuccess()) {
+            throw new \Exception('ReCaptcha was not validated.');
+        }
+        
+        // everything went well, we can compose the message, as usually
+        
+        $emailText = "You have new message from contact form\n=============================\n";
+
+        foreach ($_POST as $key => $value) {
+
+            if (isset($fields[$key])) {
+                $emailText .= "$fields[$key]: $value\n";
+            }
+        }
+        
+
+        $headers = array('Content-Type: text/plain; charset="UTF-8";',
+            'From: ' . $from,
+            'Reply-To: ' . $from,
+            'Return-Path: ' . $from,
+        );
+
+        mail($sendTo, $subject, $emailText, implode("\n", $headers));
+
+        $responseArray = array('type' => 'success', 'message' => $okMessage);
+    }
+}
+catch (\Exception $e)
+{
+    $responseArray = array('type' => 'danger', 'message' => $errorMessage);
+}
+
+if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    $encoded = json_encode($responseArray);
+
+    header('Content-Type: application/json');
+
+    echo $encoded;
+}
+else {
+    echo $responseArray['message'];
+}

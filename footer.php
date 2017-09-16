@@ -2,7 +2,7 @@
 	<div class="section-one">
 		<div class="left">
 			<h2>Want to know more?</h2>
-			<p>Quisque fringilla diam a magna imperdiet, sed aliquet arcu molestie.<p>
+			<p>If you have a question or would like more information, please <a href="contact-us">contact us</a>.<p>
 			<a href="mailto:&#115;&#105;&#120;&#119;&#101;&#101;&#107;&#115;&#064;&#111;&#115;&#116;&#101;&#111;&#110;&#111;&#118;&#117;&#115;&#046;&#099;&#111;&#109;" class="mailto">hello@osteonovus.com</a>
 		</div>
 		<div class="right">
@@ -28,6 +28,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 	<![endif]-->
 <link rel="stylesheet" href="css/style.css?v=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <script src="js/picture-fill.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

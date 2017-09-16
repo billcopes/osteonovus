@@ -175,7 +175,7 @@ $(document).ready(function() {
 	var mainVideo = $('#putty-vid');
 	var medQualVersionSrc = 'https://s3.amazonaws.com/osteonovus/vid/putty-mobile.mp4';
 	var highQualVersionSrc = 'https://s3.amazonaws.com/osteonovus/vid/putty.mp4';
-	if ($(window).width() < 800) {
+	if ($(window).width() < 400) {
 		mainVideo.append("<source type='video/mp4' src='" + medQualVersionSrc + "' />");
 	} else {
 		mainVideo.append("<source type='video/mp4' src='" + highQualVersionSrc + "' />");
@@ -185,7 +185,7 @@ $(document).ready(function() {
 	var mainVideo2 = $('#injectable-vid');
 	var medQualVersionSrc2 = 'https://s3.amazonaws.com/osteonovus/vid/injectable-mobile.mp4';
 	var highQualVersionSrc2 = 'https://s3.amazonaws.com/osteonovus/vid/injectable.mp4';
-	if ($(window).width() < 800) {
+	if ($(window).width() < 400) {
 		mainVideo2.append("<source type='video/mp4' src='" + medQualVersionSrc2 + "' />");
 	} else {
 		mainVideo2.append("<source type='video/mp4' src='" + highQualVersionSrc2 + "' />");
@@ -233,15 +233,14 @@ $(document).ready(function() {
 		$(".zoom-nav li.third").removeClass("selected");
 		$(".zoom-nav li.fourth").removeClass("selected");
 		//Toggle Images
-		$(".image.first").removeClass("hidden twelve");
+		/*$(".image.first").removeClass("hidden twelve");
 		$(".image.second").removeClass("visible six twelve");
 		$(".image.second").addClass("hidden");
 		$(".image.third").removeClass("visible six twelve");
 		$(".image.third").addClass("hidden");
 		$(".image.fourth").removeClass("visible six twelve");
 		$(".image.fourth").addClass("hidden");
-		$(".image.first").addClass("visible six");
-		$(".node").removeClass("active");
+		$(".image.first").addClass("visible six");*/
 	});
 	$("#ct-toggle, #hist-toggle").on("click", function(e) {
 		e.preventDefault(); // prevent navigating
@@ -263,7 +262,9 @@ $(document).ready(function() {
 		$(".zoom-text.first").addClass("visible");
 		$(".zoom-text li.six").addClass("active");
 		$(".zoom-text li.twelve").removeClass("active");
-		$(".node").removeClass("active");
+		$(".images").removeClass("twelve");
+		$(".images").removeClass("six");
+		$(".images").addClass("six");
 	});
 	$(".vid-nav, .zoom-nav a, .zoom-text-container li.six a, .zoom-text-container li.twelve a").click(function(event) {
 		event.preventDefault();
@@ -275,14 +276,14 @@ $(document).ready(function() {
 	});
 	//first circle
 	$(".zoom-nav li.first").click(function() {
-		$(".image.first").addClass("visible six");
-		$(".image.first").removeClass("hidden twelve");
+		$(".image.first").removeClass("hidden visible");
+		$(".image.first").addClass("visible");
 		$(".image.second").addClass("hidden");
-		$(".image.second").removeClass("six twelve visible");
+		$(".image.second").removeClass("visible");
 		$(".image.third").addClass("hidden");
-		$(".image.third").removeClass("six twelve visible");
+		$(".image.third").removeClass("visible");
 		$(".image.fourth").addClass("hidden");
-		$(".image.fourth").removeClass("six twelve visible");
+		$(".image.fourth").removeClass("visible");
 		$(".zoom-text.first").addClass("visible")
 		$(".zoom-text.first").removeClass("hidden");
 		$(".zoom-text.second").addClass("hidden")
@@ -291,33 +292,28 @@ $(document).ready(function() {
 		$(".zoom-text.third").removeClass("visible");
 		$(".zoom-text.fourth").addClass("hidden");
 		$(".zoom-text.fourth").removeClass("visible");
-		$(".zoom-text li.six, .zoom-text li.twelve").removeClass("active");
-		$(".zoom-text li.six").addClass("active");
-		$(".node").removeClass("active");
 	});
 	//Switch from 6 to 12
 	$(".zoom-text.first li.six a").click(function() {
-		$(".image.first").removeClass("twelve");
-		$(".image.first").removeClass("six");
-		$(".image.first").addClass("six");
-		$(".node").removeClass("active");
+		$(".images").removeClass("twelve");
+		$(".images").removeClass("six");
+		$(".images").addClass("six");
 	});
 	$(".zoom-text.first li.twelve a").click(function() {
-		$(".image.first").removeClass("six");
-		$(".image.first").removeClass("twelve");
-		$(".image.first").addClass("twelve");
-		$(".node").removeClass("active");
+		$(".images").removeClass("six");
+		$(".images").removeClass("twelve");
+		$(".images").addClass("twelve");
 	});
 	//second circle
 	$(".zoom-nav li.second").click(function() {
 		$(".image.first").addClass("hidden");
-		$(".image.first").removeClass("six twelve visible");
-		$(".image.second").removeClass("hidden twelve visible");
-		$(".image.second").addClass("visible six");
+		$(".image.first").removeClass("visible");
+		$(".image.second").removeClass("hidden visible");
+		$(".image.second").addClass("visible ");
 		$(".image.third").addClass("hidden");
-		$(".image.third").removeClass("six twelve visible");
+		$(".image.third").removeClass("visible");
 		$(".image.fourth").addClass("hidden");
-		$(".image.fourth").removeClass("six twelve visible");
+		$(".image.fourth").removeClass("visible");
 		$(".zoom-text.first").addClass("hidden")
 		$(".zoom-text.first").removeClass("visible");
 		$(".zoom-text.second").addClass("visible")
@@ -326,33 +322,28 @@ $(document).ready(function() {
 		$(".zoom-text.third").removeClass("visible");
 		$(".zoom-text.fourth").addClass("hidden");
 		$(".zoom-text.fourth").removeClass("visible");
-		$(".zoom-text li.six, .zoom-text li.twelve").removeClass("active");
-		$(".zoom-text li.six").addClass("active");
-		$(".node").removeClass("active");
 	});
 	//Switch from 6 to 12
 	$(".zoom-text.second li.six a").click(function() {
-		$(".image.second").removeClass("twelve");
-		$(".image.second").removeClass("six");
-		$(".image.second").addClass("six");
-		$(".node").removeClass("active");
+		$(".images").removeClass("twelve");
+		$(".images").removeClass("six");
+		$(".images").addClass("six");
 	});
 	$(".zoom-text.second li.twelve a").click(function() {
-		$(".image.second").removeClass("six");
-		$(".image.second").removeClass("twelve");
-		$(".image.second").addClass("twelve");
-		$(".node").removeClass("active");
+		$(".images").removeClass("six");
+		$(".images").removeClass("twelve");
+		$(".images").addClass("twelve");
 	});
 	//third circle
 	$(".zoom-nav li.third").click(function() {
 		$(".image.first").addClass("hidden");
-		$(".image.first").removeClass("six twelve visible");
-		$(".image.second").removeClass("six twelve visible");
+		$(".image.first").removeClass("visible");
+		$(".image.second").removeClass("visible");
 		$(".image.second").addClass("hidden");
 		$(".image.third").removeClass("hidden twelve");
 		$(".image.third").addClass("visible six");
 		$(".image.fourth").addClass("hidden");
-		$(".image.fourth").removeClass("six twelve visible");
+		$(".image.fourth").removeClass("visible");
 		$(".zoom-text.first").addClass("hidden")
 		$(".zoom-text.first").removeClass("visible");
 		$(".zoom-text.second").addClass("hidden")
@@ -361,30 +352,25 @@ $(document).ready(function() {
 		$(".zoom-text.third").removeClass("hidden");
 		$(".zoom-text.fourth").addClass("hidden");
 		$(".zoom-text.fourth").removeClass("visible");
-		$(".zoom-text li.six, .zoom-text li.twelve").removeClass("active");
-		$(".zoom-text li.six").addClass("active");
-		$(".node").removeClass("active");
 	});
 	//Switch from 6 to 12
 	$(".zoom-text.third li.six a").click(function() {
-		$(".image.third").removeClass("twelve");
-		$(".image.third").removeClass("six");
-		$(".image.third").addClass("six");
-		$(".node").removeClass("active");
+		$(".images").removeClass("twelve");
+		$(".images").removeClass("six");
+		$(".images").addClass("six");
 	});
 	$(".zoom-text.third li.twelve a").click(function() {
-		$(".image.third").removeClass("six");
-		$(".image.third").removeClass("twelve");
-		$(".image.third").addClass("twelve");
-		$(".node").removeClass("active");
+		$(".images").removeClass("six");
+		$(".images").removeClass("twelve");
+		$(".images").addClass("twelve");
 	});
 	//fourth circle
 	$(".zoom-nav li.fourth").click(function() {
 		$(".image.first").addClass("hidden");
-		$(".image.first").removeClass("six twelve visible");
-		$(".image.second").removeClass("six twelve visible");
+		$(".image.first").removeClass("visible");
+		$(".image.second").removeClass("visible");
 		$(".image.second").addClass("hidden");
-		$(".image.third").removeClass("six twelve visible");
+		$(".image.third").removeClass("visible");
 		$(".image.third").addClass("hidden");
 		$(".image.fourth").removeClass("hidden twelve");
 		$(".image.fourth").addClass("visible six");
@@ -396,54 +382,30 @@ $(document).ready(function() {
 		$(".zoom-text.third").removeClass("visible");
 		$(".zoom-text.fourth").addClass("visible");
 		$(".zoom-text.fourth").removeClass("hidden");
-		$(".zoom-text li.six, .zoom-text li.twelve").removeClass("active");
-		$(".zoom-text li.six").addClass("active");
-		$(".node").removeClass("active");
 	});
 	//Switch from 6 to 12
 	$(".zoom-text.fourth li.six a").click(function() {
-		$(".image.fourth").removeClass("twelve");
-		$(".image.fourth").removeClass("six");
-		$(".image.fourth").addClass("six");
-		$(".node").removeClass("active");
+		$(".images").removeClass("twelve");
+		$(".images").removeClass("six");
+		$(".images").addClass("six");
 	});
 	$(".zoom-text.fourth li.twelve a").click(function() {
-		$(".image.fourth").removeClass("six");
-		$(".image.fourth").removeClass("twelve");
-		$(".image.fourth").addClass("twelve");
-		$(".node").removeClass("active");
+		$(".images").removeClass("six");
+		$(".images").removeClass("twelve");
+		$(".images").addClass("twelve");
 	});
 	//Switch active from 6 to 12
 	$(".zoom-text li.six a").click(function() {
 		$(".zoom-text li.twelve").removeClass("active");
 		$(".zoom-text li.six").addClass("active");
-		$(".node").removeClass("active");
 	});
 	//Switch active from 12 to 6
 	$(".zoom-text li.twelve a").click(function() {
 		$(".zoom-text li.six").removeClass("active");
 		$(".zoom-text li.twelve").addClass("active");
-		$(".node").removeClass("active");
 	});
 });
 
-$(".node.implant").click(function() {
-	$(".node.implant::before").css('background-color', '#ff0000');
-	console.log("clicked");
-	/*$(this).addClass("fadein fast").delay(3500).queue(function(next){
-		next();
-	});*/
-});
-$(".node.newbone").click(function() {
-	/*$(".popup.newbone").addClass("fadein fast").delay(3500).queue(function(next){
-		next();
-	});*/
-});
-$(".node.marrow").click(function() {
-	/*$(".popup.marrow").addClass("fadein fast").delay(3500).queue(function(next){
-		next();
-	});*/
-});
 $(".popup").click(function() {
 	$(this).removeClass("fadein");
 });
@@ -456,22 +418,3 @@ $(document).ready(function() {
 		next();
 	});
 });
-/*$(window).on('scroll', function() {
-	 var $ratio = $(window).width()/$(window).height();
-    console.log( $(this).scrollTop() );
-});
-$( window ).resize(function() {   
-    var $ratio = $(window).width()/$(window).height(),
-    	$this = $(this),
-		$vidnav = $('.vid-nav'),
-		$progress = $('progress');
-		console.log( $(this).scrollTop() );
-		console.log($ratio);
-	if ( ($ratio > 1.61) && ($this.scrollTop() < 146 )  ){
- 	   $vidnav.addClass('fixed-vidstuff');
- 	   $progress.addClass('fixed-vidstuff');
-	} else {
-      $vidnav.removeClass('fixed-vidstuff');
-	  $progress.removeClass('fixed-vidstuff');
-	}
-});*/

@@ -107,7 +107,7 @@
 				<li class="third"><a href="#">20x</a></li>
 				<li class="fourth"><a href="#">40x</a></li>
 			</ul>
-			<div class="images">
+			<div class="images six">
 				<div class="image first six visible">
 					<a class="node implant"></a>
 					<a class="node newbone"></a>

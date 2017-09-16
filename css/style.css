@@ -444,6 +444,100 @@ video {
 	opacity: .05;
 }
 
+/********************* Form Styles *********************/
+
+.form {
+	margin-right: 7vw;
+	max-width: 420px;
+	margin-top: 2rem;
+}
+.form label {
+	display: none;
+}
+.form-group {
+	margin-bottom: 1rem;
+}
+.form-control {
+	box-shadow: none;
+	border-radius: 0;
+	border: 0;
+	border-bottom: solid 1px #000;
+	font-size: 18px;
+	background-color: transparent;
+	height: auto;
+	padding: 16px 8px;
+}
+
+.has-error .form-control {
+	box-shadow: none;
+}
+
+textarea.form-control {
+	border: solid 1px #000;
+	margin: 2rem auto;
+}
+
+select {
+	border: 0;
+	border-bottom: solid 1px #000;
+	-webkit-appearance: none;
+	   -moz-appearance:    none;
+	   appearance:         none;   
+	   -webkit-border-radius: 0;  /* Safari 3-4, iOS 1-3.2, Android 1.6- */    
+	   -moz-border-radius: 0;  /* Firefox 1-3.6 */     
+	   border-radius: 0; 
+	background: transparent;
+	width: 100%;
+	padding: 16px 8px;
+	color: #8f8f90;
+	margin-top: 1rem;
+	font-size: 18px;
+}
+.text-muted {
+	margin-top: 2rem;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 0;
+    border-radius: 4px;
+	margin-top: 2rem;
+}
+.btn-success {
+	background: #7f7cbb;
+	background: -o-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
+	background: -webkit-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
+	background: linear-gradient(to right, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
+}
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    cursor: not-allowed;
+    filter: alpha(opacity=45);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .45;
+	background: #000;
+}
+
+.g-recaptcha iframe {
+	border: solid 1px #000;
+}
+
 /********************* HOME *********************/
 
 .opaque {
@@ -942,46 +1036,46 @@ p.detail {
 #histology .images, #ct .images .visible {
 	background-color: #fff;
 }
-#histology .images .first.six {
+#histology .images.six .first {
 	background-image: url("../images/histology/6-125.jpg");
 }
-#histology .images .first.twelve {
+#histology .images.twelve .first {
 	background-image: url("../images/histology/12-125.jpg");
 }
-#histology .images .second.six {
+#histology .images.six .second {
 	background-image: url("../images/histology/6-10.jpg");
 }
-#histology .images .second.twelve {
+#histology .images.twelve .second {
 	background-image: url("../images/histology/12-10.jpg");
 }
-#histology .images .third.six {
+#histology .images.six .third {
 	background-image: url("../images/histology/6-20.jpg");
 }
-#histology .images .third.twelve {
+#histology .images.twelve .third {
 	background-image: url("../images/histology/12-20.jpg");
 }
-#histology .images .fourth.six {
+#histology .images.six .fourth {
 	background-image: url("../images/histology/6-40.jpg");
 }
-#histology .images .fourth.twelve {
+#histology .images.twelve .fourth {
 	background-image: url("../images/histology/12-40.jpg");
 }
-#ct .images .first.six {
+#ct .images.six .first {
 	background-image: url("../images/ct/6-axial.jpg");
 }
-#ct .images .first.twelve {
+#ct .images.twelve .first {
 	background-image: url("../images/ct/12-axial.jpg");
 }
-#ct .images .second.six {
+#ct .images.six .second {
 	background-image: url("../images/ct/6-sagittal.jpg");
 }
-#ct .images .second.twelve {
+#ct .images.twelve .second {
 	background-image: url("../images/ct/12-sagittal.jpg");
 }
-#ct .images .third.six {
+#ct .images.six .third {
 	background-image: url("../images/ct/6-coronal.jpg");
 }
-#ct .images .third.twelve {
+#ct .images.twelve .third {
 	background-image: url("../images/ct/12-coronal.jpg");
 }
 .node {
@@ -1074,99 +1168,99 @@ p.detail {
 .node.newbone::before {
 	content: "New Bone";
 }
-#histology .first.six .node.implant {
+#histology .images.six .first .node.implant {
 	left: 81%;
 	top: 43.5%;
 }
-#histology .first.six .node.newbone {
+#histology .images.six .first .node.newbone {
 	left: 24.5%;
 	top: 54.5%;
 }
-#histology .first.six .node.marrow {
+#histology .images.six .first .node.marrow {
 	left: 52%;
 	top: 27.5%;
 }
-#histology .first.twelve .node.implant {
+#histology .images.twelve .first .node.implant {
 	left: 19%;
 	top: 44.5%;
 }
-#histology .first.twelve .node.newbone {
+#histology .images.twelve .first .node.newbone {
 	left: 43.5%;
 	top: 18.5%;
 }
-#histology .first.twelve .node.marrow {
+#histology .images.twelve .first .node.marrow {
 	left: 56%;
 	top: 70.5%;
 }
-#histology .second.six .node.implant {
+#histology .images.six .second .node.implant {
 	left: 61%;
 	top: 81.5%;
 }
-#histology .second.six .node.newbone {
+#histology .images.six .second .node.newbone {
 	left: 71.5%;
 	top: 40.5%;
 }
-#histology .second.six .node.marrow {
+#histology .images.six .second .node.marrow {
 	left: 52%;
 	top: 53.5%;
 }
-#histology .second.twelve .node.implant {
+#histology .images.twelve .second .node.implant {
 	left: 67%;
 	top: 39.5%;
 }
-#histology .second.twelve .node.newbone {
+#histology .images.twelve .second .node.newbone {
 	left: 20.5%;
 	top: 52.5%;
 }
-#histology .second.twelve .node.marrow {
+#histology .images.twelve .second .node.marrow {
 	left: 30%;
 	top: 22.5%;
 }
-#histology .third.six .node.implant {
+#histology .images.six .third .node.implant {
 	left: 81%;
 	top: 43.5%;
 }
-#histology .third.six .node.newbone {
+#histology .images.six .third .node.newbone {
 	left: 45.5%;
 	top: 54.5%;
 }
-#histology .third.six .node.marrow {
+#histology .images.six .third .node.marrow {
 	left: 16%;
 	top: 37.5%;
 }
-#histology .third.twelve .node.implant {
+#histology .images.twelve .third .node.implant {
 	left: 12%;
 	top: 49.5%;
 }
-#histology .third.twelve .node.newbone {
+#histology .images.twelve .third .node.newbone {
 	left: 30.5%;
 	top: 26.5%;
 }
-#histology .third.twelve .node.marrow {
+#histology .images.twelve .third .node.marrow {
 	left: 61%;
 	top: 43.5%;
 }
-#histology .fourth.six .node.implant {
+#histology .images.six .fourth .node.implant {
 	left: 69%;
 	top: 43.5%;
 }
-#histology .fourth.six .node.newbone {
+#histology .images.six .fourth .node.newbone {
 	left: 29.5%;
 	top: 54.5%;
 }
-#histology .fourth.six .node.marrow {
+#histology .images.six .fourth .node.marrow {
 	left: 19%;
 	top: 30.5%;
 }
-#histology .fourth.twelve .node.implant {
+#histology .images.twelve .fourth .node.implant {
 	left: 34%;
 	top: 73.5%;
 }
-#histology .fourth.twelve .node.newbone {
+#histology .images.twelve .fourth .node.newbone {
 	left: 36.5%;
 	top: 28.5%;
 }
-#histology .fourth.twelve .node.marrow {
+#histology .images.twelve .fourth .node.marrow {
 	left: 67%;
 	top: 45.5%;
 }
@@ -1295,6 +1389,9 @@ picture {
 
 /**************************** CONTACT ******************************/
 
+.contact h1 + p {
+	margin-top: 2rem;
+}
 .contact.logomark {
 	background-position-y: -12rem;
 }
@@ -1311,12 +1408,6 @@ picture {
 	margin-top: 1rem;
 	font-size: 80%;
 }
-.contact iframe {
-	display: block;
-	width: 87%;
-	height: 50vw;
-	margin: 0 0 0 13%;
-}
 
 /**************************** FOOTER *******************************/
 
@@ -1326,6 +1417,7 @@ footer {
 	background-size: 25%;
 	color: #fff;
 }
+
 footer nav a:first-child {
 	margin: 0;
 }
@@ -1333,6 +1425,13 @@ footer p {
 	color: #fff;
 	font-size: 22px;
 }
+
+footer p a {
+	color: #fff;
+	text-transform: none;
+	text-decoration: underline;
+}
+
 footer h2 {
 	font-size: 3.6rem;
 	margin-bottom: 3rem;
@@ -1419,9 +1518,6 @@ p.legal {
 	#team {
 		margin-top: -38vw;
 	}
-	.contact iframe {
-		height: 75vw;
-	}
 }
 @media screen and (max-width: 1200px) {
 	.home #intro p {
@@ -1499,11 +1595,6 @@ p.legal {
 	}
 	.contact .text-container {
 		margin: 3rem 0;
-	}
-	.contact iframe {
-		height: 75vw;
-		margin: 0;
-		width: 100%;
 	}
 	#team {
 		margin-top: 0;
@@ -1915,7 +2006,7 @@ p.legal {
 		top: 24vw;
 	}
 	.zoom-nav {
-		-webkit-transform: scale(1.5);
+		-webkit-transition: scale(1.5);
 		-ms-transform: scale(1.5);
 		transform: scale(1.5);
 		top: 9vw;
@@ -1978,7 +2069,7 @@ p.legal {
 }
 @media screen and (max-width: 400px) {
 	#intro p {
-		font-size: 5vw;
+		font-size: 4vw;
 		top: 2rem;
 	}
 	.toggle a.active::before {
