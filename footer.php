@@ -2,8 +2,8 @@
 	<div class="section-one">
 		<div class="left">
 			<h2>Want to know more?</h2>
-			<p>If you have a question or would like more information, please <a href="contact-us">contact us</a>.<p>
-			<a href="mailto:&#115;&#105;&#120;&#119;&#101;&#101;&#107;&#115;&#064;&#111;&#115;&#116;&#101;&#111;&#110;&#111;&#118;&#117;&#115;&#046;&#099;&#111;&#109;" class="mailto">hello@osteonovus.com</a>
+			<p>If you have a question or would like more information, please <a href="contact-us.php">contact us</a>.<p>
+			<a href="mailto:" class="mailto:&#104;&#101;&#108;&#112;&#064;&#111;&#115;&#116;&#101;&#111;&#110;&#111;&#118;&#117;&#115;&#046;&#099;&#111;&#109;">help@osteonovus.com</a>
 		</div>
 		<div class="right">
 			<p class="footnote">* only available by prescription</p>	

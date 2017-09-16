@@ -36,24 +36,39 @@
 							<div class="help-block with-errors"></div>
 						</div>
 						<div class="form-group">
-							<label for="form_contact">Reason for Inquiry *</label> <!--input id="form_contact" type="email" name="contact" class="form-control" placeholder="Please enter your phone"-->
-							 <select data-error="Inquiry is required." id="form_contact" name="contact" required="required">
+							<label for="form_contact">Visitor Category</label>
+							 <select data-error="Inquiry is required." id="form_visitor" name="visitor">
+								<option>
+									What best describes you?
+								</option>
+								<option value="physician">
+									Physician
+								</option>
+								<option value="vendor">
+									Vendor
+								</option>
+								<option value="other">
+									Other
+								</option>
+							</select>
+							<div class="help-block with-errors"></div>
+						</div>
+						<div class="form-group">
+							<label for="form_contact">Reason for Inquiry</label>
+							 <select data-error="Inquiry is required." id="form_contact" name="contact">
 								<option>
 									How can we help you?
 								</option>
 								<option value="business">
-									Purchasing / Business
+									Business Inquiries
 								</option>
 								<option value="customerservice">
 									Customer Service / Technical Questions
 								</option>
 								<option value="ordering">
-									Ordering
+									Ordering / Billing
 								</option>
-								<option value="billing">
-									Billing
-								</option>
-							</select>
+c							</select>
 							<div class="help-block with-errors"></div>
 						</div>
 						<div class="form-group">
