@@ -24,7 +24,7 @@
 				<div class="text-container">
 					<h3>Anand Agarwal, MD</h3>
 					<h4>President &amp; CEO, Co-founder</h4>
-					<p>Orthopedic spine surgeon. Research Professor, University of Toledo. German Medical Council, Orthopaedic and Spine Surgery. Formerly KOL for Kyphon, Medtronic.</p>
+					<p>Since becoming CEO in 2014, he has focused on leveraging OsteoNovus' breakthrough NovoGro technology platform with an emphasis on strong execution and the highest ethical standards. Dr. Agarwal brings decades of clinical experience as a world renowned orthopedic spine surgeon to the OsteoNovus leadership team.  He has served as key opinion leader for Kyphon, Medtronic, Aesculap and Pioneer Surgical among others. He presently holds a Research Professorship at The University of Toledo and sits on the German Medical Council of Orthopaedic and Spine Surgery.</p>
 				</div>
 			</li>
 			<li>

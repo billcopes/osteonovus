@@ -524,7 +524,6 @@ select {
 	background: -webkit-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 	background: linear-gradient(to right, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 }
-
 .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
     cursor: not-allowed;
     filter: alpha(opacity=45);
@@ -533,11 +532,9 @@ select {
     opacity: .45;
 	background: #000;
 }
-
 .g-recaptcha iframe {
 	border: solid 1px #000;
 }
-
 /********************* HOME *********************/
 
 .opaque {
@@ -714,10 +711,22 @@ select {
 #injectable {
 	display: none;
 }
+p.product-note {
+	position: absolute;
+	z-index: 9999;
+	right: 8.5vw;
+	top: 14vw;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: .75rem;
+	background: rgba(255,255,255,0.5);
+	padding: .25em .5em;
+	display: block;
+}
 .attributes {
 	position: relative;
 	background-color: #2E2D38;
-	padding: 8vw 0 8vw 8vw;
+	padding: 12vw 0 8vw 8vw;
 	color: #fff;
 	z-index: 97;
 }
@@ -735,7 +744,7 @@ select {
 	height: 28vw;
 	margin-top: 1vw;
 	left: 4vw;
-	top: 25vw;
+	top: 29vw;
 }
 .day {
 	position: relative;
@@ -1454,34 +1463,37 @@ footer h2 {
 footer a.logo {
 	position: static;
 }
-footer .left p {
-	max-width: 500px;
-}
 footer .section-two {
-	padding-top: 12rem;
+	padding-top: 8rem;
 }
 p.legal {
 	font-size: 13px;
 	margin: 1.6rem 0 2rem;
+	max-width: 600px;
 }
-.ut p {
-	font-size: 14px;
-	float: right;
-	max-width: 400px;
+.email, .phone {
+	text-transform: uppercase;
+	display: inline-block;
+	margin: .5rem 2rem 0 0;
 }
-.ut p:before {
-	content: "";
-	float: left;
-	background: url("../images/ut.png") no-repeat;
-	background-size: contain;
-	width: 51px;
-	height: 55px;
-	margin: .6rem 2rem 0 0;
+.email {
+	cursor: pointer;
 }
+.phone:before, .email:before {
+	content:"\f095";
+	font: normal normal normal 21px/1 FontAwesome;
+	display: inline-block;
+	margin-right: .75rem;
+}
+.email:before {
+	content:"\f0e0";
+}
+
 .left, .right {
 	display: inline-block;
-	width: 49.3%;
+	width: 29.3%;
 }
+.left { width: 70.3%; }
 .mailto {
 	color: #79EAB9;
 	text-transform: none;
@@ -1490,7 +1502,20 @@ p.legal {
 	display: block;
 	margin: 2rem 0 0;
 }
-
+.iso {
+	font-size: 0;
+	float: right;
+	display: block;
+	background: url("../images/iso.png") no-repeat;
+	background-size: contain;
+	width: 150px;
+	height: 88px;
+	
+}
+.usa {
+	text-align: right;
+	margin: 0;
+}
 /*************************** MEDIA QUERIES *************************/
 
 @media screen and (min-width: 1800px) {
@@ -1565,6 +1590,19 @@ p.legal {
 		top: -3vh;
 	}
 }
+@media screen and (max-width: 1098px) {
+	.footnote, .usa {
+		text-align: left;
+	}
+	footer a.logo {
+		width: 260px;
+	    height: 28px;
+		margin: 4rem 0 1rem;
+	}
+	footer .section-two {
+		padding-top: 0;
+	}	
+}
 @media screen and (max-width: 1024px) {
 	#intro {
 		padding: 14vw 0 8vw 8vw;
@@ -1621,19 +1659,17 @@ p.legal {
 	}
 }
 @media screen and (max-width: 980px) {
-	footer .section-two {
-		padding-top: 6rem;
-	}
 	.section-one .left, .section-one .right, .section-two .left, .section-two .right {
 		width: 100%;
 	}
+	.iso {
+		float: none;
+		margin-top: 4rem;
+	}
+	.footnote.usa {margin: 3rem 0 0;}
 	.footnote {
 		text-align: left;
 		margin: 4rem 0 0;
-	}
-	.ut p {
-		float: none;
-		margin-top: 6rem;
 	}
 	.footnote {
 		margin: 1rem 0 0;
@@ -1665,7 +1701,7 @@ p.legal {
 		font-size: 1.75vw;
 	}
 	.product {
-		top: 29vw;
+		top: 34vw;
 		width: 58vw;
 		height: 40vw;
 		margin-top: 1vw;
@@ -1799,7 +1835,7 @@ p.legal {
 		padding: 10vw 0 32vw 8vw;
 	}
 	.attributes p {
-		width: 88vw;
+		width: 80vw;
 		font-size: 2.75vw;
 		margin: 4vw 4vw 6vw 0;
 	}
@@ -1814,7 +1850,7 @@ p.legal {
 		top: 41.5vw;
 	}
 	.product {
-		top: 84vw;
+		top: 92vw;
 		width: 84vw;
 		height: 62vw;
 	}
@@ -1829,6 +1865,10 @@ p.legal {
 	.zoom-image-container .images .image {
 		width: 74vw;
 		height: 74vw;
+	}
+	footer nav a, 	footer nav a:first-child {
+		margin: 0 0 2rem;
+		display: block;
 	}
 }
 @media screen and (max-width: 660px) {
@@ -1950,6 +1990,9 @@ p.legal {
 		font-size: 15px;
 		line-height: 25px;
 	}
+	p.product-note {
+		top: 19vw;
+	}
 }
 @media screen and (max-width: 480px) {
 	.home #intro {
@@ -2053,11 +2096,6 @@ p.legal {
 	}
 	.mailto {
 		font-size: 22px;
-	}
-	.ut p:before {
-		display: block;
-		float: none;
-		margin-bottom: 1rem;
 	}
 	.contact #intro h2 {
 		font-size: 1rem;

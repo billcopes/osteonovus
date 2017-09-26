@@ -22,6 +22,7 @@
 	<div class="video-gradient fadein"></div>
 	
 	<article id="putty" class="fadein fast">
+		<p class="product-note">FDA Cleared</p>
 		<progress id='p' max='100' value='0' class="fadein"></progress>
 		<video id="putty-vid" preload="auto" poster="images/putty.jpg" class="fadein" autoplay loop muted></video>
 		<div class="bar fadein"></div>
@@ -36,6 +37,7 @@
 			<div class="video-gradient video-gradient-bottom fadein"></div>
 	</article>
 	<article id="injectable" class="fadein fast">
+		<p class="product-note">Currently In development</p>
 		<progress id='i' max='100' value='0' class="fadein"></progress>
 		<video id="injectable-vid" preload="auto" poster="images/injectable.jpg" class="fadein" loop muted></video>
 		<div class="bar fadein"></div>
@@ -61,12 +63,12 @@
 </section>
 <section id="zoom" class="fadein">
 		<h2>NovoGro is remodeled <br/>and replaced by bone.</h2>
-		<p>NovoGro Putty was implanted into bilateral crticially sized (6x10 mm) defects in the rabbit distal 
+		<p>NovoGro Putty was implanted into bilateral critically sized (6x10 mm) defects in the rabbit distal 
 	femoral condyle. The amounts of new bone and residual graft were quantified at 
 	6 and 12 weeks post-operatively using histology and micro CT.</p>
 	<ul class="toggle">
 		<li><a href="#" class="active" id="hist-toggle" data-toggle="#histology">Histology</a></li>
-		<li><a href="#" class="" id="ct-toggle" data-toggle="#ct">&mu;CT</a></li>
+		<li><a href="#" class="" id="ct-toggle" data-toggle="#ct">micro CT</a></li>
 	</ul>
 	<article id="histology">
 		<div class="zoom-text-container fadein fast">
@@ -109,24 +111,24 @@
 			</ul>
 			<div class="images six">
 				<div class="image first six visible">
-					<a class="node implant"></a>
-					<a class="node newbone"></a>
-					<a class="node marrow"></a>
+					<a class="node implant" onclick=""></a>
+					<a class="node newbone" onclick=""></a>
+					<a class="node marrow" onclick=""></a>
 				</div>
 				<div class="image second six hidden">
-					<a class="node implant"></a>
-					<a class="node newbone"></a>
-					<a class="node marrow"></a>
+					<a class="node implant" onclick=""></a>
+					<a class="node newbone" onclick=""></a>
+					<a class="node marrow" onclick=""></a>
 				</div>
 				<div class="image third six hidden">
-					<a class="node implant"></a>
-					<a class="node newbone"></a>
-					<a class="node marrow"></a>
+					<a class="node implant" onclick=""></a>
+					<a class="node newbone" onclick=""></a>
+					<a class="node marrow" onclick=""></a>
 				</div>
 				<div class="image fourth six hidden">
-					<a class="node implant"></a>
-					<a class="node newbone"></a>
-					<a class="node marrow"></a>
+					<a class="node implant" onclick=""></a>
+					<a class="node newbone" onclick=""></a>
+					<a class="node marrow" onclick=""></a>
 				</div>
 			</div>
 		</div>
@@ -154,7 +156,7 @@
 					<li class="twelve" ><a href="#">12 Weeks</a></li>
 				</ul>
 			</div>
-			<p class="detail">A progression in healing of the NovoGro treated defects was observed radiographically by the change in trabecular density and thickness from 6 to 12 wks.  NovoGro appeared more radiolucent at 12 wks., and  the distinct spherical shape, size and porosity of the 
+			<p class="detail">A progression in healing of the NovoGro treated defects was observed radiographically by the change in trabecular density and thickness from 6 to 12 weeks. NovoGro appeared more radiolucent at 12 weeks, and the distinct spherical shape, size and porosity of the 
 particles changed as the graft remodeled. </p>
 		</div>
 		<div class="zoom-image-container fadein fast">
