@@ -22,7 +22,7 @@
 	<div class="video-gradient fadein"></div>
 	
 	<article id="putty" class="fadein fast">
-		<p class="product-note">FDA Cleared</p>
+		<p class="product-note fadein">FDA Cleared</p>
 		<progress id='p' max='100' value='0' class="fadein"></progress>
 		<video id="putty-vid" preload="auto" poster="images/putty.jpg" class="fadein" autoplay loop muted></video>
 		<div class="bar fadein"></div>
@@ -37,7 +37,7 @@
 			<div class="video-gradient video-gradient-bottom fadein"></div>
 	</article>
 	<article id="injectable" class="fadein fast">
-		<p class="product-note">Currently In development</p>
+		<p class="product-note fadein fast">Currently In development</p>
 		<progress id='i' max='100' value='0' class="fadein"></progress>
 		<video id="injectable-vid" preload="auto" poster="images/injectable.jpg" class="fadein" loop muted></video>
 		<div class="bar fadein"></div>
@@ -51,6 +51,7 @@
 	</article>
 </section>
 <section class="attributes fadein">
+	<span class="scrolldown">LEARN MORE</span>
 	<h2>BIOACTIVE.</h2>
 	<div class="flex-container">
 		<div class="text">

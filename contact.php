@@ -28,10 +28,10 @@ switch($contact) {
    case 'business':
        $sendTo = "bschlossberg@osteonovus.com";
        break;
-   case 'customerservice':
+   case 'distribution':
        $sendTo = "bschlossberg@osteonovus.com";
        break;
-   case 'ordering':
+   case 'investor':
        $sendTo = "bschlossberg@osteonovus.com";
        break;
    default:

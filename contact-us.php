@@ -44,8 +44,8 @@
 								<option value="physician">
 									Physician
 								</option>
-								<option value="vendor">
-									Vendor
+								<option value="distributor">
+									Distributor
 								</option>
 								<option value="other">
 									Other
@@ -62,11 +62,11 @@
 								<option value="business">
 									Business Inquiries
 								</option>
-								<option value="customerservice">
-									Customer Service / Technical Questions
+								<option value="distribution">
+									Distribution Inquiries
 								</option>
-								<option value="ordering">
-									Ordering / Billing
+								<option value="investor">
+									Investor Relations
 								</option>
 c							</select>
 							<div class="help-block with-errors"></div>

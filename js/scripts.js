@@ -215,7 +215,7 @@ $(document).ready(function() {
 		e.preventDefault(); // prevent navigating
 		$("#novogro a[data-toggle]").removeClass("active");
 		$(this).addClass("active")
-		$("#putty-vid, #injectable-vid, .toggle, progress, .vid-nav").addClass("fast");
+		$("#putty-vid, #injectable-vid, .toggle, progress, .vid-nav, .product-note").addClass("fast");
 		var selector = $(this).data("toggle"); // get corresponding selector from data-toggle
 		$("#novogro article").hide();
 		$(selector).show();
@@ -232,15 +232,6 @@ $(document).ready(function() {
 		$(".zoom-nav li.second").removeClass("selected");
 		$(".zoom-nav li.third").removeClass("selected");
 		$(".zoom-nav li.fourth").removeClass("selected");
-		//Toggle Images
-		/*$(".image.first").removeClass("hidden twelve");
-		$(".image.second").removeClass("visible six twelve");
-		$(".image.second").addClass("hidden");
-		$(".image.third").removeClass("visible six twelve");
-		$(".image.third").addClass("hidden");
-		$(".image.fourth").removeClass("visible six twelve");
-		$(".image.fourth").addClass("hidden");
-		$(".image.first").addClass("visible six");*/
 	});
 	$("#ct-toggle, #hist-toggle").on("click", function(e) {
 		e.preventDefault(); // prevent navigating
@@ -416,5 +407,11 @@ $(document).ready(function() {
 	$("#introMessage").delay(3500).queue(function(next){
 	    $(this).css('display','none');
 		next();
+	});
+});
+
+$(document).ready(function() {
+	$(window).scroll(function(){
+	  $(".scrolldown").fadeOut("slow");
 	});
 });
