@@ -1549,9 +1549,8 @@ p.legal {
 	display: block;
 	background: url("../images/iso.png") no-repeat;
 	background-size: contain;
-	width: 150px;
-	height: 88px;
-	
+    width: 254px;
+    height: 74px;
 }
 .usa {
 	text-align: right;
