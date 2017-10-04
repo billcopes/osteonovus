@@ -13,20 +13,21 @@
 		<h1 class="fadeout" id="introMessage">NEW BONE IN <strong>SIX WEEKS</strong></h1>
 	</div>
 </section>
-<section id="novogro">
-	<h2 class="novogro fadein">Novgro <span>Moldable Bone Substitute</span></h2>
-	<ul class="toggle fadein">
-		<li><a href="#" id="putty-toggle" class="active" data-toggle="#putty">Putty</a></li>
-		<li><a href="#" id="injectable-toggle" data-toggle="#injectable">Injectable</a></li>
+<section id="novogro" class="fadein">
+	<span class="scrolldown fixer">LEARN MORE</span>
+	<h2 class="novogro fadein fixer">Novgro <span>Moldable Bone Substitute</span></h2>
+	<ul class="toggle fadein fixer" id="product-toggle">
+		<li class="init"><a href="#" data-toggle="#putty">Novogro Putty</a></li>
+		<li class="selected"><a href="#" id="putty-toggle" data-toggle="#putty">Novogro Putty</a></li>
+		<li><a href="#" id="injectable-toggle" data-toggle="#injectable">Novogro Injectable</a></li>
 	</ul>
 	<div class="video-gradient fadein"></div>
-	
 	<article id="putty" class="fadein fast">
-		<p class="product-note fadein">FDA Cleared</p>
-		<progress id='p' max='100' value='0' class="fadein"></progress>
+		<p class="product-note fadein fixer">FDA Cleared</p>
+		<progress id='p' max='100' value='0' class="fadein fixer"></progress>
 		<video id="putty-vid" preload="auto" poster="images/putty.jpg" class="fadein" autoplay loop muted></video>
 		<div class="bar fadein"></div>
-			<ul class="vid-nav putty fadein">
+			<ul class="vid-nav putty fadein fixer">
 				<li><a href="#" id="vid1-1">Moldable <br/>and cohesive</a></li>
 				<li><a href="#" id="vid1-2">Will not <br/>Wash Out</a></li>
 				<li><a href="#" id="vid1-3">Conforms to <br/>Graft Site</a></li>
@@ -37,11 +38,11 @@
 			<div class="video-gradient video-gradient-bottom fadein"></div>
 	</article>
 	<article id="injectable" class="fadein fast">
-		<p class="product-note fadein fast">Currently In development</p>
-		<progress id='i' max='100' value='0' class="fadein"></progress>
+		<p class="product-note fadein fast fixer">Currently In development</p>
+		<progress id='i' max='100' value='0' class="fadein fixer"></progress>
 		<video id="injectable-vid" preload="auto" poster="images/injectable.jpg" class="fadein" loop muted></video>
 		<div class="bar fadein"></div>
-			<ul class="vid-nav injectable fadein">
+			<ul class="vid-nav injectable fadein fixer">
 				<li><a href="#" id="vid2-1">Injectable <br/>for 10 minutes</a></li>
 				<li><a href="#" id="vid2-2">Will not <br/>Wash Out</a></li>
 				<li><a href="#" id="vid2-3">Conforms<br/>to Bone</a></li>
@@ -51,7 +52,6 @@
 	</article>
 </section>
 <section class="attributes fadein">
-	<span class="scrolldown">LEARN MORE</span>
 	<h2>BIOACTIVE.</h2>
 	<div class="flex-container">
 		<div class="text">
@@ -67,9 +67,10 @@
 		<p>NovoGro Putty was implanted into bilateral critically sized (6x10 mm) defects in the rabbit distal 
 	femoral condyle. The amounts of new bone and residual graft were quantified at 
 	6 and 12 weeks post-operatively using histology and micro CT.</p>
-	<ul class="toggle">
-		<li><a href="#" class="active" id="hist-toggle" data-toggle="#histology">Histology</a></li>
-		<li><a href="#" class="" id="ct-toggle" data-toggle="#ct">micro CT</a></li>
+	<ul class="toggle2" id="zoom-toggle">
+		<li class="init" data-toggle="#histology"><a href="#">Histology</a></li>
+		<li class="selected"><a href="#" id="hist-toggle" data-toggle="#histology">Histology</a></li>
+		<li><a href="#" id="ct-toggle" data-toggle="#ct">micro CT</a></li>
 	</ul>
 	<article id="histology">
 		<div class="zoom-text-container fadein fast">
@@ -199,7 +200,6 @@ particles changed as the graft remodeled. </p>
 	</article>
 </section>
 <?php include 'footer.php'; // Renders page footer ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>
