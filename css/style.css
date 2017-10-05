@@ -176,11 +176,11 @@ h4 {
 }
 p {
 	font-family: "Forza SSm A", "Forza SSm B", Forza, sans-serif;
-	font-size: 1.1375rem;
+	font-size: 1rem;
 	font-weight: 100;
 	font-style: normal;
 	font-stretch: normal;
-	line-height: 1.67;
+	line-height: 1.6;
 	letter-spacing: 0.6px;
 }
 .team p {
@@ -645,7 +645,7 @@ select {
 	-webkit-animation-delay: .25s;
 	animation-delay: .25s;
 }
-.home h1#introMessage {
+.home #introMessage h1 {
 	font-size: 8.4vw;
 	position: fixed;
 	/*padding: 4vw 0 0 6vw;*/
@@ -662,7 +662,7 @@ select {
 	    background: linear-gradient(to bottom, #eaeef7 0%, #dee6f7 50%, #f4f6f9 86%);
 	    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#eaeef7', endColorstr='#f4f6f9', GradientType=0);
 }
-.home h1#introMessage strong {
+.home #introMessage h1 strong {
 	font-size: 14.8vw;
 	line-height: 16vw;
 }
@@ -670,7 +670,7 @@ select {
 	width: 60vw;
 }
 .home .text-container {
-	padding: 6rem;
+	padding: 0;
 }
 .home #intro p {
 	font-size: 1.5rem;
@@ -712,14 +712,6 @@ select {
 	margin: 0;
 	z-index: 945;
 }
-/*////////////////////////////  Style notes ////////////////////////////////
- !!!!NEED TO ADD A SECOND CLASS FOR THESE FOR THE ZOOM SECTION!!!!
-		- White background
-		- Smaller menu text
-		- Indicator down arrow
-		- Different Select color
-		- White background		
-////////////////////////////////////////////////////////////////////////*/
 
 .toggle, .toggle2 {
 	font-size: 2rem;
@@ -900,27 +892,36 @@ p.product-note {
 .zoom-nav li {
 	position: absolute;
 	display: block;
-	border-radius: 100%;
 	border: solid 10px #fff;
 	padding: 3px;
-	background: #7f7cbb;
+	background: blue;
 	/* Old browsers */
 	background: -webkit-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 	background: -webkit-gradient(linear, left top, right top, from(#7f7cbb), color-stop(50%, #7fceea), to(#89cda8));
 	background: -o-linear-gradient(left, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
 	background: linear-gradient(to right, #7f7cbb 0%, #7fceea 50%, #89cda8 100%);
+	-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+	border-radius: 100%;
+	overflow: hidden;
+	border: solid 10px red;
 }
 .zoom-nav li a {
+	top: 0;
+	left: 0;
+	position: relative;
 	display: block;
 	width: 3.25vw;
 	height: 3.25vw;
-	border-radius: 100%;
 	color: #000;
 	background: #fff;
 	text-align: center;
 	padding-top: 1.25vw;
 	font-size: 1vw;
 	text-decoration: none;
+	border-radius: 100%;
+	border: solid 1px #fff;
+	overflow: hidden;
 }
 .zoom-nav li.selected, .zoom-nav li.selected:hover {
 	-webkit-transform: scale(1.5);
@@ -928,8 +929,8 @@ p.product-note {
 	transform: scale(1.5);
 	position: relative;
 	z-index: 888;
-	-webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
 }
 .zoom-nav li.selected {
 	-webkit-animation-name: pulse;
@@ -1071,7 +1072,7 @@ p.product-note {
 }
 .zoom-text-container {
 	position: relative;
-	top: 6vw;
+	top: 10vw;
 }
 .zoom-text-container h3 {
 	font-size: 3.4vw;
@@ -1085,8 +1086,8 @@ p.product-note {
 	display: block;
 }
 p.detail {
-	font-size: 16px;
-	line-height: 28px;
+	font-size: 13px;
+	line-height: 24px;
 	position: absolute;
 	top: 12vw;
 	max-width: 36rem;
@@ -1671,7 +1672,7 @@ p.legal {
 		margin-top: -38vw;
 	}
 }
-@media screen and (min-width:1200px) and (max-height:760px) {
+@media screen and (min-width:900px) and (max-height:690px) {
 /* Makes these elements fixed when the screen is this size */
 /* Using scrollTop to remove this when they get to scrolling */
 	progress.fixer {
@@ -1865,20 +1866,19 @@ p.legal {
 		line-height: 6.4vw;
 	}
 	#zoom p {
-		font-size: 1rem;
 		width: 62vw;
 	}
 	.zoom-text-container {
-		top: 6vw;
+		top: 14vw;
 	}
 	#zoom .zoom-text-container p {
-		width: 35vw;
+		width: 30vw;
 		margin-top: 4vw;
 	}
 	.zoom-image-container {
 		width: 58vw;
 		height: 58vw;
-		margin-top: -8vw;
+		margin-top: 0vw;
 	}
 	.zoom-image-container .images {
 		width: 46vw;
@@ -1927,14 +1927,21 @@ p.legal {
 		top: 21vw;
 	}
 	.zoom-nav li {
-		border: solid 5px #fff;
+		border: solid 4px #fff;
+		padding: 6px;
 	}
 	.zoom-nav li a {
-		width: 6.25vw;
-		height: 6.25vw;
-		font-size: 2vw;
-		padding-top: 2.25vw;
+		width: 8.25vw;
+		height: 8.25vw;
+		font-size: 2.25vw;
+		padding-top: 3vw;
 	}
+	/*.toggle li.init, .toggle2 li.init {
+		padding: 0 4rem 0 .25rem;
+	}
+	.toggle li.init a::after, .toggle2 li.init a::after {
+		right: .75rem;
+	}*/
 	.contact #intro h2 {
 		line-height: 2rem;
 	}
@@ -1965,9 +1972,7 @@ p.legal {
 		width: 90vw;
 	}
 	.zoom-nav li.selected, .zoom-nav li.selected:hover {
-		-webkit-transform: scale(1.25);
-		-ms-transform: scale(1.25);
-		transform: scale(1.25);
+		
 	}
 	#histology .zoom-nav li.first {
 		top: 4vw;
@@ -2146,6 +2151,12 @@ p.legal {
 	p.product-note {
 		top: 19vw;
 	}
+	.zoom-image-container {
+		margin-top: 24vw;
+	}
+	.zoom-text-container {
+		top: 126vw;
+	}
 }
 @media screen and (max-width: 480px) {
 	.home #intro {
@@ -2153,7 +2164,7 @@ p.legal {
 	}
 	.toggle, .toggle2 {
 		margin-top: 1rem;
-		font-size: 1rem;
+		font-size: 1.15rem;
 	}
 	p.product-note {
 		left: 9vw;
@@ -2215,9 +2226,6 @@ p.legal {
 	#zoom p {
 		margin-bottom: 8vw;
 	}
-	.zoom-text-container {
-		top: 97vw;
-	}
 	.zoom-text-container h3 {
 		font-size: 3rem;
 	}
@@ -2253,12 +2261,19 @@ p.legal {
 	}
 	footer h2 {
 		font-size: 2rem;
+		margin-bottom: 1rem;
 	}
 	footer p {
 		font-size: 18px;
 	}
+	footer nav {
+		margin-top: 4rem;
+	}
 	footer nav a {
 		font-size: 12px;
+	}
+	.footnote.usa {
+		margin: 1rem 0 0;
 	}
 	.mailto {
 		font-size: 22px;
@@ -2294,8 +2309,15 @@ p.legal {
 		top: 28vw;
 	}
 }
+@media screen and (max-width: 375px) {
+	.product {
+		top: 410px;
+	}	
+}
+
 @media screen and (max-width: 360px) {
 	.vid-nav {
 		padding: 1rem 0 8.5rem;
 	}
 }
+
