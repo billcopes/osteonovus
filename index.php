@@ -9,8 +9,8 @@
 <body class="<?php echo $page ?>">
 <?php include 'header.php'; // Renders navigation ?>
 <section id="intro" class="logomark">
-	<div class="text-container">
-		<h1 class="fadeout" id="introMessage">NEW BONE IN <strong>SIX WEEKS</strong></h1>
+	<div id="introMessage" class="text-container fadeout" >
+		<h1 class="fadeout">NEW BONE IN <strong>SIX WEEKS</strong></h1>
 	</div>
 </section>
 <section id="novogro" class="fadein">
@@ -25,7 +25,7 @@
 	<article id="putty" class="fadein fast">
 		<p class="product-note fadein fixer">FDA Cleared</p>
 		<progress id='p' max='100' value='0' class="fadein fixer"></progress>
-		<video id="putty-vid" preload="auto" poster="images/putty.jpg" class="fadein" autoplay loop muted></video>
+		<video id="putty-vid" preload="auto" poster="images/putty.jpg" class="fadein" playsinline loop muted autoplay></video>
 		<div class="bar fadein"></div>
 			<ul class="vid-nav putty fadein fixer">
 				<li><a href="#" id="vid1-1">Moldable <br/>and cohesive</a></li>
@@ -40,7 +40,7 @@
 	<article id="injectable" class="fadein fast">
 		<p class="product-note fadein fast fixer">Currently In development</p>
 		<progress id='i' max='100' value='0' class="fadein fixer"></progress>
-		<video id="injectable-vid" preload="auto" poster="images/injectable.jpg" class="fadein" loop muted></video>
+		<video id="injectable-vid" preload="auto" poster="images/injectable.jpg" class="fadein" playsinline loop muted autoplay></video>
 		<div class="bar fadein"></div>
 			<ul class="vid-nav injectable fadein fixer">
 				<li><a href="#" id="vid2-1">Injectable <br/>for 10 minutes</a></li>
